@@ -1,0 +1,225 @@
+@font-face{
+    font-family: graphie-bold;
+    src: url("../fonts/Graphie-Bold.otf");
+}
+@font-face{
+    font-family: graphie-regular;
+    src: url("../fonts/Graphie-Regular.otf");
+}
+@font-face{
+    font-family: graphie-light;
+    src: url("../fonts/Graphie-Light.otf");
+}
+@font-face{
+    font-family: extra-light;
+    src: url("../fonts/Graphie-ExtraLight.otf");
+}
+
+.marcas{
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    align-content: center;
+    flex-flow: row wrap;
+    width: 80%;
+    margin: auto;
+}
+.marcasinde{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    transition: .5s ease-in-out;
+}
+.marcasinde:hover{
+    box-shadow: 10px 10px 50px #b8c66c;
+    border-bottom: 1px solid #b8c66c;
+    border-top: 1px solid #b8c66c;
+    transform: scale(1.1);
+    transition: .5s;
+}
+.products-preview{
+    position: fixed;
+    z-index: 11;
+    top:0; left:0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.preview{
+    display: none;
+    padding:2rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin:2rem;
+    width: 40rem;
+    border-radius: 20px;
+    height: 470px;
+}
+.preview.active{
+    display: inline-block;
+}
+.modal_img{
+    position: absolute;
+    right: -200px;
+    width: 90%;
+    max-width: 400px;
+}
+.modal_close{
+    text-decoration: none;
+    color: #fff;
+    background-color: #b8c66c;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 300;
+    transition: background-color .3s;
+    margin: auto 300px auto auto;
+    cursor: pointer;
+}
+.redireccion{
+    text-decoration: none;
+    background-color: #b8c66c;
+    padding: 10px 20px;
+    width: 50%;
+    border-radius: 6px;
+    border: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 300;
+    transition: background-color .3s;
+    margin: 15px 300px auto auto;
+    cursor: pointer;
+}
+.redireccion a{
+    color: white;
+}
+.redireccion:hover{
+    border: 1px solid #b8c66c;
+    background-color: white;
+}
+.redireccion:hover a{
+    color: black;
+}
+.modal_close:hover{
+    color: black;
+    background-color: #fff;
+    border: 1px solid #b8c66c;
+}
+.modal_title{
+    font-size: 2.5rem;
+    margin-top: 30%;
+    color: #b8c66c;
+    font-family: graphie-bold;
+    text-align: left;
+}
+.modal_texts{
+    width: 350px;
+    height: 400px;
+}
+.modal_paragraph{
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    font-family: graphie-light;
+    text-align: left;
+}
+#mc_modal_img{
+    top: 120px;
+}
+#ar_modal_img{
+    top: 70px;
+}
+#au_modal_img{
+    top: 130px;
+}
+#corpo_modal-img{
+    top: 45px;
+}
+#hu_modal-img{
+    top: 45px;
+}
+#melo_modal-img{
+    top: 25px;
+} 
+#on_modal_img{
+    top: 45px;
+}
+#sp_modal_img{
+    top: 45px;
+}
+
+@media screen and (max-width: 1050px){
+    .preview{
+        margin-bottom: 50%;
+        height: fit-content;
+    }
+    .modal_texts{
+        height: fit-content;
+        margin: 10px auto auto auto;
+    }
+    .modal_paragraph{
+        text-align: justify;
+    }
+    .modal_title{
+        font-size: 2rem;
+        margin-top: 0;
+        text-align: center;
+    }
+    .modal_close,
+    .redireccion{
+        margin: auto;
+    }
+    .modal_img{
+        position: relative;
+        box-shadow: 5px 5px 40px rgba(128, 128, 128, 0.363);
+        border-radius: 20px;
+    }
+    #mc_modal_img, #ar_modal_img, #au_modal_img, #corpo_modal-img, #hu_modal-img, #melo_modal-img, #on_modal_img, #sp_modal_img{
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+}
+@media screen and (max-width: 950px){
+    .preview{
+        height: fit-content;
+    }
+}
+@media screen and (max-width: 430px){
+    .preview{
+        height: fit-content;
+    }
+    .modal_texts{
+        margin-top: 10px;
+        height: fit-content;
+    }
+    .modal_paragraph{
+        text-align: justify;
+    }
+    .modal_title{
+        font-size: 2rem;
+        margin-top: 0;
+        text-align: center;
+    }
+    .modal_close,
+    .redireccion{
+        margin: auto;
+    }
+    .modal_img{
+        position: relative;
+        box-shadow: 5px 5px 40px rgba(128, 128, 128, 0.363);
+        border-radius: 20px;
+    }
+    #mc_modal_img, #ar_modal_img, #au_modal_img, #corpo_modal-img, #hu_modal-img, #melo_modal-img, #on_modal_img, #sp_modal_img{
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+}

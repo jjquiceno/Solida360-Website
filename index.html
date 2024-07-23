@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Una empresa apasionada por la creatividad y la innovación en el mundo de las comunicaciones, el mercadeo y la producción de impresos. Ubicada en Envigado - Colombia.">
+    <meta name="keywords" content="sólida 360, marketing, mercado, diseño, fotografía, web, marca, creatividad">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Sólida 360">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="43200">
+    <meta property="og:title" content="Sólida 360 - Innovación en Marketing, Diseño y mucho mas">
+    <meta property="og:description" content="Impulsa tu marca con nosotros, juntos alcanzaremos nuevas alturas.">
+    <meta property="og:image" content="https://res.cloudinary.com/dowv6nrci/image/upload/v1718898456/solida360_fpzhkn.png">
+    <meta property="og:url" content="https://solidasas.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sólida 360 - Innovación en Marketing, Diseño y mucho mas">
+    <meta name="twitter:description" content="Impulsa tu marca con nosotros y alcancemos nuevas alturas.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dowv6nrci/image/upload/v1718898456/solida360_fpzhkn.png">
+    <title>Sólida 360</title>
+    <link rel="fonts" href="front-end/fonts/Graphie-Book.otf">
+    <link rel="stylesheet" href="front-end/css/index.css">
+    <link rel="stylesheet" href="front-end/css/letras.css">
+    <link rel="stylesheet" href="front-end/css/menu-ham.css">
+    <link rel="stylesheet" href="front-end/css/modal.css">
+    <link rel="icon" href="front-end/img/iconos/logo-solida.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="front-end/css/scroll.css">
+</head>
+<body>
+    <script src="front-end/js/loader.js"></script>
+    <div class="cont_nav">
+        <nav class="nav" id="encabezado">
+            <div class="caja-logo">
+                <img class="logo" src="front-end/img/iconos/ICONO CON PUNTOS.png" alt="">
+            </div>
+            <div class="off-screen-menu">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="front-end/templates/nosotros.html">NOSOTROS</a></li>
+                    <li><a href="front-end/templates/servicios.html">SERVICIOS</a></li>
+                    <li><a href="front-end/templates/impresos.html">IMPRESOS</a></li>
+                    <li><a href="front-end/templates/contacto.php">CONTACTO</a></li>
+                    <li><a href="front-end/templates/log-in.html">LOG-IN</a></li>
+                </ul>
+            </div>
+            
+            <nav>
+                <div class="ham-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+              <script>
+                    const hamMenu = document.querySelector(".ham-menu");
+                    const offScreenMenu = document.querySelector(".off-screen-menu");
+                    hamMenu.addEventListener("click", () => {
+                      hamMenu.classList.toggle("active");
+                      offScreenMenu.classList.toggle("active");
+                    });
+              </script>
+        </nav>
+    </div>
+    <div>
+        <video class="video" src="front-end/img/videos/BANNER-SÓLIDA2.mp4" autoplay muted loop></video>
+    </div>
+    <section class="slogan">
+        <div class="fondo"></div>
+        <div class="contenedor">
+            <main>
+                 <div class="contenedor-texto">
+					<h1 class="titulo">MÁS ALLÁ <BR> <span class="typed"></span></h1>
+                 </div>
+
+            </main>
+       </div>
+       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+       <script src="front-end/js/palabrasmain.js"></script>
+    </section>
+
+    <section class="all">
+        <div class="container2">
+            <div class="tittle" data-aos="fade-down" data-aos-duration="800" >
+                <h2 class="tittles">NUESTROS <span class="light">SERVICIOS</span></h2>
+            </div>
+    
+            <div class="separador"></div>
+    
+            <div class="servicios">
+                <div class="serv" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div>
+                        <img src="front-end/img/iconos/BRANDING.png" alt="icono relacionado con estrategias de branding y diseño de marca." class="bombillo">
+                        <h3 class="subtittles">BRANDING</h3>
+                    </div>
+                    <div class="caja_text" id="text1">
+                        <p>Creamos identidades visuales atractivas y memorables que destacan en el mercado.</p>
+                    </div>
+                </div>
+                <div class="serv" id="caja1" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div>
+                        <img src="front-end/img/iconos/SOCIAL MEDIA.png" alt="icono que representa servicios profesionales de gestión de redes sociales y estrategias de marketing digital." class="bombillo">
+                        <h3 class="subtittles">SOCIAL MEDIA</h3>
+                    </div>
+                    <div class="caja_text" id="text2">
+                        <p>Gestionamos y diseñamos las redes  sociales de nuestros clientes para aumentar su presencia en línea y comprometer a su audiencia.</p>
+                    </div>
+                </div>
+                <div class="serv" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                   <div id="caja-posi">
+                        <img src="front-end/img/iconos/POSICIONAMIENTO.png" alt="Icono que representa servicios especializados en estrategias para mejorar el posicionamiento en el mercado." class="bombillo">
+                        <h3 class="subtittles">POSICIONAMIENTO</h3>
+                   </div>
+                    <div class="caja_text">
+                        <p>Ayudamos a nuestros clientes a destacarse en su nicho de mercado.</p>
+                    </div>
+                </div>
+                <div class="serv" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div>
+                        <img src="front-end/img/iconos/pauta.png" alt="Icono que representa servicios especializados para el uso de pauta publicitaria en el marketing" class="bombillo">
+    
+                        <h3 class="subtittles">PAUTA PUBLICITARIA</h3>
+                    </div>
+                    <div class="caja_text">
+                        <p class="textofijo">Creamos y gestionamos campañas publicitarias efectivas en diferentes canales, como redes sociales, publicidad en línea y medios tradicionales. </p>
+                    </div>
+                </div>
+                <div class="serv" id="caja2" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div>
+                        <img src="front-end/img/iconos/WEB.png" alt="Icono que representa un servicio especializado para el desarrollo de las paginas web o web sites." class="bombillo">
+    
+                        <h3 class="subtittles">DESARROLLO WEB</h3>
+                    </div>
+                    <div class="caja_text" id="text5">
+                        <p>Diseñamos y desarrollamos sitios web funcionales y atractivos que impulsan la presencia en línea de las empresas.</p>
+                    </div>
+                </div>
+                <div class="serv" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                    <div>
+                        <img src="front-end/img/iconos/MERCADEO.png" alt="Icono que representa el servicio de diseño y estrategias de marketing para mejorar el alcance del mercado." class="bombillo">
+    
+                        <h3 class="subtittles">ESTRATEGIAS DE MERCADEO</h3>
+                    </div>
+                    <div class="caja_text" id="text6">
+                        <p>Generamos estrategias de mercadeo que lleven al éxito de nuestros aliados, proporcionando una hoja de ruta para alcanzar los objetivos comerciales, optimizar recursos, adaptarse a los cambios del mercado y construir relaciones duraderas con los clientes.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="nosotros">
+            <div class="manifiesto-interior">
+                <div class="titulo-m" data-aos="fade-left" data-aos-duration="800">
+                    <h2 class="tittles">CONÓCENOS <span class="light">UN POCO</span></h2>
+                </div>
+                <div class="separador"></div>
+                <div class="texto-m" data-aos="fade-right" data-aos-duration="800">
+                    <p>En Sólida, creemos en el poder de la comunicación y el mercadeo para transformar 
+                        empresas y marcas. Nos esforzamos por superar las expectativas de nuestros clientes en 
+                        cada proyecto. Valoramos la creatividad, la colaboración y el compromiso con el éxito a 
+                        largo plazo. Estamos dedicados a impulsar las ideas y estrategias de nuestros clientes, 
+                        trabajando incansablemente para lograr resultados excepcionales. Creemos que juntos, 
+                        podemos alcanzar nuevas alturas.
+                        </p>
+                </div>
+            </div>
+            <div class="separador"></div>
+            <!--<div class="center" id="center-b-2">-->
+            <!--    <div class="button" onclick="void(0);">-->
+            <!--        <a href="servicios"><span class="c-b">conoce más</span></a>-->
+            <!--        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">-->
+            <!--            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />-->
+            <!--            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />-->
+            <!--        </svg>-->
+            <!--    <div>-->
+            <!--</div>-->
+            <div class="boton" data-aos="flip-left" data-aos-duration="1000">
+                <a href="front-end/templates/nosotros.html" class="btn btn-3">conoce más</a>
+            </div>
+        </div>
+        <section class="marcas-section" id="posicion">
+            <div class="contact-titulo" data-aos="fade-down" data-aos-duration="800">
+               <h2 class="tittles" id="marcas-tittle">MARCAS QUE SE <span class="light">HAN</span> VUELTO <span class="light">SÓLIDAS</span></h2>
+           </div>
+            <div class="marcas">
+               <div class="marcasinde" data-name="p-1" id="empresa-img1" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <img src="front-end/img/empresas/montecasino.png" alt="Logo diseñado por una agencia de branding de una empresa de cafe." class="empresa-img">
+               </div>
+         
+               <div class="marcasinde" data-name="p-2" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                  <img src="front-end/img/empresas/arulla.png" alt="Logo diseñado por una agencia de branding de una empresa de arroz." class="empresa-img">
+               </div>
+         
+               <div class="marcasinde" data-name="p-3" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                  <img src="front-end/img/empresas/aurum.png" alt="Logo diseñado por una agencia de branding de una empresa de presonalización y diseño de vehiculos." class="empresa-img">
+               </div>
+         
+               <div class="marcasinde" data-name="p-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+                  <img src="front-end/img/empresas/corpoases.png" alt="Logo diseñado por una agencia de branding de una empresa que realiza trabajos sociales para las personas." class="empresa-img">
+               </div>
+         
+               <div class="marcasinde" data-name="p-5" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                  <img src="front-end/img/empresas/huellas.png" alt="Logo diseñado por una agencia de branding de una fundacion que apoya y ayuda a los adultos mayores." class="empresa-img">
+               </div>
+         
+               <div class="marcasinde" data-name="p-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                  <img src="front-end/img/empresas/melodias.png" alt="Logo diseñado por una agencia de branding de un jardín infantil." class="empresa-img">
+               </div>
+         
+               <div class="marcasinde" data-name="p-7" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+                  <img src="front-end/img/empresas/ondas.png" alt="Logo diseñado por una agencia de branding de una empresa de servicios médicos y de salud." class="empresa-img">
+               </div>
+         
+               <div class="marcasinde" data-name="p-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+                  <img src="front-end/img/empresas/spot-servicios.png" alt="Logo diseñado por una agencia de branding de una empresa de servicios spot." class="empresa-img">
+               </div>
+            </div>
+            <div class="products-preview">
+               <div class="preview" data-target="p-1">
+                  <img src="front-end/img/empresas/modal-imgs/MONTECASINO.png" alt="imagen alusiva a los servicios y productos de una empresa de cafe." class="modal_img" id="mc_modal_img">
+                  <div class="modal_texts">
+                     <h2 class="modal_title">MONTECASINO</h2>
+                     <p class="modal_paragraph">Café Montecasino es el fruto del esfuerzo de una familia colombiana. En este proyecto se buscó resaltar cómo ese producto los ha identificado entre generaciones de una manera balanceada, limpia y purificada, como lo es el café. Montecasino, una cura para tu alma y tu corazón.</p>
+                     <button class="modal_close">cerrar</button>
+                  </div>
+               </div>
+            
+               <div class="preview" data-target="p-2">
+                  <img src="front-end/img/empresas/modal-imgs/ARRULLA.png" alt="imagen de los productos y calidad de los servicios de una empresa de arroz." class="modal_img" id="ar_modal_img">
+                  <div class="modal_texts">
+                     <h2 class="modal_title">ARRULLA</h2>
+                     <p class="modal_paragraph">Arrulla nos conecta con nuestros ancestros. La prosperidad y abundancia que se resaltan en este pro- ducto, incluso, la fertilidad del Chocó han sido cualidades del diario vivir en nuestros hogares. Arrulla, producción pura de amor.</p>
+                     <button class="modal_close">cerrar</button>
+                  </div>
+               </div>
+            
+               <div class="preview" data-target="p-3">
+                  <img src="front-end/img/empresas/modal-imgs/AURUM.PNG" alt="Ilustracion de los proyectos de una empresa especializada en la personalizacion y diseño de vehiculos." class="modal_img" id="au_modal_img">
+                  <div class="modal_texts">
+                     <h2 class="modal_title">AURUM</h2>
+                     <p class="modal_paragraph">En Aurum, somos especialistas en transformar vehículos con precisión y estilo. Nuestros servicios de wraps, decoración automotriz, polarizados, personificación de autos y detailing son la elección perfecta para quienes buscan una imagen única y de calidad para sus vehículos. Con un enfoque meticuloso en los detalles, ofrecemos soluciones que resaltan la estética y la personalidad de cada automóvil. Únete a Aurum y experimenta la excelencia en la mejora de vehículos.</p>
+                     <button class="modal_close">cerrar</button>
+                  </div>
+               </div>
+            
+               <div class="preview" data-target="p-4">
+                  <img src="front-end/img/empresas/modal-imgs/CORPOASES.png" alt="imagen alusiva a los cambios den el marketing de una empresa de trabajos sociales." class="modal_img" id="corpo_modal-img">
+                  <div class="modal_texts">
+                     <h2 class="modal_title">CORPOASES</h2>
+                     <p class="modal_paragraph">El rediseño de Corpoases se creó para generar más confianza en el público a través de una buena estética, mejo- rar factores como la recordación de su imagen principal la mariposa y también ser más amigable al aplicar y reproducir la marca en distintos formatos para esta nueva etapa de la corporación.</p>
+                     <button class="modal_close">cerrar</button>
+                     <button class="redireccion"><a href="https://corpoases.com.co/" target="_blank">ir a corpoases</a></button>
+                  </div>
+               </div>
+            
+               <div class="preview" data-target="p-5">
+                  <img src="front-end/img/empresas/modal-imgs/HUELLAS.png" alt="imagen que representa el marketing de una fundacion para los adultos mayores." class="modal_img" id="hu_modal-img">
+                  <div class="modal_texts">
+                     <h2 class="modal_title">HUELLAS DEL AYER</h2>
+                     <p class="modal_paragraph">La marca Fundación Huellas del Ayer es principalmente una fundación para adultos mayores que busca brindar protección, amor, unidad y cuidado a cada uno de sus pacientes. Con el rediseño de la marca se planteó una nueva distribución y diseño del identificador gráfico.</p>
+                     <button class="modal_close">cerrar</button>
+                     <button class="redireccion"><a href="https://fundacionhuellasdelayer.com/" target="_blank">ir a huellas del ayer</a></button>
+                  </div>
+               </div>
+            
+               <div class="preview" data-target="p-6">
+                  <img src="front-end/img/empresas/modal-imgs/MELO.png" alt="ilustracion de los cambios en el marketing, el social media y el posicionamiento del jardin infantil melodias" class="modal_img" id="melo_modal-img">
+                  <div class="modal_texts">
+                     <h2 class="modal_title">MELODIAS</h2>
+                     <p class="modal_paragraph">Somos un equipo interdisciplinario para la Educación Inicial, que vive la pedagogía del amor. Protegemos la felicidad de los niños y las niñas, al potenciar su pensamiento con proyectos inmersivos basados en el asombro y la creatividad, con enfoque multidimensional y de ciudadanía universal.</p>
+                     <button class="modal_close">cerrar</button>
+                     <button class="redireccion"><a href="https://melodias.edu.co/" target="_blank">ir a melodias</a></button>
+                  </div>
+               </div>
+            
+               <div class="preview" data-target="p-7">
+                  <img src="front-end/img/empresas/modal-imgs/ONDAS.png" alt="Representacion de los avances en el marketing de una empresa de servicios medicos y de salud." class="modal_img" id="on_modal_img">
+                  <div class="modal_texts">
+                     <h2 class="modal_title">ONDAS</h2>
+                     <p class="modal_paragraph">Ondas es un centro dedicado a brindar una amplia gama de servicios médicos y terapéuticos para el bienestar completo de sus pacientes. En Ondas podrás, encontrar un equipo de profesionales altamente calificados y especializados en diversas áreas de la salud.</p>
+                     <button class="modal_close">cerrar</button>
+                     <button class="redireccion"><a href="https://medyrehintegral.com/ondas-centro-de-salud-y-bienestar" target="_blank">ir a ondas</a></button>
+                  </div>
+               </div>
+            
+               <div class="preview" data-target="p-8">
+                  <img src="front-end/img/empresas/modal-imgs/SPOT.png" alt="" class="modal_img" id="sp_modal_img">
+                  <div class="modal_texts">
+                     <h2 class="modal_title">SPOT SERVICIOS</h2>
+                     <p class="modal_paragraph">Café Montecasino es el fruto del esfuerzo de una familia colombiana. En este proyecto se buscó resaltar cómo ese producto los ha identificado entre generaciones de una manera balanceada, limpia y purificada, como lo es el café. Montecasino, una cura para tu alma y tu corazón.</p>
+                     <button class="modal_close">cerrar</button>
+                  </div>
+               </div>
+            </div>
+            <script src="front-end/js/modal2.js" defer></script>
+         </section>
+        <div class="caja-patron"></div>
+        <section class="footter">
+            <div class="foot-interior">
+                <div class="fot-info" id="info1">
+                    <div>
+                        <img src="front-end/img/iconos/ipbe.png" alt="" class="logo-solida-fot">
+                    </div>
+                    <div>
+                        <p class="">Somos Sólida, una empresa apasionada por la creatividad y la innovación en el mundo de las comunicaciones, el mercadeo y la producción de impresos.</p>
+                    </div>
+                </div>
+                <div class="fot-info" id="info2">
+                    <div class="fot-titulos-internos">
+                        <h3>MARCAS <span class="light">SÓLIDAS</span></h3>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a href="#posicion">MONTECASINO</a></li>
+                            <li><a href="#posicion">CORPOASES</a></li>
+                            <li><a href="#posicion">FUNDACIÓN HUELLAS DEL AYER</a></li>
+                            <li><a href="#posicion">ARRULLA</a></li>
+                            <li><a href="#posicion">ONDAS</a></li>
+                            <li><a href="#posicion">AURUM</a></li>
+                            <li><a href="#posicion">SPOT SERVICIOS</a></li>
+                            <li><a href="#posicion">CENTRO EDUCATIVO MELODÍAS</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fot-info" id="info3">
+                    <div class="fot-titulos-internos">
+                        <h3>CONTACTO</h3>
+                    </div>
+                    <div>
+                        <ul>
+                            <div class="fot-flex">
+                                <div>
+                                    <img src="front-end/img/iconos/ubi.png" alt="" class="footer-iconos">
+                                </div>
+                                <div>
+                                    <a href="https://maps.app.goo.gl/NkUMMBjKmGbwSTrk6" target="_blank"><p>Cra. 41A #27 A sur 86 - Centro Ejecutivo La Casona Envigado - Oficina 102</p></a>
+                                </div>
+                            </div>
+                            <div class="fot-flex">
+                                <div>
+                                    <img src="front-end/img/iconos/mail.png" alt="" class="footer-iconos">
+                                </div>
+                                <div>
+                                    <p>gestion@solidasas.com</p>
+                                </div>
+                            </div>
+                            <div class="fot-flex">
+                                <div>
+                                    <img src="front-end/img/iconos/wats.png" alt="" class="footer-iconos">
+                                </div>
+                                <div>
+                                    <!--<a href=""><p>+57 324 569 36 94</p></a>-->
+                                    <p>+57 324 569 36 94</p>
+                                </div>
+                            </div>
+                            <div class="fot-flex">
+                                <div>
+                                    <img src="front-end/img/iconos/time.png" alt="" class="footer-iconos">
+                                </div>
+                                <div>
+                                    <p>Lunes a viernes de 8:00 a.m. a 5:00 p.m.</p>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fot-info" id="info4">
+                    <div class="fot-titulos-internos">
+                        <h3>SÍGUENOS</h3>
+                    </div>
+                    <div>
+                        <div class="fot-flex">
+                            <div>
+                                <img src="front-end/img/iconos/in.png" alt="" class="footer-iconos">
+                            </div>
+                            <div>
+                                <a href="https://co.linkedin.com/company/s%C3%B3lida-sas" target="_blank"><p>Linkedin</p></a><br>
+                                <!--<a href="https://www.instagram.com/solida360_?igsh=MWFlZW9iaTJ0N3NuMQ%3D%3D"><p>Instagram</p></a>-->
+                                <!--<a href="https://www.tiktok.com/@solida.360?_t=8mP23a76KLV&_r=1"><p>Tik Tok</p></a>-->
+                            </div>
+                        </div>
+                        <div class="fot-flex">
+                            <div>
+                                <img src="front-end/img/iconos/igblanco.png" alt="" class="footer-iconos">
+                            </div>
+                            <div>
+                                <a href="https://www.instagram.com/solida360_?igsh=MWFlZW9iaTJ0N3NuMQ%3D%3D" target="_blank"><p>Instagram</p></a>
+                            </div>
+                        </div>
+                        <div class="fot-flex">
+                            <div>
+                                <img src="front-end/img/iconos/ttblanco.png" alt="" class="footer-iconos">
+                            </div>
+                            <div>
+                                <a href="https://www.tiktok.com/@solida.360?_t=8mP23a76KLV&_r=1" target="_blank"><p>Tik Tok</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="go-top-container">
+            <div class="go-top-button">
+                <div><img class="i" src="front-end/img/iconos/flecha.png" alt=""></div>
+            </div>
+        </div>
+        <script src="front-end/js/arriba.js">
+            
+        </script>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    	<script>
+        	AOS.init()
+    	</script>
+</body>
+</html>

@@ -1,0 +1,602 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* -----------------------------------------------fuentes------------------------------------------------ */
+@font-face{
+    font-family: graphie-bold;
+    src: url("../fonts/Graphie-Bold.otf");
+}
+@font-face{
+    font-family: graphie-regular;
+    src: url("../fonts/Graphie-Regular.otf");
+}
+@font-face{
+    font-family: graphie-light;
+    src: url("../fonts/Graphie-Light.otf");
+}
+@font-face{
+    font-family: extra-light;
+    src: url("../fonts/Graphie-ExtraLight.otf");
+}
+.tittles{
+    font-family: graphie-bold;
+    word-spacing: 10px;
+    color: #b8c66c;
+}
+.subtittles{
+    font-family: extra-light;
+    letter-spacing: 5px;
+    color: #b8c66c;
+}
+.light{
+    font-family: extra-light;
+    letter-spacing: 5px;
+}
+p{
+    font-family: graphie-regular;
+    font-size: 18px;
+}
+.typed{
+    color: #b8c66c;
+    font-family: extra-light;
+}
+
+.all{
+    position: relative;
+    background-color: #fff;
+}
+
+/* -----------------------------------------------loader------------------------------------------ */
+#loader {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.spinner {
+    border: 16px solid #b8c66c80; /* Light grey */
+    border-top: 16px solid #b8c66c; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* --------------------------------------------estilos primer cajon inicio----------------------------------------------- */
+.container1{
+    background-image: url("../img/Banner\ de\ Linkedin\ para\ Copywriter\ Moderno\ Neutral.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    font-size: xx-large;
+    display: flex;
+}
+.information1{
+    width: fit-content;
+    margin: 140px auto auto 100px;
+}
+
+/* -----------------------------------------estilos del segundo contenedor con el grid de los servicios----------------------------- */
+.container2{
+    margin-top: 50px;
+    display: grid;
+    height: 800px;
+    position: relative;
+    background-color: white;
+}
+.servicios{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+
+.serv div{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+}
+#caja-posi{
+    width: fit-content;
+}
+.serv div h3{
+    font-weight: 800;
+    font-size: x-large;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+.serv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    transition: 0.25s ease-in-out;
+}
+.serv:hover{
+    transition: calc(0.2s);
+    box-shadow: 5px 5px 40px rgba(128, 128, 128, 0.363);
+}
+.tittle{
+    width: fit-content;
+    margin: auto auto 10px auto;
+    height: 50px;
+}
+.separador{
+    border-top: 1px solid #b8c66c; 
+    height: 10px;
+    width: 100px;
+    margin: auto auto 30px auto;
+}
+#caja1, #caja2{
+    border-left: 0px;
+    border-right: 0px;
+}
+.bombillo{
+    width: 70px;
+    margin: auto;
+}
+
+/* -----------------------------estilos de los botones------------------------------------- */
+/*.center {*/
+/*    margin: auto;*/
+/*    position: relative;*/
+/*}*/
+/*#center-b-1{*/
+/*    margin-bottom: 100px;*/
+/*}*/
+/*.button {*/
+/*    span {*/
+/*        position: absolute;*/
+/*        top: 0;*/
+/*        left: 0;*/
+/*        right: 0;*/
+/*        text-align: center;*/
+/*        line-height: 58px;*/
+/*        text-transform: uppercase;*/
+/*        font-size: 18px;*/
+/*        letter-spacing: 1px;*/
+/*        font-weight: 300;*/
+/*    }*/
+/*    #conocenosb{*/
+/*        right: 465px;*/
+/*        width:fit-content;*/
+/*        border:solid black;*/
+/*    }*/
+
+/*    .border{*/
+/*        fill: none;*/
+/*        stroke-width: 2;*/
+/*    }*/
+      
+/*    .bg-line {*/
+/*        fill: #b8c66c;*/
+/*        stroke: #91C9FF;*/
+/*        transition: all .8s ease-in-out;*/
+/*    }*/
+      
+/*    .hl-line {*/
+/*        stroke: #393E41;*/
+/*        stroke-dasharray: 40 480;*/
+/*        stroke-dashoffset: 40;*/
+/*        transition: all .8s ease-in-out;*/
+/*    }*/
+      
+/*    &:hover {*/
+/*        .bg-line {*/
+/*            fill: #b8c66c;*/
+/*        }*/
+/*        .hl-line {*/
+/*            stroke-dashoffset: -480;	*/
+/*        }  */
+/*    }*/
+/*}*/
+/*.c-b{*/
+/*    color: #393E41;*/
+    
+/*}*/
+/*#center-b-2{*/
+/*    width: fit-content;*/
+/*}*/
+
+.boton{
+    display: flex;
+    height: 100vh;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn{
+    position: relative;
+    padding: 20px 50px;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 10px;
+    text-indent: 10px;
+    z-index: 2;
+    color: black;
+}
+.btn-3{
+    transition: all 0.6s ease;
+    color:black;
+}
+
+.btn-3::after{
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 110%;
+    left: -10%;
+    top: 0;
+    transform: skew(20deg, 0deg);
+    background-color: #ffffff;
+    z-index: -1;
+    transition: all 0.4s ease;
+    color:black;
+}
+
+.btn-3::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: skew(20deg, 0deg);
+    border: 3px solid #03cc57;
+    transition: all 0.4s ease;
+    z-index: -1;
+    color:black;
+}
+
+.btn-3:hover::after{
+    background-color: #ffffff31;
+    transform: skew(20deg, 0deg) translateX(240px);
+    color:black;
+}
+
+.btn-3:hover::before{
+    background-color: #03cc57;
+    border: 3px solid #029740;
+    transform: skew(20deg, 0deg) scale(1.1);
+    color:black;
+}
+
+/* ---------------------------------------estilos del contenedor de nosotros-------------------------------------- */
+.nosotros{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(246, 251, 255);
+    position: relative;
+}
+.manifiesto-interior{
+    border: solid transparent;
+    height: 400px;
+}
+.titulo-m{
+    width: fit-content;
+    margin: 100px auto 30px auto;
+    height: fit-content;
+    color: #b8c66c;
+}
+.texto-m{
+    text-align: center;
+    margin: 60px auto auto auto;
+    width: 70%;
+}
+
+#separador2{
+    margin: 0;
+    width: 300px;
+}
+#separador3{
+    margin: 0;
+    width: 300px;
+}
+
+/* ------------------------------------------estilos de las marcas -------------------------------------- */
+.marcas-section{
+    display: flex;
+    flex-direction: column;
+    border: solid transparent;
+    position: relative;
+    background-color: white;
+}
+#marcas-tittle{
+    width: fit-content;
+    margin: 50px auto;
+}
+.marcas{
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    align-content: center;
+    flex-flow: row wrap;
+    width: 80%;
+    margin: auto;
+}
+.marcasinde{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    transition: .5s ease-in-out;
+    cursor: -webkit-zoom-in;
+}
+.marcasinde:hover{
+    box-shadow: 10px 10px 50px #b8c66c;
+    border-bottom: 1px solid #b8c66c;
+    border-top: 1px solid #b8c66c;
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.empresa-img{
+    width: 200px;
+}
+
+/* ------------------------------------------estilos del footter---------------------------------------- */
+.caja-patron{
+    position: relative;
+    background-image: url("../img/iconos/patron-recor.png");
+    background-repeat: repeat-x;
+    background-size: 340px;
+    background-color: white;
+    height: 90px;
+    width: 100%;
+}
+.footter{
+    height: fit-content;
+    position: relative;
+    background-color: white;
+}
+.foot-interior{
+    background-color: #b8c66c;
+    display: flex;
+    justify-content: space-between;
+}
+.fot-info{
+    margin: 25px auto;
+    width: 300px;
+    height: 350px;
+}
+.logo-solida-fot{
+    width: 300px;
+}
+#info1 div p{
+    text-align: center;
+    color: white;
+    font-family: graphie-bold;
+}
+
+#info1 div img{
+    margin-top: 45px;
+}
+.fot-titulos-internos{
+    width: fit-content;
+    margin: 20px 10px;
+}
+.fot-titulos-internos h3{
+    color: white;
+    font-family: graphie-bold;
+}
+#info2 div ul li a{
+    color: white;
+    font-family: graphie-bold;
+}
+#info2 div ul li a:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+#info2 div ul li{
+    width: fit-content;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+.fot-flex{
+    display: flex;
+}
+.fot-flex div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.fot-flex div a p{
+    color: white;
+    font-family: graphie-bold;
+}
+.fot-flex div a p:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+.fot-flex div p{
+    color: white;
+    font-family: graphie-bold;
+}
+.footer-iconos{
+    width: 30px;
+}
+
+/* ------------------------------------------boton ir arriba---------------------------------------------- */
+.go-top-container{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 3.3rem;
+    height: 3.3rem;
+}
+.go-top-button{
+    width: 0rem;
+    height: 0rem;
+    background-color: #b8c66c;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: .3s ease-in-out;
+}
+.go-top-button .i{
+    position: absolute;
+    font-size: 1.7rem;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #fff;
+    transition: .2s;
+    width: 2rem;
+}
+.show{
+    z-index: 10;
+}
+.show .go-top-button{
+    animation: popup .3s;
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 11;
+}
+
+.show .i{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup{
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    50%{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    100%{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+/* --///////////////////////////////////////////--RESPONSIVE SECTION--////////////////////////////////////////////////-- */
+@media screen and (max-width: 1050px){
+    .container2{
+        margin-top: 50px;
+        display: grid;
+        height: fit-content;
+        position: relative;
+        background-color: white;
+    }
+    .servicios{
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 80%;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    .serv{
+        padding: 30px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        transition: 0.25s ease-in-out;
+        width: 80%;
+        margin: auto;
+    }
+    .nosotros{
+        height: fit-content;
+        background-color: rgb(246, 251, 255);
+        position: relative;
+    }
+    .foot-interior{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+    }
+    .fot-info{
+        margin: 25px 0;
+    }
+    .marcas-section{
+        height: 900px;
+    }
+    .video{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px){
+    .container2{
+        margin-top: 50px;
+        display: grid;
+        height: fit-content;
+        position: relative;
+        background-color: white;
+    }
+    .servicios{
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    .serv{
+        padding: 30px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        transition: 0.25s ease-in-out;
+        width: 50%;
+    }
+    .nosotros{
+        height: fit-content;
+        background-color: rgb(246, 251, 255);
+        position: relative;
+    }
+    .foot-interior{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 430px){
+    .servicios{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    .nosotros{
+        height: 850px;
+    }
+    .serv{
+        width: 80%;
+    }
+    .marcas-section{
+        height: 1800px;
+
+    }
+    .marcas{
+        margin-bottom: 30px;
+    }
+    .foot-interior{
+        height: 100%;
+    }
+    .video{
+        width: 100%;
+    }
+}

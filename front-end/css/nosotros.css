@@ -1,0 +1,394 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* --------------------------fuentes---------------------------------------------------- */
+@font-face{
+    font-family: graphie-bold;
+    src: url("../fonts/Graphie-Bold.otf");
+}
+@font-face{
+    font-family: graphie-regular;
+    src: url("../fonts/Graphie-Regular.otf");
+}
+@font-face{
+    font-family: graphie-light;
+    src: url("../fonts/Graphie-Light.otf");
+}
+@font-face{
+    font-family: extra-light;
+    src: url("../fonts/Graphie-ExtraLight.otf");
+}
+.tittles{
+    font-family: graphie-bold;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+}
+.light{
+    font-family: extra-light;
+    letter-spacing: 5px;
+}
+p{
+    font-family: graphie-regular;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* estilos del manifiesto-valores ----------------------------------------------------------------------------*/
+.manifiesto{
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    padding-bottom: 200px;
+}
+.manifiesto-interior{
+    border: solid transparent;
+    height: fit-content;
+}
+.titulo-m{
+    width: fit-content;
+    margin: 100px auto 30px auto;
+    height: fit-content;
+    color: #b8c66c;
+}
+.texto-m{
+    text-align: center;
+    margin: 50px auto 20px auto;
+    width: 70%;
+}
+.valor:hover{
+    box-shadow: 10px 10px 50px #b8c66c;
+    border-bottom: 1px solid #b8c66c;
+    border-top: 1px solid #b8c66c;
+    width: 350px;
+    transform: translateX(center);
+    transition: .5s;
+}
+.valores{
+    display: flex;
+    justify-content: center;
+}
+.valor{
+    display: flex;
+    margin: auto;
+    width: 320px;
+    transition: .5s ease-in-out;
+}
+.rotacion1{
+    position: absolute;
+    transform: rotate(287deg);
+    opacity: .7;
+    bottom: 450px;
+    left: 900px;
+    width: 750px;
+    overflow-y: hidden;
+}
+.rotacion2{
+    position: absolute;
+    transform: rotate(71deg);
+    opacity: .7;
+    bottom: 450px;
+    right: 800px;
+    width: 950px;
+    overflow-y: hidden;
+}
+.separador{
+    border-top: 1px solid #b8c66c; 
+    height: 10px;
+    width: 100px;
+    margin: auto auto 30px auto;
+}
+#separador2{
+    margin-top: 30px;
+    width: 500px;
+}
+.titulo-valores{
+    width: fit-content;
+    margin: 100px auto 80px auto;
+    color: #b8c66c;
+}
+
+/* estilos de la mision y vsion ---------------------------------------------------------------------------------*/
+.mision-vision{
+    height: fit-content;
+    position: relative;
+    background-color: white;
+    display: flex;
+    height: 800px;
+}
+#mision{
+    margin-top: 100px;
+    margin-bottom: 200px;
+    transition: .3s ease-in-out;
+}
+#mision:hover{
+    box-shadow: 30px -30px 0 #b8c66c;
+    transition: .3s;
+    transform: translate(-1%, -1%);
+}
+#vision:hover{
+    box-shadow: -30px -30px 0 #b8c66c;
+    transition: .3s;
+    transform: translate(1%, 1%);
+}
+#vision{
+    margin-top: 200px;
+    margin-bottom: 100px;
+    position: relative;
+}
+.mv{
+    margin: auto;
+    position: relative;
+    background-color: white;
+    width: 550px;
+    height: 400px;
+    transition: 0.5s ease-in-out;
+}
+.titulo-mv{
+    color: #b8c66c;
+    opacity: .8;
+    font-size: 80px;
+    width: fit-content;
+    margin: 50px auto auto auto;
+    position: absolute;
+    transform: rotate(360deg);
+    top: 170px;
+    right: 120px;
+    transition: 0.5s ease-in-out;
+    font-family: graphie-bold;
+}
+#titulo-mv-mision{
+    top: 160px;
+    right: 110px;
+}
+.texto-mv{
+    width: 400px;
+    margin: 20px auto auto 30px;
+    transition: .5s ease-in-out;
+    font-family: graphie-regular;
+}
+#vision-section{
+    height: 900px;
+}
+
+/* ------------------------------------------estilos del footter---------------------------------------- */
+.caja-patron{
+    position: relative;
+    background-image: url("../img/iconos/patron-recor.png");
+    background-repeat: repeat-x;
+    background-size: 340px;
+    background-color: #fff;
+    height: 90px;
+    width: 100%;
+}
+.footter{
+    height: fit-content;
+    position: relative;
+    background-color: white;
+}
+.foot-interior{
+    background-color: #b8c66c;
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}
+.fot-info{
+    margin: 25px auto;
+    width: 300px;
+    height: 350px;
+}
+.logo-solida-fot{
+    width: 300px;
+}
+#info1 div p{
+    text-align: center;
+    color: white;
+    font-family: graphie-bold;
+}
+#info1 div img{
+    margin-top: 45px;
+}
+.fot-titulos-internos{
+    width: fit-content;
+    margin: 20px 10px;
+    /*border-bottom: solid #0D8FAB;*/
+    font-family: graphie-bold;
+}
+.fot-titulos-internos h3{
+    color: white;
+}
+#info2 div ul li a{
+    color: white;
+    font-family: graphie-bold;
+}
+#info2 div ul li a:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+#info2 div ul li{
+    width: fit-content;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+.fot-flex{
+    display: flex;
+}
+.fot-flex div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.fot-flex div a p{
+    color: white;
+    font-family: graphie-bold;
+}
+.fot-flex div a p:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+.fot-flex div p{
+    color: white;
+    font-family: graphie-bold;
+}
+.footer-iconos{
+    width: 30px;
+}
+
+/* boton ir arriba */
+.go-top-container{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 3.3rem;
+    height: 3.3rem;
+}
+.go-top-button{
+    width: 0rem;
+    height: 0rem;
+    background-color: #b8c66c;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: .3s ease-in-out;
+}
+.go-top-button .i{
+    position: absolute;
+    font-size: 1.7rem;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #fff;
+    transition: .2s;
+    width: 2rem;
+}
+.show{
+    z-index: 10;
+}
+.show .go-top-button{
+    animation: popup .3s;
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 11;
+}
+.show .i{
+    transform: translate(-50%, -50%) scale(1);
+}
+@keyframes popup{
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    50%{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    100%{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+/* --///////////////////////////////////////////--RESPONSIVE SECTION--////////////////////////////////////////////////-- */
+
+@media screen and (max-width: 1050px){
+    .valores{
+        display: grid;
+        grid-template-columns: 45% 45%;
+    }
+    .valor{
+        width: 380px;
+    }
+    #vision{
+        box-shadow: -30px -30px 0 #b8c66c;
+        transition: .3s;
+        transform: translate(1%, 1%);
+    }
+    #mision{
+        box-shadow: 30px -30px 0 #b8c66c;
+        transition: .3s;
+        transform: translate(-1%, -1%);
+    }
+    
+}
+
+@media (max-width: 850px){
+    .valores{
+        display: grid;
+        grid-template-columns: 80%;
+    }
+    .foot-interior{
+        flex-direction: column;
+    }
+    .mv{
+        width: 70%;
+        height: 50%;
+    }
+    .texto-mv{
+        width: 80%;
+    }
+    #titulo-mv-mision{
+        top: -5%;
+        right: 5%;
+    }
+    .titulo-mv{
+        font-size: 2.5rem;
+        position: relative;
+        top: 0;
+        right: 5%;
+    }
+    
+    .valor{
+        width: 100%;
+    }
+    .valor:hover{
+        width: 100%;
+    }
+    .valores-inde{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 430px){
+    #separador2{
+        width: 40%;
+    }
+    .titulo-m{
+        width: 70%;
+    }
+    .texto-m{
+        text-align: left;
+    }
+    .mision-img, .vision-img{
+        display: none;
+    }
+}

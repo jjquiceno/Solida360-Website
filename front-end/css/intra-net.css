@@ -1,0 +1,232 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+@font-face{
+    font-family: graphie-bold;
+    src: url("../fonts/Graphie-Bold.otf");
+}
+@font-face{
+    font-family: graphie-regular;
+    src: url("../fonts/Graphie-Regular.otf");
+}
+@font-face{
+    font-family: graphie-light;
+    src: url("../fonts/Graphie-Light.otf");
+}
+@font-face{
+    font-family: extra-light;
+    src: url("../fonts/Graphie-ExtraLight.otf");
+}
+.tittles{
+    font-family: graphie-bold;
+    word-spacing: 10px;
+    color: #b8c66c;
+}
+.subtittles{
+    font-family: extra-light;
+    letter-spacing: 5px;
+    color: #b8c66c;
+}
+.light{
+    font-family: extra-light;
+    letter-spacing: 5px;
+}
+
+.cont_nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.nav{
+    box-shadow: 2px 1px 3px #b8c66c;
+}
+
+/* ----------------------------------------------estilos menulateral------------------------------------------------ */
+.menu-lateral{
+    width: 20%;
+    height: calc(100% - 80px);
+    position: fixed;
+    top: 80px;
+    left: 0;
+    /* box-shadow: 1px 1px 4px #b8c66c; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-grid{
+    /* border: solid black; */
+    width: 95%;
+    height: 95%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 30px;
+}
+.grid-intm{
+    width: 90%;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #0d8eab0a;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.perfil{
+    width: 40px;
+}
+/* ----------------------------------------------estilos caja principal---------------------------------------------- */
+.hero{
+    width: 80%;
+    height: calc(100% - 80px);
+    overflow-y: scroll;
+    position: fixed;
+    top: 80px;
+    right: 0;
+    
+}
+.hero-container{
+    width: 100%;
+    height: 100%;
+}
+.diseñemos{
+    background: linear-gradient(45deg, #b8c66c, #ee5c23);
+    margin: 10px auto;
+    height: 30%;
+    width: 95%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.diseñemos div h1{
+    color: black;
+}
+.archivos{
+    /* border: solid black; */
+    width: 95%;
+    height: 800px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: auto;
+}
+.archivos a{
+    display: flex;
+    align-items: flex-end;
+    border-radius: 15px;
+}
+#a-fondo1{
+    background-image: url("../img/galeria/baru.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.descarga{
+    width: 25px;
+}
+.archivos a div{
+    /* background-color: rgba(128, 128, 128, 0.521); */
+    backdrop-filter: blur(15px);
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 15px;
+}
+.archivos a div button{
+    background-color: transparent;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    margin-right: 10px;
+}
+/* ------------------------------------------estilos del footter---------------------------------------- */
+.caja-patron{
+    position: relative;
+    background-image: url("../img/iconos/patron-recor.png");
+    background-repeat: repeat-x;
+    background-size: 340px;
+    background-color: white;
+    height: 90px;
+    width: 100%;
+}
+.footter{
+    display: none;
+    height: fit-content;
+    position: relative;
+    background-color: white;
+}
+.foot-interior{
+    background-color: #b8c66c;
+    display: flex;
+    justify-content: space-between;
+}
+.fot-info{
+    margin: 25px auto;
+    width: 300px;
+    height: 350px;
+}
+.logo-solida-fot{
+    width: 300px;
+}
+#info1 div p{
+    text-align: center;
+    color: white;
+    font-family: graphie-bold;
+}
+
+#info1 div img{
+    margin-top: 45px;
+}
+.fot-titulos-internos{
+    width: fit-content;
+    margin: 20px 10px;
+}
+.fot-titulos-internos h3{
+    color: white;
+    font-family: graphie-bold;
+}
+#info2 div ul li a{
+    color: white;
+    font-family: graphie-bold;
+}
+#info2 div ul li a:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+#info2 div ul li{
+    width: fit-content;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+.fot-flex{
+    display: flex;
+}
+.fot-flex div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.fot-flex div a p{
+    color: white;
+    font-family: graphie-bold;
+}
+.fot-flex div a p:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+.fot-flex div p{
+    color: white;
+    font-family: graphie-bold;
+}
+.footer-iconos{
+    width: 30px;
+}

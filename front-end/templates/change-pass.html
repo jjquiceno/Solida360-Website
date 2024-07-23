@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Datos</title>
+    <link rel="stylesheet" href="../css/log-in.css">
+    <link rel="icon" href="../img/iconos/logo-solida.png">
+</head>
+<body>
+    <section class="log-in-form">
+        <div class="container-form">
+            <div class="form-texts">
+
+            </div>
+            <div class="form">
+                <form name="form" action="../../back-end/passchange.php" method="post" class="form_form">
+                    <div class="titule">
+                        <h3 class="tittles">CAMBIO DE CONTRASEÑA</h3>
+                    </div>
+                    <div class="info-message" data-validate="el correo es requerido">
+                        <input class="caja_text" type="password" name="oldpass" required>
+                        <label class="label" for="email">CONTRASEÑA ANTERIOR</label>
+                        <span></span>
+                    </div>
+                    <div class="info-message" data-validate="el correo es requerido">
+                        <input class="caja_text" type="password" name="pass1" required>
+                        <label class="label" for="email">NUEVA CONTRASEÑA</label>
+                        <span></span>
+                    </div>
+                    <div class="info-message" data-validate="el correo es requerido">
+                        <input class="caja_text" type="password" name="password" required>
+                        <label class="label" for="password">NUEVA CONTRASEÑA</label>
+                        <span></span>
+                    </div>
+                    <div class="e-b">
+                        <input for="form" type="submit" value="enviar" name="log" class="enviar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

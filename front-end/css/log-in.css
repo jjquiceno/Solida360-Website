@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+@font-face{
+    font-family: graphie-bold;
+    src: url("../fonts/Graphie-Bold.otf");
+}
+@font-face{
+    font-family: graphie-regular;
+    src: url("../fonts/Graphie-Regular.otf");
+}
+@font-face{
+    font-family: graphie-light;
+    src: url("../fonts/Graphie-Light.otf");
+}
+@font-face{
+    font-family: extra-light;
+    src: url("../fonts/Graphie-ExtraLight.otf");
+}
+.tittles{
+    font-family: graphie-bold;
+    word-spacing: 10px;
+    color: #b8c66c;
+}
+.subtittles{
+    font-family: extra-light;
+    letter-spacing: 5px;
+    color: #b8c66c;
+}
+.light{
+    font-family: extra-light;
+    letter-spacing: 5px;
+}
+p{
+    font-family: graphie-regular;
+    font-size: 18px;
+}
+.typed{
+    color: #b8c66c;
+    font-family: extra-light;
+}
+
+.all{
+    position: relative;
+    background-color: #fff;
+}
+
+/* -----------------------------------------------------hero section-------------------------------------------------- */
+#hero{
+    background-image: url("../img/MIMAKI.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    will-change: scroll-position;
+    width: 100%;
+    height: 100vh;
+}
+.texts{
+    width: 100%;
+    height: 100%;
+    background-color: #b8c66c88;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.texts div h1{
+    color: black;
+    font-size: 80px;
+}
+
+/* ---------------------------------------------------------log-in form------------------------------------------------------ */
+.log-in-form{
+    border: solid black;
+    height: 100vh;
+    width: 100%;
+
+}
+
+
+/* ----------------------------------------estios del contenedor padre------------------------------------ */
+
+.titule{
+    width: fit-content;
+    margin: auto;
+}
+.form{
+    width: fit-content;
+    margin: 100px auto;
+}
+.form_form{
+    display: grid;
+    gap: 10px;
+}
+.info-message{
+    margin: 10px;
+    position: relative;
+}
+.caja_text{
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+    border: 1px solid #b8c66c;
+    padding: 0 15px;
+    background-color: transparent;
+    font-family: graphie-light;
+    font-size: 1rem;
+    color: black;
+    outline: none;
+}
+.label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: black;
+    letter-spacing: 5px;
+    font-family: extra-light;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: .3s ease-in-out;
+}
+.caja_text:focus ~ .label{
+    top: -10px;
+    left: 20px;
+    font-size: 0.7rem;
+    padding: 0 2px;
+    border-radius: 5px;
+}
+input:valid ~ .label,
+textarea:valid ~ .label{
+    top: -10px;
+    left: 15px;
+    font-size: 0.7rem;
+    padding: 0 2px;
+}
+.enviar{
+    margin: auto;
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    border: 1px solid #b8c66c;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: extra-light;
+    color: black;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    transition: .3s ease-in-out;
+}
+.enviar:hover{
+    transform: scale(1.1);
+}
+.e-b{
+    width: fit-content;
+    margin: auto;
+}
+
+/* ------------------------------------------estilos del footter---------------------------------------- */
+.caja-patron{
+    position: relative;
+    background-image: url("../img/iconos/patron-recor.png");
+    background-repeat: repeat-x;
+    background-size: 340px;
+    background-color: white;
+    height: 90px;
+    width: 100%;
+}
+.footter{
+    height: fit-content;
+    position: relative;
+    background-color: white;
+}
+.foot-interior{
+    background-color: #b8c66c;
+    display: flex;
+    justify-content: space-between;
+}
+.fot-info{
+    margin: 25px auto;
+    width: 300px;
+    height: 350px;
+}
+.logo-solida-fot{
+    width: 300px;
+}
+#info1 div p{
+    text-align: center;
+    color: white;
+    font-family: graphie-bold;
+}
+
+#info1 div img{
+    margin-top: 45px;
+}
+.fot-titulos-internos{
+    width: fit-content;
+    margin: 20px 10px;
+}
+.fot-titulos-internos h3{
+    color: white;
+    font-family: graphie-bold;
+}
+#info2 div ul li a{
+    color: white;
+    font-family: graphie-bold;
+}
+#info2 div ul li a:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+#info2 div ul li{
+    width: fit-content;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+.fot-flex{
+    display: flex;
+}
+.fot-flex div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.fot-flex div a p{
+    color: white;
+    font-family: graphie-bold;
+}
+.fot-flex div a p:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+.fot-flex div p{
+    color: white;
+    font-family: graphie-bold;
+}
+.footer-iconos{
+    width: 30px;
+}
+
+.label{
+    color: black;
+}

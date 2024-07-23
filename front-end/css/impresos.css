@@ -1,0 +1,633 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* -----------------------------------------------fuentes------------------------------------------------ */
+@font-face{
+    font-family: graphie-bold;
+    src: url("../fonts/Graphie-Bold.otf");
+}
+@font-face{
+    font-family: graphie-regular;
+    src: url("../fonts/Graphie-Regular.otf");
+}
+@font-face{
+    font-family: graphie-light;
+    src: url("../fonts/Graphie-Light.otf");
+}
+@font-face{
+    font-family: extra-light;
+    src: url("../fonts/Graphie-ExtraLight.otf");
+}
+.tittles{
+    font-family: graphie-bold;
+    word-spacing: 10px;
+    color: #b8c66c;
+}
+.subtittles{
+    font-family: extra-light;
+    letter-spacing: 5px;
+    color: #b8c66c;
+}
+.light{
+    font-family: extra-light;
+    letter-spacing: 5px;
+}
+p{
+    font-family: graphie-regular;
+    font-size: 18px;
+}
+li{
+    font-family: graphie-regular;
+    font-size: 18px;
+}
+.typed{
+    color: #b8c66c;
+    font-family: extra-light;
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+.slogan{
+    display: flex;
+    justify-content: space-between;
+    height: 700px;
+    background-image: url('../img/MIMAKI.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #b8c66c;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+}
+.typed{
+    color: #b8c66c;
+    font-family: extra-light;
+}
+.titulo{
+    color: white;
+    font-size: 90px;
+    font-family: graphie-bold;
+}
+.contenedor{
+    box-sizing:border-box;
+    left:40%;
+    padding: 10vmin;
+    position: fixed;
+    top:50%;
+    transform:translate(-50%, -50%);
+    width: 1100px;
+}
+
+
+@media screen and (max-width: 600px){
+    .titulo{
+        font-size: 50px;
+    }
+    .contenedor{
+        width: 400px;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .titulo{
+        font-size: 65px;
+    }
+    .contenedor{
+        width: 800px;
+        margin-left: auto;
+    }
+}
+
+/* -----------------------------------------piezas graficas----------------------------- */
+.piezas-graficas{
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    
+}
+.pg-int{
+    width: 80%;
+}
+.titulo-imp{
+    position: absolute;
+    left: 10px;
+    top: -100px;
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+.imprsion-i-t{
+    width: 600px;
+}
+
+/* --------------------------seccion tipos de formatos (pequeño formato)------------------ */
+.tip-imp{
+    position: relative;
+    background-color: #fff;
+    padding-bottom: 10px;
+}
+
+.pf-text{
+    margin: auto;
+    text-align: center;
+    width: fit-content;
+    font-size: 3rem;
+    letter-spacing: 10px;
+    word-spacing: 25px;
+    font-family: extra-light;
+    color: #fff;
+}
+.pf-contenedor{
+    display: flex;
+    justify-content: center;
+    background-image: url('../img/pf-imp6.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-color: #b8c66c;
+    height: 50vh;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.gallery{
+    margin-top: 15px;
+    height: fit-content;
+    gap: 10px;
+}
+.gallery-int1{
+    margin-bottom: 10px;
+}
+.gallery-int1,
+.gallery-int2{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.g-int1-1,
+.g-int1-2{
+    display: flex;
+    gap: 10px;
+}
+.g-int2-1,
+.g-int2-2{
+    display: flex;
+    gap: 10px;
+}
+.gg-img{
+    height: 270px;
+    width: auto;
+    object-fit: cover;
+    transition: .3s ease-in-out;
+}
+.gg-img:hover{
+    border-radius: 20px;
+    box-shadow: 5px 5px 40px rgba(128, 128, 128, 0.363);
+    transition: .3s;
+}
+
+.gg-img2{
+    height: 229px;
+    width: auto;
+    object-fit: cover;
+    transition: .3s ease-in-out;
+}
+.gg-img2:hover{
+    border-radius: 20px;
+    box-shadow: 5px 5px 40px rgba(128, 128, 128, 0.363);
+    transition: .3s;
+}
+.galler2-flex{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.galler3-flex{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+#gallery-grid{
+    display: grid;
+    width: fit-content;
+    gap: 10px;
+}
+.gallery-int-flex3{
+    display: grid;
+    gap: 10px;
+}
+.g-int-flex{
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    gap: 10px;
+}
+#gg-img2-1{
+    width: 590px;
+}
+#gg-img3-3{
+    width: 500px;
+}
+.gimg-f{
+    height: auto;
+    width: 300px;
+    object-fit: cover;
+}
+#gimg-alone{
+    width: 610px;
+    height: auto;
+    object-fit: cover;
+}
+#gimg-alone3{
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+.gggg{
+    transition: .3s ease-in-out;
+}
+.gggg:hover{
+    border-radius: 20px;
+    box-shadow: 5px 5px 40px rgba(128, 128, 128, 0.363);
+    transition: .3s;
+}
+
+/* ------------------------------tipos de formato (gran formato)------------------------- */
+.gran-formato{
+    padding-bottom: 20px;
+    height: fit-content;
+    position: relative;
+    background-color: #fff;
+}
+.pf-contenedor3{
+    display: flex;
+    justify-content: center;
+    background-image: url('../img/carro.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-color: #b8c66c;
+    height: 50vh;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.galler3-flex{
+    display: flex;
+    justify-content: center;
+}
+.gimg2-f{
+    height: 218px;
+    width: auto;
+    object-fit: cover;
+}
+.gimg3-f{
+    height: 290px;
+    width: auto;
+    object-fit: cover;
+}
+#gimg-alone2{
+    width: auto;
+    height: 360px;
+    object-fit: cover;
+}
+.gimg-alone3{
+    width: 307px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* --------------------------------------------estilos del cajon etc-------------------- */
+.etc-container{
+    padding-top: 20px;
+    height: fit-content;
+    position: relative;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tittle-etc{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: fit-content;
+    font-family: graphie-bold;
+    font-size: 3rem;
+    color: #b8c66c;
+
+}
+.etc-texts{
+    height: 100vh;
+    display: flex;
+    gap: 50PX;
+    margin-top: 20px;
+}
+.etc-info{
+    width: 340px;
+    height: 75vh;
+    transition: .3s ease-in-out;
+}
+.etc-info:hover{
+    box-shadow: 10px 10px 50px #b8c66c;
+    transition: .3s;
+}
+.etc-info:hover .separador2{
+    transform: translateY(-10px);
+    transition: .3s;
+    width: 100%;
+    border-top: 1px solid #b8c66c;
+}
+.etc-info:hover .separador{
+    transform: translateY(0);
+    transition: .3s;
+    width: 100%;
+    border-top: 1px solid #b8c66c;
+}
+.etc-info-tt{
+    margin-top: 10px;
+    text-align: center;
+}
+.etc-info-int-container{
+    height: 94%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tt-etc{
+    font-family: extra-light;
+    color: #b8c66c;
+    letter-spacing: 5px;
+}
+.separador{
+    border-top: 1px solid black;
+    width: 30%;
+    margin: auto;
+    transform: translateY(-10px);
+    transition: .3s ease-in-out;
+}
+.separador2{
+    border-top: 1px solid black;
+    width: 30%;
+    margin: auto;
+    transition: .3s ease-in-out;
+}
+.etc-info-int ul li{
+    list-style: circle;
+}
+
+/* ------------------------------------------estilos del footter---------------------------------------- */
+.caja-patron{
+    position: relative;
+    background-image: url("../img/iconos/patron-recor.png");
+    background-repeat: repeat-x;
+    background-size: 340px;
+    background-color: #f5f5f5;
+    height: 90px;
+    width: 100%;
+}
+.footter{
+
+    height: fit-content;
+    position: relative;
+    background-color: white;
+}
+.foot-interior{
+    background-color: #b8c66c;
+    display: flex;
+    justify-content: space-between;
+}
+.fot-info{
+    margin: 25px auto;
+    width: 300px;
+    height: 350px;
+}
+.logo-solida-fot{
+    width: 300px;
+}
+#info1 div p{
+    text-align: center;
+    color: white;
+    font-family: graphie-bold;
+}
+
+#info1 div img{
+    margin-top: 45px;
+}
+.fot-titulos-internos{
+    width: fit-content;
+    margin: 20px 10px;
+    /*border-bottom: solid #0D8FAB;*/
+}
+.fot-titulos-internos h3{
+    color: white;
+    font-family:graphie-regular;
+}
+#info2 div ul li a{
+    color: white;
+    font-family: graphie-bold;
+}
+#info2 div ul li a:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+#info2 div ul li{
+    width: fit-content;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+.fot-flex{
+    display: flex;
+}
+.fot-flex div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.fot-flex div a p{
+    color: white;
+    font-family: graphie-bold;
+}
+.fot-flex div a p:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+.fot-flex div p{
+    color: white;
+    font-family: graphie-bold;
+}
+.footer-iconos{
+    width: 30px;
+}
+
+/* ------------------------------------------boton ir arriba---------------------------------------------- */
+.go-top-container{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 3.3rem;
+    height: 3.3rem;
+}
+.go-top-button{
+    width: 0rem;
+    height: 0rem;
+    background-color: #b8c66c;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: .3s ease-in-out;
+}
+.go-top-button .i{
+    position: absolute;
+    font-size: 1.7rem;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #fff;
+    transition: .2s;
+    width: 2rem;
+}
+.show{
+    z-index: 10;
+}
+.show .go-top-button{
+    animation: popup .3s;
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 11;
+}
+.show .i{
+    transform: translate(-50%, -50%) scale(1);
+}
+@keyframes popup{
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    50%{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    100%{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+/* --///////////////////////////////////////////--RESPONSIVE SECTION--////////////////////////////////////////////////-- */
+
+@media screen and (max-width: 1050px){
+    .gggg{
+        border-radius: 20px;
+    }
+    .none{
+        display: none;
+    }
+    .gallery-int-flex{
+        width: 100%;
+    }
+    .gallery-int-flex3{
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .titulo{
+        font-size: 4rem;
+    }
+    .contenedor{
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        width: 100%;
+    }
+    .titulo-imp{
+        top: -5%;
+        left: 10%;
+        width: 80%;
+    }
+    .imprsion-i-t{
+        width: 100%;
+    }
+    .gallery{
+        width: 100%;
+    }
+    
+    .gg-img{
+        height: 130px;
+        width: auto;
+    }
+    .gg-img2{
+        height: 140px;
+        width: auto;
+    }
+    #gg-img2-1{
+        width: 100%;
+    }
+    .gimg2-f{
+        width: 45%;
+    }
+    .gimg3-f{
+        width: 40%;
+    }
+    .gimg-alone3{
+        width: 48%;
+    }
+    .gimg-f{
+        height: auto;
+        width: 45%;
+    }
+    #gg-img3-3{
+        width: 80%;
+    }
+    #gimg-alone{
+        width: 100%;
+        height: 100%;
+    }
+    #gimg-alone2{
+        width: 100%;
+    }
+    #gimg-alone3{
+        width: 44%;
+        height: auto;
+    }
+    .etc-texts{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .foot-interior{
+        flex-direction: column;
+    }
+    .g-int-flex{
+        margin: auto;
+    }
+}
+@media screen and (max-width: 430px){
+    .titulo{
+        font-size: 2rem;
+    }
+    .gg-img{
+        height: 65px;
+        width: auto;
+    }
+    .gg-img2{
+        height: 75px;
+        width: auto;
+    }
+    .piezas-graficas{
+        border:solid black;
+        height:100vh;
+    }
+}
