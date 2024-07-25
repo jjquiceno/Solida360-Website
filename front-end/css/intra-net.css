@@ -9,6 +9,12 @@ html{
 body{
     overflow-x: hidden;
 }
+:root{
+    --negro: #393E41;
+    --verde: #b8c66c;
+    --naranja: #EE5D23;
+    --azul: #0D8FAB;
+}
 @font-face{
     font-family: graphie-bold;
     src: url("../fonts/Graphie-Bold.otf");
@@ -47,6 +53,8 @@ body{
 }
 .nav{
     box-shadow: 2px 1px 3px #b8c66c;
+    background-color: var(--negro);
+
 }
 
 /* ----------------------------------------------estilos menulateral------------------------------------------------ */
@@ -60,6 +68,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--negro);
+    transition: .5s;
+}
+.menu-lateral:hover{
+    box-shadow: 2px 1px 3px #b8c66c;
+    transition: .5s;
 }
 .menu-grid{
     /* border: solid black; */

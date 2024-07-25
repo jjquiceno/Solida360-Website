@@ -54,3 +54,6 @@ section{
     background-color: #b8c66c;
     transition: 0s;
 }
+.background > :nth-child(18){
+    background-color: #b8c66c;
+}
