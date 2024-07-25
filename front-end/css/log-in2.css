@@ -3,10 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face{
+  font-family: graphie-bold;
+  src: url("../fonts/Graphie-Bold.otf");
+}
+@font-face{
+  font-family: graphie-regular;
+  src: url("../fonts/Graphie-Regular.otf");
+}
+@font-face{
+  font-family: graphie-light;
+  src: url("../fonts/Graphie-Light.otf");
+}
+@font-face{
+  font-family: extra-light;
+  src: url("../fonts/Graphie-ExtraLight.otf");
+}
 section{
     width: 100vw;
     height: 100vh;
-
 }
 .background{
     height: 100%;
@@ -54,6 +69,108 @@ section{
     background-color: #b8c66c;
     transition: 0s;
 }
-.background > :nth-child(18){
-    background-color: #b8c66c;
+.form-padre{
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 35vw;
+  height: 80vh;
+  background-color: #1a1b1b;
+  border-radius: 30px;
+  box-shadow: 0px 10px 30px black;
+}
+.form{
+  width: fit-content;
+  margin: 100px auto;
+}
+.form_form{
+  display: grid;
+  gap: 10px;
+}
+.info-message{
+  margin: 10px;
+  position: relative;
+}
+.caja_text{
+  width: 300px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  padding: 0 15px;
+  background-color: transparent;
+  font-family: graphie-light;
+  font-size: 1rem;
+  color: black;
+  outline: none;
+  background-color: #b8c66c52;
+}
+.label{
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: black;
+  letter-spacing: 5px;
+  font-family: extra-light;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: .3s ease-in-out;
+}
+.caja_text:focus ~ .label{
+  top: -10px;
+  left: 20px;
+  font-size: 0.7rem;
+  padding: 0 2px;
+  border-radius: 5px;
+  color: white;
+}
+input:valid ~ .label,
+textarea:valid ~ .label{
+  top: -10px;
+  left: 15px;
+  font-size: 0.7rem;
+  padding: 0 2px;
+}
+.enviar{
+  margin: auto;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #b8c66c;
+  cursor: pointer;
+  font-family: extra-light;
+  color: black;
+  word-spacing: 10px;
+  letter-spacing: 5px;
+  transition: .3s ease-in-out;
+}
+.enviar:hover{
+  transform: scale(1.1);
+}
+.enlaces{
+  display: flex;
+  flex-direction: column;
+
+}
+.enlaces a{
+  color: black;
+  font-family: graphie-regular;
+  text-decoration: none;
+}
+.separador{
+  border-bottom: 1px solid #b8c66c;
+  margin: 4px 0;
+  width: 50%;
+}
+.e-b{
+  width: fit-content;
+  margin: auto;
+}
+.tittles{
+  font-family: graphie-bold;
+  text-align: center;
+  font-size: 2rem;
 }
