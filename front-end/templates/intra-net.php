@@ -1,3 +1,6 @@
+<?php 
+    include("conexion.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,7 +74,9 @@
         <div class="hero-container">
             <div class="diseñemos">
                 <div>
-                    
+                    <?php 
+                        echo 
+                    ?>
                     <h1 class="tittles">DISEÑEMOS JUNTOS</h1>
                 </div>
             </div>
