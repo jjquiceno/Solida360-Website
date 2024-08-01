@@ -1,6 +1,3 @@
-<?php 
-    include("conexion.php");
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,7 +72,10 @@
             <div class="diseñemos">
                 <div>
                     <?php 
-                        echo 
+                        include("../../back-end/conexion.php");
+                        $consulta ="SELECT * FROM users where pass='$password'";
+                        
+                        
                     ?>
                     <h1 class="tittles">DISEÑEMOS JUNTOS</h1>
                 </div>

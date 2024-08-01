@@ -1,3 +1,4 @@
+<?php include("../../back-end/log-in.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +23,7 @@
                         <div class="titule">
                             <h3 class="tittles">INICIA SESION</h3>
                         </div>
-                        <input type="hidden" name="csrf_token" value="<>">
+                        <input type="hidden" name="csrf_token" value="<?php echo $token?>">
                         <div class="info-message" data-validate="el correo es requerido">
                             <input class="caja_text" type="email" name="email" required>
                             <label class="label" for="email">CORREO</label>
@@ -34,7 +35,7 @@
                             <span></span>
                         </div>
                         <div class="enlaces">
-                            <a href="../recuperacion de contraseña/email.html">Olvide mi contraseña</a>
+                            <a href="change-pass.html">Olvide mi contraseña</a>
                             <span class="separador"></span>
                             <a href="../../index.html">Volver al inicio</a>
                         </div>
