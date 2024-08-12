@@ -1,26 +1,26 @@
 <?php 
     include("../conexion.php");
-    include("code.php");
+    // include("code.php");
 
+    $documento = $_POST['documento'];
     $password = $_POST["password"];
     $pass1 = $_POST["pass1"];
     $minlenght = 8;
     $hasMayusculas = preg_match('/[A-Z]/', $password);
     $hasNumber = preg_match('/[0-9]/', $password);
     
-    $consulta = "SELECT * FROM users where email='$email'";
+    $consulta = "SELECT * FROM users where documento='$documento'";
     $resultado = mysqli_query($conexion, $consulta);
     $filas = mysqli_fetch_array($resultado);
 
-    if($filas['pass'] == $password){
-        if($password != $pass1){
-            echo
-                "la contraseña no coincide en ambos campos"
-                // <script>
-                //     alert("la contraseña no coincide en ambos campos");
-                //     window.location.href="../../front-end/recuperacion/reinc-pass.php"
-                // </script>
-            ;
+    if($pass1 == $password){
+        if($filas['pass'] == $password){
+            echo'
+                <script>
+                    alert("la contraseña no puede ser la misma actual");
+                    window.location.href="../../front-end/recuperacion/reinc-pass.php"
+                </script>
+            ';
             exit;
         }else{
             if(strlen($password) < $minlenght){
@@ -50,7 +50,7 @@
                         ';
                         exit;
                     }else{
-                        $sql = "UPDATE `users` SET `pass`='$password' WHERE email='$email'";
+                        $sql = "UPDATE `users` SET `pass`='$password' WHERE documento='$documento'";
                         $query = mysqli_query($conexion, $sql);
                         if($query){
                             echo'
@@ -64,7 +64,7 @@
                             echo'
                                 <script>
                                     alert("ha ocurrido un error");
-                                    window.location.href="../../front-end/recuperacion/reinc-pass.php"
+                                    window.location.href="../../front-end/recuperacion/reinc-pass.html"
                                 </script>
                             ';
                             exit;
@@ -73,4 +73,12 @@
                 }
             }
         }
+    }else{
+        echo'
+            <script>
+                alert("la contraseña no coincide en ambos campos");}
+                window.location.href="../../front-end/recuperacion/reinc-pass.html"
+            </script>
+        ';
+        exit;
     }

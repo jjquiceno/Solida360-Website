@@ -18,7 +18,7 @@ if($filas['pass'] == $oldpass){
         echo'
             <script>
                 alert("la contraseña no coincide en ambos campos, por favor verificala y vuelve a ingresarla");
-                window.location.href = "../front-end/templates/change-pass.html"
+                window.location.href = "../front-end/t e m p l a t e s/change-pass.html"
             </script>
         ';
         exit;
@@ -27,7 +27,7 @@ if($filas['pass'] == $oldpass){
             echo'
                 <script>
                     alert("la contraseña debe tener como minimo 8 caracteres");
-                    window.location.href="../front-end/templates/change-pass.html"
+                    window.location.href="../front-end/t e m p l a t e s/change-pass.html"
                 </script>
             ';
             exit;
@@ -36,7 +36,7 @@ if($filas['pass'] == $oldpass){
                 echo'
                     <script>
                         alert("la contraseña debe tener al menos una letra mayuscula");
-                        window.location.href="../front-end/templates/change-pass.html"
+                        window.location.href="../front-end/t e m p l a t e s/change-pass.html"
                     </script>
                 ';
                 exit;
@@ -45,7 +45,7 @@ if($filas['pass'] == $oldpass){
                     echo'
                         <script>
                             alert("la contraseña debe tener al menos un numero");
-                            window.location.href="../front-end/templates/change-pass.html"
+                            window.location.href="../front-end/t e m p l a t e s/change-pass.html"
                         </script>
                     ';
                     exit; 
@@ -56,7 +56,7 @@ if($filas['pass'] == $oldpass){
                         echo'
                             <script>
                                 alert("se ha cambiado la contraseña");
-                                window.location.href = "../front-end/templates/config.html"
+                                window.location.href = "../front-end/t e m p l a t e s/config.html"
                             </script>
                         ';
                         exit;
@@ -64,7 +64,7 @@ if($filas['pass'] == $oldpass){
                         echo '
                             <script>
                                 alert("ha ocurrido un error");
-                                window.location.href = "../front-end/templates/change-pass.html"
+                                window.location.href = "../front-end/t e m p l a t e s/change-pass.html"
                             </script>
                         ';
                     }
@@ -77,7 +77,7 @@ if($filas['pass'] == $oldpass){
     echo '
     <script>
         alert("la contraseña anterior no coincide");
-        window.location.href="../front-end/templates/change-pass.html"
+        window.location.href="../front-end/t e m p l a t e s/change-pass.html"
     </script>';
     exit;
 }
@@ -85,7 +85,7 @@ if($pass1 != $password){
     echo'
         <script>
             alert("la contraseña no coincide en ambos campos, por favor verificala y vuelve a ingresarla");
-            window.location.href = "../front-end/templates/change-pass.html"
+            window.location.href = "../front-end/t e m p l a t e s/change-pass.html"
         </script>
     ';
     exit;
@@ -94,7 +94,7 @@ if($pass1 != $password){
         echo'
             <script>
                 alert("la contraseña debe tener como minimo 8 caracteres");
-                window.location.href="../front-end/templates/change-pass.html"
+                window.location.href="../front-end/t e m p l a t e s/change-pass.html"
             </script>
         ';
         exit;
@@ -103,7 +103,7 @@ if($pass1 != $password){
             echo'
                 <script>
                     alert("la contraseña debe tener al menos una letra mayuscula");
-                    window.location.href="../front-end/templates/change-pass.html"
+                    window.location.href="../front-end/t e m p l a t e s/change-pass.html"
                 </script>
             ';
             exit;
@@ -112,7 +112,7 @@ if($pass1 != $password){
                 echo'
                     <script>
                         alert("la contraseña debe tener al menos un numero");
-                        window.location.href="../front-end/templates/change-pass.html"
+                        window.location.href="../front-end/t e m p l a t e s/change-pass.html"
                     </script>
                 ';
                 exit; 
@@ -123,7 +123,7 @@ if($pass1 != $password){
                     echo'
                         <script>
                             alert("se ha cambiado la contraseña");
-                            window.location.href = "../front-end/templates/config.html"
+                            window.location.href = "../front-end/t e m p l a t e s/config.html"
                         </script>
                     ';
                     exit;
@@ -131,7 +131,7 @@ if($pass1 != $password){
                     echo '
                         <script>
                             alert("ha ocurrido un error");
-                            window.location.href = "../front-end/templates/change-pass.html"
+                            window.location.href = "../front-end/t e m p l a t e s/change-pass.html"
                         </script>
                     ';
                 }

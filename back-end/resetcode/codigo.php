@@ -8,10 +8,10 @@
     $query = mysqli_query($conexion, $consulta);
     $filas = mysqli_fetch_array($query);
 
-    if($filas['reset_code'] = $resetCode){
+    if($filas['reset_code'] == $resetCode){
         echo'
             <script>
-                window.location.href="../../front-end/recuperacion/rein-pass.html"
+                window.location.href="../../front-end/recuperacion/reinc-pass.html"
             </script>
         ';
         exit;
@@ -19,7 +19,7 @@
         echo'
             <script>
                 alert("el codigo de verificacion es incorrecto");
-                window.location.href="../../front-end/recuperacion/rein-pass.html"
+                window.location.href="../../front-end/recuperacion/codigo.html"
             </script>
         ';
         exit;

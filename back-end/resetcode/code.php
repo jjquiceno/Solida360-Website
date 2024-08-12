@@ -29,8 +29,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $Mail = mail($destinatario, $asunto, $contenido, $headers);
 
         if ($Mail) {
-            echo "<script>alert('El correo se envio correctamente :)')</script>";
-            
+            echo '
+                <script>
+                    alert("El correo se envio correctamente :)")
+                    window.location.href="../../front-end/recuperacion/codigo.html"
+                </script>
+            ';
+            exit;
         } else {
             echo "<script>alert('El correo no se pudo enviar, intente nuevamente :(')</script>";
         }

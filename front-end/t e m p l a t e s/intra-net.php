@@ -1,3 +1,7 @@
+<?php 
+    include("../../back-end/conexion.php");
+    include("../../back-end/log-in.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +51,9 @@
             <div class="grid-intm">
                 <img src="../img/iconos/perfil.png" alt="" class="perfil">
                 <div>
-                    h
+                    <?php 
+                        echo 
+                    ?>
                 </div>
             </div>
             <div class="grid-intm">
@@ -71,12 +77,7 @@
         <div class="hero-container">
             <div class="diseñemos">
                 <div>
-                    <?php 
-                        include("../../back-end/conexion.php");
-                        $consulta ="SELECT * FROM users where pass='$password'";
-                        
-                        
-                    ?>
+                    
                     <h1 class="tittles">DISEÑEMOS JUNTOS</h1>
                 </div>
             </div>

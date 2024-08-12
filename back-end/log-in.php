@@ -17,7 +17,7 @@
         echo '
             <script>
                 alert("por seguridad de tu cuenta cambia tu controseña desde los ajustes");
-                window.location.href="../front-end/templates/intra-net.html"
+                window.location.href="../front-end/t e m p l a t e s/intra-net.html"
             </script>
         ';
     }else{
@@ -25,7 +25,7 @@
             echo '
             <script>
                 alert("Aún hay campos sin completar");
-                window.location.href = "../front-end/templates/log-in.html"
+                window.location.href = "../front-end/t e m p l a t e s/log-in.html"
             </script>
             ';
         exit;
@@ -33,14 +33,14 @@
             if($filas){
                 echo '
                     <script>
-                        window.location.href="../front-end/templates/intra-net.html"
+                        window.location.href="../front-end/t e m p l a t e s/intra-net.html"
                     </script>
                 ';
-            }else{
+            }else{ 
                 echo '
                     <script>
                         alert("usuario y/o contraseña incorrectos o no registrados");
-                        window.location="../front-end/templates/log-in.html"
+                        window.location="../front-end/t e m p l a t e s/log-in.html"
                     </script>
                 ';
             }
