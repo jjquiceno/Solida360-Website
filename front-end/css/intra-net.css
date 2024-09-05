@@ -162,6 +162,11 @@ body{
     border: none;
     margin-right: 10px;
 }
+.text{
+    border: solid black;
+    height: fit-content;
+    width: 95%;
+}
 /* ------------------------------------------estilos del footter---------------------------------------- */
 .caja-patron{
     position: relative;

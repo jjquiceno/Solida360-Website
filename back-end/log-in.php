@@ -14,10 +14,11 @@
     $filas = mysqli_fetch_array($resultado);
 
     if(strlen($password) == $passlenght){
+        $_SESSION['email'] = $email;
         echo '
             <script>
                 alert("por seguridad de tu cuenta cambia tu controseña desde los ajustes");
-                window.location.href="../front-end/t e m p l a t e s/intra-net.html"
+                window.location.href="../front-end/t e m p l a t e s/intra-net.php"
             </script>
         ';
     }else{
@@ -28,12 +29,13 @@
                 window.location.href = "../front-end/t e m p l a t e s/log-in.html"
             </script>
             ';
-        exit;
+            exit;
         }else{
             if($filas){
+                $_SESSION['email'] = $email;
                 echo '
                     <script>
-                        window.location.href="../front-end/t e m p l a t e s/intra-net.html"
+                        window.location.href="../front-end/t e m p l a t e s/intra-net.php"
                     </script>
                 ';
             }else{ 

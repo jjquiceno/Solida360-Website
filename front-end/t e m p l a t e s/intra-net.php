@@ -1,6 +1,18 @@
 <?php 
+    session_start();
+
     include("../../back-end/conexion.php");
-    include("../../back-end/log-in.php");
+    // include("../../back-end/log-in.php");
+    $email = $_SESSION['email'];
+    $fila = "SELECT `name` FROM `users` WHERE email = '$email' ";
+    $resultado =  mysqli_query($conexion, $fila);
+
+    if (mysqli_num_rows($resultado) > 0) {
+        // Si hay resultados, mostrarlos
+        while($row = mysqli_fetch_assoc($resultado)) {
+            $_SESSION['name'] = $row['name'];
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +64,7 @@
                 <img src="../img/iconos/perfil.png" alt="" class="perfil">
                 <div>
                     <?php 
-                        echo 
+                        echo $_SESSION['name'];
                     ?>
                 </div>
             </div>
@@ -81,52 +93,9 @@
                     <h1 class="tittles">DISEÑEMOS JUNTOS</h1>
                 </div>
             </div>
+            <div class="text"><h1>Tus Proyectos</h1></div>
             <div class="archivos">
-                <a href="../img/galeria/baru.jpg" download="imagen1.jpg" id="a-fondo1">
-                    <div>
-                        <button><img src="../img/iconos/descarga-directa.png" alt="" class="descarga"></button>
-                    </div>
-                </a>
-                <a href="../img/galeria/casa.jpg" download="imagen2.jpg">
-                    <div>
-                        <button><img src="../img/iconos/descarga-directa.png" alt="" class="descarga"></button>
-                    </div>
-                </a>
-                <a href="../img/galeria/ff1.jpg" download="imagen3.jpg">
-                    <div>
-                        <button><img src="../img/iconos/descarga-directa.png" alt="" class="descarga"></button>
-                    </div>
-                </a>
-                <a href="../img/galeria/ff2.jpg" download="imagen4.jpg">
-                    <div>
-                        <button><img src="../img/iconos/descarga-directa.png" alt="" class="descarga"></button>
-                    </div>
-                </a>
-                <a href="../img/galeria/ficha.jpg" download="imagen5.jpg">
-                    <div>
-                        <button><img src="../img/iconos/descarga-directa.png" alt="" class="descarga"></button>
-                    </div>
-                </a>
-                <a href="../img/galeria/gym1.jpg" download="imagen6.jpg">
-                    <div>
-                        <button><img src="../img/iconos/descarga-directa.png" alt="" class="descarga"></button>
-                    </div>
-                </a>
-                <a href="../img/galeria/gym2.jpg" download="imagen7.jpg">
-                    <div>
-                        <button><img src="../img/iconos/descarga-directa.png" alt="" class="descarga"></button>
-                    </div>
-                </a>
-                <a href="../img/galeria/gym3.jpg" download="imagen8.jpg">
-                    <div>
-                        <button><img src="../img/iconos/descarga-directa.png" alt="" class="descarga"></button>
-                    </div>
-                </a>
-                <a href="../img/galeria/mr.jpg" download="imagen9.jpg">
-                    <div>
-                        <button><img src="../img/iconos/descarga-directa.png" alt="" class="descarga"></button>
-                    </div>
-                </a>
+
             </div>
         </div>
     </section>

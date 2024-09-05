@@ -2,8 +2,7 @@
     include("../../conexion.php");
     session_start();
     $fila = 'SELECT `name` FROM `users` WHERE id = 5';
-    $resultado =  
-    $_SESSION['name'] = $fila;
+    $resultado =  mysqli_query($conexion, $fila);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,8 +15,17 @@
     <div>
         <div>
             <h1>
+                hola
                 <?php 
-                    echo $_SESSION['name'];
+                    if (mysqli_num_rows($resultado) > 0) {
+                        // Si hay resultados, mostrarlos
+                        while($row = mysqli_fetch_assoc($resultado)) {
+                            $_SESSION['name'] = $row['name'];
+                            echo $_SESSION['name'];
+                        }
+                    } else {
+                        echo "0 results";
+                    }
                 ?>
             </h1>
         </div>
