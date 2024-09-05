@@ -26,7 +26,7 @@
             echo '
             <script>
                 alert("Aún hay campos sin completar");
-                window.location.href = "../front-end/t e m p l a t e s/log-in.html"
+                window.location.href = "../front-end/t e m p l a t e s/¿log-in2.html"
             </script>
             ';
             exit;
@@ -42,7 +42,7 @@
                 echo '
                     <script>
                         alert("usuario y/o contraseña incorrectos o no registrados");
-                        window.location="../front-end/t e m p l a t e s/log-in.html"
+                        window.location="../front-end/t e m p l a t e s/¿log-in2.html"
                     </script>
                 ';
             }

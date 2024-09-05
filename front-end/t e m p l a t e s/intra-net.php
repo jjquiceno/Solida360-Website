@@ -5,12 +5,19 @@
     // include("../../back-end/log-in.php");
     $email = $_SESSION['email'];
     $fila = "SELECT `name` FROM `users` WHERE email = '$email' ";
+    $plan = "SELECT `plan` FROM `users` WHERE email = '$email' ";
     $resultado =  mysqli_query($conexion, $fila);
+    $resultplan = mysqli_query($conexion, $plan);
 
     if (mysqli_num_rows($resultado) > 0) {
         // Si hay resultados, mostrarlos
         while($row = mysqli_fetch_assoc($resultado)) {
             $_SESSION['name'] = $row['name'];
+            if (mysqli_num_rows($resultplan) > 0) {
+                while($row = mysqli_fetch_assoc($resultplan)){
+                    $_SESSION['plan'] = $row['plan'];
+                }
+            }
         }
     }
 ?>
@@ -60,29 +67,30 @@
     
     <section class="menu-lateral">
         <div class="menu-grid">
-            <div class="grid-intm">
-                <img src="../img/iconos/perfil.png" alt="" class="perfil">
+            <a href="" class="grid-intm">
+            <img src="../img/iconos/perfil.png" alt="" class="perfil">
                 <div>
                     <?php 
                         echo $_SESSION['name'];
                     ?>
                 </div>
-            </div>
-            <div class="grid-intm">
-                <h3>plan</h3>
-            </div>
-            <div class="grid-intm">
-                <h3>proyectos</h3>
-            </div>
-            <div class="grid-intm">
-                <h3>marca</h3>
-            </div>
-            <div class="grid-intm">
-                <h3>crear</h3>
-            </div>
-            <div class="grid-intm">
-                <h3>casas</h3>
-            </div>
+            </a>
+            
+            <a href="" class="grid-intm">  
+                <h3>Plan: </h3>
+                <?php 
+                    echo $_SESSION['plan'];
+                ?>
+            </a>
+            <a href="proyectos.php" class="grid-intm">  
+                <h3>Proyectos</h3>
+            </a>
+            <a href="" class="grid-intm">  
+                <h3>Treas</h3>
+            </a>
+            <a href="" class="grid-intm">  
+                <h3>Crear</h3>
+            </a>
         </div>
     </section>
     <section class="hero">
@@ -99,111 +107,6 @@
             </div>
         </div>
     </section>
-
-    <section class="footter">
-        <div class="foot-interior">
-            <div class="fot-info" id="info1">
-                <div>
-                    <img src="../img/iconos/ipbe.png" alt="" class="logo-solida-fot">
-                </div>
-                <div>
-                    <p class="">Somos Sólida, una empresa apasionada por la creatividad y la innovación en el mundo de las comunicaciones, el mercadeo y la producción de impresos.</p>
-                </div>
-            </div>
-            <div class="fot-info" id="info2">
-                <div class="fot-titulos-internos">
-                    <h3>MARCAS <span class="light">SÓLIDAS</span></h3>
-                </div>
-                <div>
-                    <ul>
-                        <li><a href="#posicion">MONTECASINO</a></li>
-                        <li><a href="#posicion">CORPOASES</a></li>
-                        <li><a href="#posicion">FUNDACIÓN HUELLAS DEL AYER</a></li>
-                        <li><a href="#posicion">ARRULLA</a></li>
-                        <li><a href="#posicion">ONDAS</a></li>
-                        <li><a href="#posicion">AURUM</a></li>
-                        <li><a href="#posicion">SPOT SERVICIOS</a></li>
-                        <li><a href="#posicion">CENTRO EDUCATIVO MELODÍAS</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="fot-info" id="info3">
-                <div class="fot-titulos-internos">
-                    <h3>CONTACTO</h3>
-                </div>
-                <div>
-                    <ul>
-                        <div class="fot-flex">
-                            <div>
-                                <img src="../img/iconos/ubi.png" alt="" class="footer-iconos">
-                            </div>
-                            <div>
-                                <a href="https://maps.app.goo.gl/NkUMMBjKmGbwSTrk6" target="_blank"><p>Cra. 41A #27 A sur 86 - Centro Ejecutivo La Casona Envigado - Oficina 102</p></a>
-                            </div>
-                        </div>
-                        <div class="fot-flex">
-                            <div>
-                                <img src="../img/iconos/mail.png" alt="" class="footer-iconos">
-                            </div>
-                            <div>
-                                <p>gestion@solidasas.com</p>
-                            </div>
-                        </div>
-                        <div class="fot-flex">
-                            <div>
-                                <img src="../img/iconos/wats.png" alt="" class="footer-iconos">
-                            </div>
-                            <div>
-                                <!--<a href=""><p>+57 324 569 36 94</p></a>-->
-                                <p>+57 324 569 36 94</p>
-                            </div>
-                        </div>
-                        <div class="fot-flex">
-                            <div>
-                                <img src="../img/iconos/time.png" alt="" class="footer-iconos">
-                            </div>
-                            <div>
-                                <p>Lunes a viernes de 8:00 a.m. a 5:00 p.m.</p>
-                            </div>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-            <div class="fot-info" id="info4">
-                <div class="fot-titulos-internos">
-                    <h3>SÍGUENOS</h3>
-                </div>
-                <div>
-                    <div class="fot-flex">
-                        <div>
-                            <img src="../img/iconos/in.png" alt="" class="footer-iconos">
-                        </div>
-                        <div>
-                            <a href=""><p>Linkedin</p></a>
-                            <!--<a href=""><p>WhatsApp</p></a>-->
-                            
-                        </div>
-                    </div>
-                    <div class="fot-flex">
-                        <div>
-                            <img src="" alt="" class="footer-iconos">
-                        </div>
-                        <div>
-                            <a href="https://www.instagram.com/solida360_?igsh=MWFlZW9iaTJ0N3NuMQ%3D%3D" target="_blank"><p>Instagram</p></a>
-                        </div>
-                    </div>
-                    <div class="fot-flex">
-                        <div>
-                            <img src="" alt="" class="footer-iconos">
-                        </div>
-                        <div>
-                            <a href="https://www.tiktok.com/@solida.360?_t=8mP23a76KLV&_r=1" target="_blank"><p>Tik Tok</p></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <script src="../js/pagesload.js"></script>
 </body>
 </html>
