@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/iconos/logo-solida.png">
+    <!-- <link rel="stylesheet" href="../front-end/css/menu-ham.css"> -->
+    <link rel="stylesheet" href="../css/solidacomercial/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Sólida</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-grid">
+            <div class="logo-box">
+                <a href="../../index.html">
+                    <img class="logo" src="../img/iconos/ICONO CON PUNTOS.png" alt="">
+                </a>
+            </div>
+            <div class="containerGrid">
+                <div>
+                    <input type="text" placeholder="Buscar productos">
+                </div>
+                <div class="conttt">
+                    <img class="carrito" src="../img/iconos/carrito.png" alt="">
+                </div>
+                <div class="wish-list">
+                    <div class="exs">
+                        <i id="cerrar" class="fa-solid fa-xmark fa-2x"></i>
+                    </div>
+                    <div class="shoping">
+
+                    </div>
+                </div>
+                <script>
+                    const carrito = document.querySelector(".conttt");
+                    const wishList = document.querySelector(".wish-list");
+                    const cerrar = document.getElementById("cerrar");
+                    carrito.addEventListener("click", () => {
+                        carrito.classList.toggle("active");
+                        wishList.classList.toggle("active");
+                    });
+                    cerrar.addEventListener("click", () => {
+                        cerrar.classList.toggle("active");
+                        wishList.classList.toggle("active");
+                    })
+                </script>
+            </div>
+        </div>
+        <nav class="nav2">
+            <ul class="listas">
+                <li>Imprenta</li>
+                <li>Carteleria</li>
+                <li>Cajas y Bolsas</li>
+                <li>Merchandising</li>
+                <li>Ideas</li>
+                <li>Deco & Gift</li>
+                <li>Cotizacion a Medida</li>
+            </ul>
+        </nav>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    	<script>
+        	AOS.init()
+    	</script>
+</body>
+</html>
