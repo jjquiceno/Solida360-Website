@@ -19,8 +19,8 @@
                 </a>
             </div>
             <div class="containerGrid">
-                <div>
-                    <input type="text" placeholder="Buscar productos">
+                <div style="position: relative;">
+                    <input type="text" class="busqueda tittles" name="search" placeholder="buscar productos">
                 </div>
                 <div class="conttt">
                     <img class="carrito" src="../img/iconos/carrito.png" alt="">
@@ -50,16 +50,65 @@
         </div>
         <nav class="nav2">
             <ul class="listas">
-                <li>Imprenta</li>
-                <li>Carteleria</li>
-                <li>Cajas y Bolsas</li>
-                <li>Merchandising</li>
-                <li>Ideas</li>
-                <li>Deco & Gift</li>
-                <li>Cotizacion a Medida</li>
+                <li class="relative-menu">
+                    <a href="">Imprenta</a>
+                    <ul class="hiden-menu">
+                        <div class="columns">
+                            <div>
+                                <li><a href=""><h3 class="tittles">Papeleria Comercial</h3></a></li>
+                                
+                                <li><a href="">Remito</a></li>
+                                <li><a href="">Tarjetas Personalizadas</a></li>
+                                <li><a href="">Tacos</a></li>
+                                <li><a href="">Carpetas de presentación</a></li>
+                                <li><a href="">Hojas de membersias</a></li>
+                                <li><a href="">Recetarrios / Talonarios</a></li>
+                            </div>
+                            <div>
+                                <li><a href=""><h3 class="tittles">Sobres</h3></a></li>
+                                
+                                <li><a href="">sobres con tu logo</a></li>
+                                <li><a href="">sobre porta tarjeta</a></li>
+                                <li><a href="">sobre largo</a></li>
+                                <li><a href="">sobre tipo bolsa</a></li>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div>
+                                <li><a href=""><h3 class="tittles">Folleteria</h3></a></li>
+                                
+                                <li><a href="">volantes</a></li>
+                                <li><a href="">Dipticos</a></li>
+                                <li><a href="">Tripticos</a></li>
+                                <li><a href="">Cuadripticos</a></li>
+                                <li><a href="">Cuadripticos Extralargos</a></li>
+                            </div>
+                            <div>
+                                <li><a href=""><h3 class="tittles">Gremio Gráfico</h3></a></li>
+                                
+                                <li><a href="">Bajadas XL</a></li>
+                                <li><a href="">Bajadas Láser</a></li>
+                                <li><a href="">Bajadas Offset</a></li>
+                                <li><a href="">Estampado DTF</a></li>
+                                <li><a href="">Impresipon DTF textil por metro</a></li>
+                                <li><a href="">Impresión lona, vinilo, papel y tela</a></li>
+                                <!-- <li><a href="">Estampado DTF</a></li> -->
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li class="relative-menu">Carteleria</li>
+                <li class="relative-menu">Cajas y Bolsas</li>
+                <li class="relative-menu">Merchandising</li>
+                <li class="relative-menu">Ideas</li>
+                <li class="relative-menu">Deco & Gift</li>
+                <li class="relative-menu">Cotizacion a Medida</li>
             </ul>
         </nav>
+
     </div>
+
+    
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     	<script>
         	AOS.init()

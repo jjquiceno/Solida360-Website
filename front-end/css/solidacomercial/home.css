@@ -26,7 +26,7 @@ html{
 }
 .tittles{
     font-family: graphie-bold;
-    word-spacing: 10px;
+    word-spacing: 3px;
     color: #b8c66c;
 }
 .subtittles{
@@ -42,6 +42,9 @@ p{
     font-family: graphie-regular;
     font-size: 18px;
 }
+.regular{
+    font-family: graphie-regular;
+}
 .typed{
     color: #b8c66c;
     font-family: extra-light;
@@ -54,7 +57,7 @@ p{
 
 /* --------------------------------------------------header-------------------------------------------------- */
 .header{
-    border: solid black;
+    /* border: solid black; */
     height: 120px;
     width: 100%;
     display: grid;
@@ -92,16 +95,16 @@ p{
     align-items: center;
     /* border: solid black; */
 }
-.containerGrid > :nth-child(1) input{
+.busqueda{
     border-radius: 20px;
     height: 40px;
     width: 80%;
     border: none;
     box-shadow: 10px 10px 50px #b8c66c;
+    padding-left: 15px;
 }
 .containerGrid > :nth-child(2){
     height: fit-content;
-    /* border: solid black; */
 }
 .carrito{
     width: 100%;
@@ -111,9 +114,7 @@ p{
 .conttt:hover, #cerrar:hover{
     transform: scale(1.1);
     transition: .3s ease;
-
 }
-
 .listas{
     display: flex;
     justify-content: space-around;
@@ -127,6 +128,54 @@ p{
 .listas li:hover{
     color: #b8c66c;
     transition: .1s;
+}
+.relative-menu{
+    position: relative;
+}
+.relative-menu a{
+    text-decoration: none;
+    color: black;
+}
+.hiden-menu{
+    display: none;
+    list-style: none;
+    background-color: white;
+    box-shadow: 10px 10px 50px #b8c66c;
+    position: absolute;
+    top: 100%;
+    border-radius: 15px;
+    width: 90vw;
+    padding: 15px;
+}
+.hiden-menu > div > div{
+    margin-bottom: 15px;
+}
+
+@keyframes appear {
+    0%{
+        top: -500%;
+    }
+    50%{
+        top: -250%;
+    }
+    100%{
+        top: 0%;
+    }
+}
+.hiden-menu > div > div > li > a{
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px dashed #b8c66ccc;
+}
+.listas li:hover .hiden-menu{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    animation: appear .07s linear;
+    animation-iteration-count: 1;
+}
+.guiones{
+    border-bottom: dashed rgba(0, 0, 0, 0.247);
 }
 
 /* ---------------------------------------objetos en el carrito */
