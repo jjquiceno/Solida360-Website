@@ -138,7 +138,8 @@
                     <h4 class="light">Tipo de copias</h4>
                     <select class="select tipoCopias" name="" id="">
                         <option value=""></option>
-                        <option value=""></option>
+                        <option value="duplicado">Duplicado</option>
+                        <option value="triplicado">Triplicado</option>
                     </select>
                 </div>
                 <div>
@@ -207,7 +208,12 @@
                         total = total - (costo * 0.02);
                     }
 
-                    
+                    // calcular el tipode copias
+                    if (tipoCopiasValor == "duplicado") {
+                        total = total + (costo * 0.03);
+                    } else if (tipoCopiasValor == "triplicado") {
+                        total = total + (costo * 0.06)
+                    }
 
                     // asignacion del total
                     const totalValueElement = document.getElementById("totalValue");
@@ -217,6 +223,7 @@
                 // Añadir evento para actualizar el valor cuando se cambie la selección
                 tamañoRemito.addEventListener("change", actualizarTotal);
                 tipoRemito.addEventListener("change", actualizarTotal);
+                tipoCopias.addEventListener("change", actualizarTotal);
             </script>
         </div>
     </section>
