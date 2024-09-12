@@ -144,9 +144,10 @@
                 </div>
                 <div>
                     <h4 class="light">Encuadernado</h4>
-                    <select class="select" name="" id="">
+                    <select class="select tipoEncuadernado" name="" id="">
                         <option value=""></option>
-                        <option value=""></option>
+                        <option value="emblocado">Emblocado</option>
+                        <option value="sueltas">Hojas Sueltas</option>
                     </select>
                 </div>
                 <div>
@@ -166,10 +167,13 @@
                     </select>
                 </div>
             </div>
+            <br><br>
             <div>
                 <h1>Valor unitario: </h1>
-                <p></p>
+                <p id="costouni"></p>
+                <br>
                 <hr>
+                <br>
                 <h2>Total: </h2>
                 <p id="totalValue"></p>
             </div>
@@ -177,7 +181,7 @@
                 var tamañoRemito = document.querySelector(".tamañoRemito");
                 var tipoRemito = document.querySelector(".tipoRemito");
                 var tipoCopias = document.querySelector(".tipoCopias");
-                
+                var tipoEncuadernado = document.querySelector(".tipoEncuadernado");
                 const costo = 100
                 // Función para actualizar el valor en el HTML
                 function actualizarTotal() {
@@ -188,6 +192,7 @@
                     var tamañoRemitoValor = tamañoRemito.value; 
                     var tipoRemitoValor = tipoRemito.value;
                     var tipoCopiasValor = tipoCopias.value;
+                    var tipoEncuadernadoValor = tipoEncuadernado.value;
 
                     // calcular el tamaño del remito
                     if (tamañoRemitoValor == "Pequeño") {
@@ -215,6 +220,13 @@
                         total = total + (costo * 0.06)
                     }
 
+                    // calcular el tipo de encuadernado
+                    if (tipoEncuadernadoValor == "emblocado") {
+                        total = total + (costo * 0.01)
+                    } else if (tipoEncuadernadoValor == "sueltas") {
+                        total = total
+                    }
+
                     // asignacion del total
                     const totalValueElement = document.getElementById("totalValue");
                     totalValueElement.innerText = total;
@@ -224,6 +236,7 @@
                 tamañoRemito.addEventListener("change", actualizarTotal);
                 tipoRemito.addEventListener("change", actualizarTotal);
                 tipoCopias.addEventListener("change", actualizarTotal);
+                tipoEncuadernado.addEventListener("change", actualizarTotal);
             </script>
         </div>
     </section>
