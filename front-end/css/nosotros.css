@@ -194,7 +194,7 @@ p{
     background-color: white;
 }
 .foot-interior{
-    background-color: #b8c66c;
+    background-color: #b8c66cc9;
     display: flex;
     justify-content: space-between;
     height: fit-content;

@@ -28,6 +28,7 @@ html{
     font-family: graphie-bold;
     word-spacing: 3px;
     color: #b8c66c;
+    font-size: 2rem;
 }
 .subtittles{
     font-family: extra-light;
@@ -37,6 +38,7 @@ html{
 .light{
     font-family: extra-light;
     letter-spacing: 2px;
+    
 }
 p{
     font-family: graphie-regular;
@@ -143,9 +145,10 @@ p{
     box-shadow: 10px 10px 50px #b8c66c;
     position: absolute;
     top: 100%;
-    border-radius: 15px;
-    width: 90vw;
+    width: 100vw;
+    margin-left: -50px;
     padding: 15px;
+    left: 0;
 }
 .hiden-menu > div > div{
     margin-bottom: 15px;
@@ -185,6 +188,7 @@ p{
     width: 30%;
     max-width: 30%;
     position: fixed;
+    z-index: 1;
     top: 0;
     right: -30%;
     display: grid;
@@ -195,6 +199,7 @@ p{
     font-size: 20px;
     transition: .3s ease;
     background-color: #b8c66c;
+    /* border: 2px solid blue; */
 }
 .wish-list.active {
     right: 0;
@@ -203,13 +208,13 @@ p{
     cursor: pointer;
 }
 .exs{
-    border: solid black;
+    /* border: solid black; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding-right: 10%;
 }
 .shoping{
-    border: solid black;
+    /* border: solid black; */
     height: 100%;
 }
