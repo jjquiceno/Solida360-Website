@@ -72,7 +72,30 @@
 
 /* ---------------------------------------------cotizacion a la medida----------------------------------------------- */
 .atuMedida{
+    position: relative;
+    /* border: solid black; */
+    height: 100vh;
+    background-image: url(../../img/imp3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-color: #b8c66c;
+    margin-bottom: 10px;
+}
+.svg1{
+    position: absolute;
+    top: 0;
+}
+.svg2{
+    position: absolute;
+    bottom: 0;
+}
+.curvo{
     border: solid black;
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
 }
 
 /* -------------------------------------------slide de recomendaciones---------------------------------------------- */

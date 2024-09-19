@@ -1,3 +1,17 @@
+<?php 
+
+    
+    // Aquí puedes hacer algo con el valor recibido, por ejemplo:
+
+    // Guardar en base de datos
+    // $query = "INSERT INTO tu_tabla (total) VALUES ('$receivedTotal')";
+    // mysqli_query($conn, $query);
+
+    // Enviar un correo electrónico
+    // mail("quicenolondonoj@gmail.com", "Nuevo total", "El total es: " . $receivedTotal);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,57 +137,59 @@
             <div>
                 <h1 class="tittles">Remitos</h1>
             </div>
-            <div class="perso">
-                <div>
-                    <h4 class="light">Tamaño del remito</h4>
-                    <select class="select tamañoRemito" name="" id="">
-                        <option value=""></option>
-                        <option value="Pequeño">Pequeño</option>
-                        <option value="Mediano">Mediano</option>
-                        <option value="Grande">Grande</option>
-                    </select>
+            <form method="post" action="productos.php">
+                <div class="perso">
+                    <div>
+                        <h4 class="light">Tamaño del remito</h4>
+                        <select class="select tamañoRemito" name="tamañoRemito" id="">
+                            <option value=""></option>
+                            <option value="Pequeño">Pequeño</option>
+                            <option value="Mediano">Mediano</option>
+                            <option value="Grande">Grande</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h4 class="light">Tipo del Remito</h4>
+                        <select class="select tipoRemito" name="tipoRemito" id="">
+                            <option value=""></option>
+                            <option value="remito-x">Remito X</option>
+                            <option value="remito-l">Remito L</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h4 class="light">Tipo de copias</h4>
+                        <select class="select tipoCopias" name="tipoCopias" id="">
+                            <option value=""></option>
+                            <option value="duplicado">Duplicado</option>
+                            <option value="triplicado">Triplicado</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h4 class="light">Encuadernado</h4>
+                        <select class="select tipoEncuadernado" name="tipoEncuadernado" id="">
+                            <option value=""></option>
+                            <option value="emblocado">Emblocado</option>
+                            <option value="sueltas">Hojas Sueltas</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h4 class="light">Impresión</h4>
+                        <select class="select" name="" id="">
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div>
+                        <h4 class="light">papel Interior</h4>
+                        <select class="select" name="" id="">
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="light">Tipo del Remito</h4>
-                    <select class="select tipoRemito" name="" id="">
-                        <option value=""></option>
-                        <option value="remito-x">Remito X</option>
-                        <option value="remito-l">Remito L</option>
-                    </select>
-                </div>
-                <div>
-                    <h4 class="light">Tipo de copias</h4>
-                    <select class="select tipoCopias" name="" id="">
-                        <option value=""></option>
-                        <option value="duplicado">Duplicado</option>
-                        <option value="triplicado">Triplicado</option>
-                    </select>
-                </div>
-                <div>
-                    <h4 class="light">Encuadernado</h4>
-                    <select class="select tipoEncuadernado" name="" id="">
-                        <option value=""></option>
-                        <option value="emblocado">Emblocado</option>
-                        <option value="sueltas">Hojas Sueltas</option>
-                    </select>
-                </div>
-                <div>
-                    <h4 class="light">Impresión</h4>
-                    <select class="select" name="" id="">
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
-                </div>
-                <div>
-                    <h4 class="light">papel Interior</h4>
-                    <select class="select" name="" id="">
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
-                </div>
-            </div>
+            </form>
             <br><br>
             <div>
                 <h1>Valor unitario: </h1>
@@ -183,6 +199,17 @@
                 <br>
                 <h2>Total: </h2>
                 <p id="totalValue"></p>
+                <hr>
+                <br>
+                <h2>Variable de php: </h2>
+                <p>
+                   <?php
+                        if (isset($_POST['total'])) {
+                            $receivedTotal = $_POST['total'];
+                        }
+                        echo $receivedTotal;
+                   ?>
+                </p>
             </div>
             <script>
                 var tamañoRemito = document.querySelector(".tamañoRemito");
@@ -244,11 +271,27 @@
                 tipoRemito.addEventListener("change", actualizarTotal);
                 tipoCopias.addEventListener("change", actualizarTotal);
                 tipoEncuadernado.addEventListener("change", actualizarTotal);
+
+                // Usamos AJAX para enviar esta variable a PHP
+                $.ajax({
+                    url: 'productos.php', // Archivo PHP que procesará la variable
+                    type: 'POST',
+                    data: { total: total },
+                    success: function(response) {
+                        console.log("Respuesta de PHP: " + response);
+                    }
+                });
+
             </script>
+            
         </div>
     </section>
     <section class="atuMedida">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#b8c66c" fill-opacity="1" d="M0,64L48,96C96,128,192,192,288,197.3C384,203,480,149,576,106.7C672,64,768,32,864,53.3C960,75,1056,149,1152,181.3C1248,213,1344,203,1392,197.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+        <div class="curvo">
+            <h2>>Necesitas cotizacion a medida?</h2>
+        </div>
+        <svg class="svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,64L48,96C96,128,192,192,288,197.3C384,203,480,149,576,106.7C672,64,768,32,864,53.3C960,75,1056,149,1152,181.3C1248,213,1344,203,1392,197.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+        <svg class="svg2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
     </section>
     <div class="text-recomendaciones">
         <div class="int-text-recom">
@@ -443,8 +486,9 @@
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    	<script>
-        	AOS.init()
-    	</script>
+    <script>
+    	AOS.init()
+	</script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 </body>
 </html>
