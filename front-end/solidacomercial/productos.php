@@ -1,4 +1,4 @@
-<?php 
+<!-- ?php 
 
     
     // Aquí puedes hacer algo con el valor recibido, por ejemplo:
@@ -11,7 +11,7 @@
     // mail("quicenolondonoj@gmail.com", "Nuevo total", "El total es: " . $receivedTotal);
 
 
-?>
+?> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -286,13 +286,54 @@
             
         </div>
     </section>
-    <section class="atuMedida">
-        <div class="curvo">
-            <h2>>Necesitas cotizacion a medida?</h2>
+    <!-- <section class="atuMedida">
+        <div class="texts">
+            <h1>¿Necesitas cotizacion a medida?</h1>
         </div>
         <svg class="svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,64L48,96C96,128,192,192,288,197.3C384,203,480,149,576,106.7C672,64,768,32,864,53.3C960,75,1056,149,1152,181.3C1248,213,1344,203,1392,197.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
         <svg class="svg2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-    </section>
+    </section> -->
+    <div class="atuMedida">  
+        <div class="item-medida">
+            <form method="post" class="form_form">
+                <div class="titule">
+                    <h3 class="tittles">ESCRÍBENOS</h3>
+                </div>
+                <div class="info-message" data-validate = "El nombre es requerido">
+                    <input class="caja_text" type="text" name="producto" required>
+                    <label class="label" for="producto">PRODUCTO</label>
+                    <span></span>
+                </div>
+                <div class="info-message" data-validate = "El nombre es requerido">
+                    <input class="caja_text" type="text" name="nombre" required>
+                    <label class="label" for="nombre">NOMBRE</label>
+                    <span></span>
+                </div>
+                <div class="info-message" data-validate="El corrreo es necesario">
+                    <input class="caja_text" type="text" name="email" required>
+                    <label class="label" for="email">CORREO</label>
+                    <span></span>
+                </div>
+                <div class="info-message" data-validate="El corrreo es necesario">
+                    <input class="caja_text" type="text" name="wssp" required>
+                    <label class="label" for="wssp">WHATSAPP</label>
+                    <span></span>
+                </div>
+                <div class="info-message" data-validate="Escriba el mensaje por favor">
+                    <textarea name="consulta" id="" cols="30" rows="10" class="caja_text" required></textarea>
+                    <label class="label" for="consulta">CONSULTA</label>
+                    <span></span>
+                </div>
+                <div class="e-b">
+                    <!--<button class="enviar" type="submit">ENVIAR MENSAJE</button>-->
+                    <input type="submit" value="enviar" name="enviar" class="enviar">
+                </div>
+            </form>
+        </div>
+        <div class="item-medida">
+
+        </div>
+    </div>
     <div class="text-recomendaciones">
         <div class="int-text-recom">
             <h2 class="tittles"><span class="light">¡Recomendaciones</span>Para Ti!</h2>
@@ -492,3 +533,30 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 </body>
 </html>
+<?php 
+if (isset($_POST["enviar"])) {
+    $producto = $_POST["producto"];
+    $nombre = $_POST["nombre"];
+    $email = $_POST["email"]; 
+    $wssp = $_POST["wssp"];
+    $consulta = $_POST["consulta"];
+
+    $destinatario = "programacion@solidasas.com";
+
+    $contenido = "Mensaje de la pagina web de: $nombre, \n Contacto de Whatsapp: $wssp \n";
+    $contenido .= "Email: $email \n";
+
+    $asunto = "cotizacion a medida del sitio web";
+    $contenido .= "Mensaje: $mensaje";
+
+    $header = "From: $email"; 
+
+    $mail = mail($destinatario, $asunto, $contenido, $header);
+
+    if ($mail) {
+        echo "<script>alert('El correo se envio correctamente :)')</script>";
+    } else {
+        echo "<script>alert('El correo no se pudo enviar, intente nuevamente :(')</script>";
+    }
+}
+?>
