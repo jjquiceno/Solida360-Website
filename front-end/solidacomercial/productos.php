@@ -344,12 +344,20 @@
     <section class="recomendaciones">
         <div class="slider">
             <div class="slides">
-                <div class="slide"><img src="image1.jpg" alt="Imagen 1"></div>
-                <div class="slide"><img src="image2.jpg" alt="Imagen 2"></div>
-                <div class="slide"><img src="image3.jpg" alt="Imagen 3"></div>
-                <div class="slide"><img src="image4.jpg" alt="Imagen 4"></div>
-                <div class="slide"><img src="image5.jpg" alt="Imagen 5"></div>
-                <div class="slide"><img src="image6.jpg" alt="Imagen 6"></div>
+                <div class="slide">
+                    <div>
+                        <img src="../img/pf-imp13.jpg" alt="">
+                    </div>
+                    <div>
+                        <h3>Roll up</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repudiandae?</p>
+                    </div>
+                </div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
                 <div class="slide"></div>
                 <div class="slide"></div>
                 <div class="slide"></div>
@@ -545,10 +553,9 @@ if (isset($_POST["enviar"])) {
 
     $contenido = "Mensaje de la pagina web de: $nombre, \n Contacto de Whatsapp: $wssp \n";
     $contenido .= "Email: $email \n";
-
+    $contenido .= "producto: $producto \n";
+    $contenido .= "consulta: $consulta";
     $asunto = "cotizacion a medida del sitio web";
-    $contenido .= "Mensaje: $mensaje";
-
     $header = "From: $email"; 
 
     $mail = mail($destinatario, $asunto, $contenido, $header);

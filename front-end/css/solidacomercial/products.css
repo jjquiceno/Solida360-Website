@@ -103,7 +103,7 @@
     backdrop-filter: blur(15px);
 } */
 .atuMedida{
-    border: solid black;
+    /* border: solid black; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,7 +113,7 @@
     margin-bottom: 40px;
 }
 .item-medida{
-    border: solid blue;
+    /* border: solid blue; */
     width: calc(50% - 10px);
     height: 100%;
 }
@@ -133,15 +133,15 @@
 .form_form{
     display: grid;
     gap: 10px;
-    border: solid black;
+    /* border: solid black; */
     border-radius: 20px;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(50px);
     width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    padding: 10px 0;
 }
 .titule{
     /* border: solid blue; */
@@ -254,6 +254,12 @@ textarea:valid ~ .label{
     /* border: solid black; */
     border-radius: 10px;
     box-shadow: 1px 1px 10px #b8c66c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
 }
 .slide:hover{
     transform: scale(1.1);
@@ -261,6 +267,17 @@ textarea:valid ~ .label{
     /* border: solid blue; */
     background-color: white;
 }
+/* .slide div{
+    border: solid blue;
+} */
+.slide > :nth-child(1) > img{
+    object-fit: cover;
+    width: 40%;
+    height: auto;
+    /* border: solid black; */
+    margin: auto;
+}
+
 .controls {
     position: absolute;
     top: 50%;
