@@ -1,6 +1,4 @@
 <?php 
-    session_start();
-
     include("conexion.php");
 
     $email =$_POST['email'];
@@ -47,6 +45,6 @@
         }
     }
 
+    
     mysqli_free_result($resultado);
     mysqli_close($conexion);
-    $conexion->close();

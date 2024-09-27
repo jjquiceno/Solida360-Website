@@ -1,0 +1,14 @@
+# Bloqueo de acceso a la carpeta del back-end
+User-agent: *
+Disallow: /back-end/
+
+# Permitir acceso a las carpetas del front-end
+User-agent: *
+Allow: /front-end/js/
+Allow: /front-end/css/
+Allow: /front-end/img/
+Allow: /front-end/fonts/
+Allow: /front-end/templates/
+
+# Indicar la ubicación del sitemap si tienes uno
+Sitemap: https://solidasas.com/sitemap.xml

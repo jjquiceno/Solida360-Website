@@ -48,14 +48,7 @@ a:hover {
 .logo{
     width: 100px;
 }
-.espacio{
-    border: solid black;
-    background-color: white;
-    /* height: calc(100vh - 80px); */
-    width: 20%;
-    position: sticky;
-    top: 80px;
-}
+
 /* off-screen-menu */
 .off-screen-menu {
     bottom: 0;
@@ -126,7 +119,6 @@ nav {
     top: 30%;
     transform: translate(-50%, -50%) rotate(-45deg);
 }
-
 @media screen and (max-width: 1050px){
     a:hover {
         color: white;
