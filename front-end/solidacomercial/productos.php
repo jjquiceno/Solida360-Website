@@ -188,6 +188,14 @@
                             <option value=""></option>
                         </select>
                     </div>
+                    <div>
+                        <h4 class="light">cantidad</h4>
+                        <div class="containercant">
+                            <input type="button" value="-" class="minuscant buttons">
+                            <input type="number" id="cajacantidad" class="cant" step="1" min="1" max="" value="1" placeholder="" inputmode="numeric">
+                            <input type="button" value="+" class="pluscant buttons">
+                        </div>
+                    </div>
                 </div>
             </form>
             <br><br>
@@ -198,29 +206,53 @@
                 <hr>
                 <br>
                 <h2>Total: </h2>
-                <p id="totalValue"></p>
-                <hr>
+                <div>
+                    <p id="totalValue"></p>
+                    <button></button>
+                </div>
                 <br>
-                <h2>Variable de php: </h2>
-                <p>
-                   <?php
-                        if (isset($_POST['total'])) {
-                            $receivedTotal = $_POST['total'];
-                        }
-                        echo $receivedTotal;
-                   ?>
-                </p>
+                <hr>
             </div>
             <script>
+                // inicializacion de variables para el calculo del precio total
                 var tamañoRemito = document.querySelector(".tamañoRemito");
                 var tipoRemito = document.querySelector(".tipoRemito");
                 var tipoCopias = document.querySelector(".tipoCopias");
                 var tipoEncuadernado = document.querySelector(".tipoEncuadernado");
-                const costo = 100
+                const costo = 100;
+                
+                // inicializacion de variables para la cntidad de unidades del producto
+                const minusCantButton = document.querySelector('.minuscant');
+                const plusCantButton = document.querySelector('.pluscant');
+                var cantValue = document.querySelector('.cant');
+                var calcCantValue = parseInt(cantValue.value);
+
+                // funcion para ctualizar cantidad de unidades del producto
+                function actualziarCantidad(){
+                    minusCantButton.addEventListener('click', () => {
+                        if (calcCantValue > 1) {
+                            calcCantValue -= 1
+                            cantValue.value = calcCantValue;
+                            actualizarTotal();
+                        }
+                    })
+                    plusCantButton.addEventListener('click', () => {
+                        calcCantValue += 1
+                        cantValue.value = calcCantValue;
+                        actualizarTotal();
+                    })
+                    cantValue.addEventListener('input', () => {
+                        calcCantValue = parseInt(cantValue.value);
+                        actualizarTotal();
+                    })
+                }
+                actualziarCantidad();
+    
                 // Función para actualizar el valor en el HTML
                 function actualizarTotal() {
                     var descuento;
                     var total = 100;
+                    var valorUnitario;
 
                     // Obtener el valor de los select
                     var tamañoRemitoValor = tamañoRemito.value; 
@@ -261,9 +293,17 @@
                         total = total
                     }
 
+                    // calculo del total segun cantidad de productos
+                    total = total * calcCantValue
+                    valorUnitario = total /calcCantValue
+
                     // asignacion del total
                     const totalValueElement = document.getElementById("totalValue");
                     totalValueElement.innerText = total;
+
+                    // asignacion del valor unitario
+                    const escribirValorUnidad = document.getElementById("costouni");
+                    escribirValorUnidad.innerText = valorUnitario; 
                 }
                 
                 // Añadir evento para actualizar el valor cuando se cambie la selección
@@ -283,16 +323,15 @@
                 });
 
             </script>
-            
         </div>
     </section>
-    <!-- <section class="atuMedida">
-        <div class="texts">
-            <h1>¿Necesitas cotizacion a medida?</h1>
+    <!-- <div class="text_container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path class="waves" fill="#b8c66c" fill-opacity="1" d="M0,96L26.7,117.3C53.3,139,107,181,160,192C213.3,203,267,181,320,160C373.3,139,427,117,480,117.3C533.3,117,587,139,640,138.7C693.3,139,747,117,800,112C853.3,107,907,117,960,144C1013.3,171,1067,213,1120,218.7C1173.3,224,1227,192,1280,192C1333.3,192,1387,224,1413,240L1440,256L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path class="waves" fill="#b8c66c" fill-opacity="1" d="M0,96L26.7,117.3C53.3,139,107,181,160,192C213.3,203,267,181,320,160C373.3,139,427,117,480,117.3C533.3,117,587,139,640,138.7C693.3,139,747,117,800,112C853.3,107,907,117,960,144C1013.3,171,1067,213,1120,218.7C1173.3,224,1227,192,1280,192C1333.3,192,1387,224,1413,240L1440,256L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path></svg>
+        <div class="text_us">
+            <h2 style="color: black;" class="tittles">Impulsa tus ideas con impresiones personalizadas. <br><span class="light">Solicita tu cotización y recibe asesoramiento profesional para llevar tus proyectos al siguiente nivel.</span></h2>
         </div>
-        <svg class="svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,64L48,96C96,128,192,192,288,197.3C384,203,480,149,576,106.7C672,64,768,32,864,53.3C960,75,1056,149,1152,181.3C1248,213,1344,203,1392,197.3L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
-        <svg class="svg2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-    </section> -->
+    </div> -->
     <div class="atuMedida">  
         <div class="item-medida">
             <form method="post" class="form_form">
@@ -329,9 +368,6 @@
                     <input type="submit" value="enviar" name="enviar" class="enviar">
                 </div>
             </form>
-        </div>
-        <div class="item-medida">
-
         </div>
     </div>
     <div class="text-recomendaciones">
