@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/solidacomercial/home.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <title>Sólida</title>
 </head>
 <body>
@@ -24,7 +25,7 @@
                     <input type="text" class="busqueda tittles" name="search" placeholder="buscar productos">
                 </div>
                 <div class="conttt">
-                    <img class="carrito" src="../img/iconos/carrito.png" alt="">
+                    <i class="fa-solid fa-cart-shopping fa-3x carrito"></i>
                 </div>
                 <div class="wish-list">
                     <div class="exs">
@@ -110,14 +111,9 @@
     </div>
     <section class="productDetail">
         <div class="volver">
-            <a>
+            <a href="homecomer.html">
                 <div>
-                    <i id="go-back" class="fa-solid fa-arrow-left fa-2x" style="color: #b8c66c;"></i>
-                    <script>
-                        document.getElementById('go-back').addEventListener('click', function(){
-                            window.history.back();
-                        })
-                    </script>
+                    <i class="fa-solid fa-arrow-left fa-2x" style="color: #b8c66c;"></i>
                 </div>
             </a>
         </div>
