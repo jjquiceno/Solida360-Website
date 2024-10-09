@@ -1,8 +1,8 @@
 // Función para mostrar/ocultar el carrito
-function toggleCart() {
-    const cartItems = document.querySelector('.cart-items');
-    cartItems.style.display = cartItems.style.display === 'block' ? 'none' : 'block';
-}
+// function toggleCart() {
+//     const cartItems = document.querySelector('.cart-items');
+//     cartItems.style.display = cartItems.style.display === 'block' ? 'none' : 'block';
+// }
 
 // Función para actualizar el contador del carrito
 function updateCartCount() {
