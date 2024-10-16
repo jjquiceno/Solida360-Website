@@ -3,7 +3,7 @@ var tamañoRemito = document.querySelector(".tamañoRemito");
 var tipoRemito = document.querySelector(".tipoRemito");
 var tipoCopias = document.querySelector(".tipoCopias");
 var tipoEncuadernado = document.querySelector(".tipoEncuadernado");
-const costo = 100;
+const costo = document.getElementById('valorproducto').textContent;
 
 // inicializacion de variables para la cntidad de unidades del producto
 const minusCantButton = document.querySelector('.minuscant');
@@ -35,7 +35,7 @@ actualziarCantidad();
 // Función para actualizar el valor en el HTML
 function actualizarTotal() {
     var descuento;
-    var total = 100;
+    var total = document.getElementById('valorproducto').textContent;
     var valorUnitario;
 
     // Obtener el valor de los select

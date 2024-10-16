@@ -293,4 +293,7 @@ p{
     width: 31%;
 }
 
-
+/* ----------------------varible para el precio---------------------- */
+#valorproducto{
+    display: none;
+}

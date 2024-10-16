@@ -50,6 +50,7 @@
                 </div>
                 <div class="wish-list">
                     <div class="exs">
+                        <p>Productos (<span id="contador"></span>)</p>
                         <i id="cerrar" class="fa-solid fa-xmark fa-2x"></i>
                     </div>
                     <div id="shoping">
@@ -135,6 +136,7 @@
 
     </div>
     <h1>estas en el index</h1>
+
     <section class="productDetail">
         <div class="volver">
             <a>
@@ -154,13 +156,14 @@
         <div class="costos">
             <div>
                 <h1 class="tittles">Remitos</h1>
+                <p id="valorproducto">10000</p>
             </div>
             <form method="post">
                 <div class="perso">
                     <div>
                         <h4 class="light">Tamaño del remito</h4>
                         <select class="select tamañoRemito" name="tamañoRemito" id="">
-                            <option value=""></option>
+                            <!-- <option value=""></option> -->
                             <option value="Pequeño">Pequeño</option>
                             <option value="Mediano">Mediano</option>
                             <option value="Grande">Grande</option>
@@ -169,7 +172,7 @@
                     <div>
                         <h4 class="light">Tipo del Remito</h4>
                         <select class="select tipoRemito" name="tipoRemito" id="">
-                            <option value=""></option>
+                            <!-- <option value=""></option> -->
                             <option value="remito-x">Remito X</option>
                             <option value="remito-l">Remito L</option>
                         </select>
@@ -177,7 +180,7 @@
                     <div>
                         <h4 class="light">Tipo de copias</h4>
                         <select class="select tipoCopias" name="tipoCopias" id="">
-                            <option value=""></option>
+                            <!-- <option value=""></option> -->
                             <option value="duplicado">Duplicado</option>
                             <option value="triplicado">Triplicado</option>
                         </select>
@@ -185,7 +188,7 @@
                     <div>
                         <h4 class="light">Encuadernado</h4>
                         <select class="select tipoEncuadernado" name="tipoEncuadernado" id="">
-                            <option value=""></option>
+                            <!-- <option value=""></option> -->
                             <option value="emblocado">Emblocado</option>
                             <option value="sueltas">Hojas Sueltas</option>
                         </select>
@@ -217,7 +220,7 @@
                 </div>
 
             </form>
-            <button onclick="agregarAlCarrito('Remito', document.querySelector('.tamañoRemito').value, document.querySelector('.tipoRemito').value, document.querySelector('.tipoCopias').value, document.querySelector('.tipoEncuadernado').value, document.getElementById('cajacantidad').value, document.getElementById('totalValue').value)">agregar</button>
+            <button onclick="agregarAlCarrito('Remito', document.querySelector('.tamañoRemito').value, document.querySelector('.tipoRemito').value, document.querySelector('.tipoCopias').value, document.querySelector('.tipoEncuadernado').value, document.getElementById('cajacantidad').value)">agregar</button>
 
             <br><br>
             <div>
@@ -237,13 +240,16 @@
             <script src="../js/carrito/costos.js"></script>
             <script>
                 let total = 0;
+                var contador = 0;
 
                 function agregarAlCarrito(producto, tamañoR, tipoR, tipoC, tipoE, cantidad) {
+                    var valorUnidad = document.getElementById('costouni').textContent;
                     const carritoItems = document.getElementById('shoping');
                     const item = document.createElement('div');
                     item.className = 'carrito-item';
-                    const itemPrecio = 10 * cantidad;  // Aquí asumes un precio fijo de 10
-                    
+                    const itemPrecio = valorUnidad * cantidad;  // Aquí asumes un precio fijo de 10
+                     
+
                     // Utilizar la estructura solicitada para mostrar la información
                     item.innerHTML = `
                         <ul class="listCaract">
@@ -261,8 +267,13 @@
 
                     carritoItems.appendChild(item);
                     
+                    // calculo del total al agregar un producto al carrito
                     total += itemPrecio;
                     document.getElementById('total-precio').textContent = total;
+
+                    // varible contadora de numero de productos en el carrito
+                    contador += 1;
+                    document.getElementById('contador').textContent = contador;
 
                     // Guardar el carrito en localStorage
                     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
@@ -290,6 +301,8 @@
                     item.remove();
                     total -= precio;
                     document.getElementById('total-precio').textContent = total;
+                    contador -= 1;
+                    document.getElementById('contador').textContent = contador;
                 }
 
                 document.addEventListener('DOMContentLoaded', function () {
@@ -316,6 +329,8 @@
 
                         carritoItems.appendChild(div);
                         total += item.precio;
+
+                        contador += 1;
 
                         const btnEliminar = div.querySelector('.btn-eliminar');
                         btnEliminar.addEventListener('click', () => eliminarDelCarrito(div, item.precio));
