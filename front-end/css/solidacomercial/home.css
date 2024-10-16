@@ -7,6 +7,14 @@ html{
     scroll-behavior: smooth;
 }
 
+/* ------------------------------------------------variables---------------------------------------------- */
+:root{
+    --negro: #393E41;
+    --verde: #b8c66c;
+    --naranja: #EE5D23;
+    --azul: #0D8FAB;
+}
+
 /* -----------------------------------------------fuentes------------------------------------------------ */
 @font-face{
     font-family: graphie-bold;
@@ -193,13 +201,13 @@ p{
     right: -30%;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 10% 90%;
-    align-items: center;    
-    justify-content: center;
+    grid-template-rows: 10% 80% 10%;
     font-size: 20px;
     transition: .3s ease;
     background-color: #b8c66c;
-    /* border: 2px solid blue; */
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    gap: 0;
 }
 .wish-list.active {
     right: 0;
@@ -208,13 +216,81 @@ p{
     cursor: pointer;
 }
 .exs{
-    /* border: solid black; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding-right: 10%;
 }
-.shoping{
-    /* border: solid black; */
-    height: 100%;
+#totalcontainer{
+    display: grid;
+    grid-template-columns: repeat(2, 49%);
+    justify-content: space-around;
+    margin: 5px;
 }
+#totalcontainer p{
+    display: flex;
+}
+#pedir{
+    border: none;
+    background-color: #393E41;
+    border-radius: 15px;
+    font-family: graphie-bold;
+    font-size: 2rem;
+}
+#total-precio, 
+#signo{
+    font-size: 2rem;
+    font-weight: 800;
+}
+#shoping{
+    max-height: 100%;
+    overflow-y: scroll;
+    width: 95%;
+    margin: 0 auto;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    box-shadow: 0 5px 8px -5px var(--negro);
+}
+#shoping::-webkit-scrollbar {
+    display: none;
+}  
+
+#header-container{
+    border: solid black; 
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+.carrito-item{
+    border-bottom: 1px solid var(--negro);
+    display: flex;
+    margin-bottom: 15px;
+    
+}
+.carrito-item > ul li{
+    font-family: graphie-regular;
+}
+.listCaract{
+    list-style: none;
+}
+.separador{
+    border-bottom: solid #393E41;
+    height: 0;
+    width: 70%;
+}
+.btn-eliminar{
+    width: 30%;
+    background-color: #393E41;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    color: white;
+    text-align: center;
+    transition: .3s ease;
+    cursor: pointer;
+}
+.btn-eliminar:hover{
+    width: 31%;
+}
+
+

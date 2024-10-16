@@ -13,102 +13,27 @@
     <title>Sólida</title>
 </head>
 <body>
-    <div class="header">
-        <div class="header-grid">
-            <div class="logo-box">
-                <a href="../../index.html">
-                    <img class="logo" src="../img/iconos/ICONO CON PUNTOS.png" alt="">
-                </a>
-            </div>
-            <div class="containerGrid">
-                <div style="position: relative;">
-                    <input type="text" class="busqueda tittles" name="search" placeholder="buscar productos">
-                </div>
-                <div class="conttt">
-                    <i class="fa-solid fa-cart-shopping fa-3x carrito"></i>
-                </div>
-                <div class="wish-list">
-                    <div class="exs">
-                        <i id="cerrar" class="fa-solid fa-xmark fa-2x"></i>
-                    </div>
-                    <div class="shoping">
-
-                    </div>
-                </div>
-                <script>
-                    const carrito = document.querySelector(".conttt");
-                    const wishList = document.querySelector(".wish-list");
-                    const cerrar = document.getElementById("cerrar");
-                    carrito.addEventListener("click", () => {
-                        carrito.classList.toggle("active");
-                        wishList.classList.toggle("active");
-                    });
-                    cerrar.addEventListener("click", () => {
-                        cerrar.classList.toggle("active");
-                        wishList.classList.toggle("active");
-                    })
-                </script>
-            </div>
-        </div>
-        <nav class="nav2">
-            <ul class="listas">
-                <li class="relative-menu">
-                    <a href="">Imprenta</a>
-                    <ul class="hiden-menu">
-                        <div class="columns">
-                            <div>
-                                <li><a href=""><h3 class="tittles">Papeleria Comercial</h3></a></li>
-                                
-                                <li><a href="productos.php">Remito</a></li>
-                                <li><a href="">Tarjetas Personalizadas</a></li>
-                                <li><a href="">Tacos</a></li>
-                                <li><a href="">Carpetas de presentación</a></li>
-                                <li><a href="">Hojas de membersias</a></li>
-                                <li><a href="">Recetarrios / Talonarios</a></li>
-                            </div>
-                            <div>
-                                <li><a href=""><h3 class="tittles">Sobres</h3></a></li>
-                                
-                                <li><a href="">sobres con tu logo</a></li>
-                                <li><a href="">sobre porta tarjeta</a></li>
-                                <li><a href="">sobre largo</a></li>
-                                <li><a href="">sobre tipo bolsa</a></li>
-                            </div>
-                        </div>
-                        <div class="columns">
-                            <div>
-                                <li><a href=""><h3 class="tittles">Folleteria</h3></a></li>
-                                
-                                <li><a href="">volantes</a></li>
-                                <li><a href="">Dipticos</a></li>
-                                <li><a href="">Tripticos</a></li>
-                                <li><a href="">Cuadripticos</a></li>
-                                <li><a href="">Cuadripticos Extralargos</a></li>
-                            </div>
-                            <div>
-                                <li><a href=""><h3 class="tittles">Gremio Gráfico</h3></a></li>
-                                
-                                <li><a href="">Bajadas XL</a></li>
-                                <li><a href="">Bajadas Láser</a></li>
-                                <li><a href="">Bajadas Offset</a></li>
-                                <li><a href="">Estampado DTF</a></li>
-                                <li><a href="">Impresipon DTF textil por metro</a></li>
-                                <li><a href="">Impresión lona, vinilo, papel y tela</a></li>
-                                <!-- <li><a href="">Estampado DTF</a></li> -->
-                            </div>
-                        </div>
-                    </ul>
-                </li>
-                <li class="relative-menu">Carteleria</li>
-                <li class="relative-menu">Cajas y Bolsas</li>
-                <li class="relative-menu">Merchandising</li>
-                <li class="relative-menu">Ideas</li>
-                <li class="relative-menu">Deco & Gift</li>
-                <li class="relative-menu">Cotizacion a Medida</li>
-            </ul>
-        </nav>
-
-    </div>
+<div id="header-container"></div>
+    <script>    
+        fetch('header.html')//aqui va la direccion del header que estamos cargando
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+                // funcionalidad de mostrar y ocultar
+                const carrito = document.querySelector(".conttt");
+                const wishList = document.querySelector(".wish-list");
+                const cerrar = document.getElementById("cerrar");
+                carrito.addEventListener("click", () => {
+                    carrito.classList.toggle("active");
+                    wishList.classList.toggle("active");
+                });
+                cerrar.addEventListener("click", () => {
+                    cerrar.classList.toggle("active");
+                    wishList.classList.toggle("active");
+                })    
+            })
+    
+    </script>
     <section class="productDetail">
         <div class="volver">
             <a href="homecomer.html">
@@ -310,15 +235,11 @@
                 });
 
             </script>
+            
         </div>
     </section>
-    <!-- <div class="text_container">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path class="waves" fill="#b8c66c" fill-opacity="1" d="M0,96L26.7,117.3C53.3,139,107,181,160,192C213.3,203,267,181,320,160C373.3,139,427,117,480,117.3C533.3,117,587,139,640,138.7C693.3,139,747,117,800,112C853.3,107,907,117,960,144C1013.3,171,1067,213,1120,218.7C1173.3,224,1227,192,1280,192C1333.3,192,1387,224,1413,240L1440,256L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path class="waves" fill="#b8c66c" fill-opacity="1" d="M0,96L26.7,117.3C53.3,139,107,181,160,192C213.3,203,267,181,320,160C373.3,139,427,117,480,117.3C533.3,117,587,139,640,138.7C693.3,139,747,117,800,112C853.3,107,907,117,960,144C1013.3,171,1067,213,1120,218.7C1173.3,224,1227,192,1280,192C1333.3,192,1387,224,1413,240L1440,256L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path></svg>
-        <div class="text_us">
-            <h2 style="color: black;" class="tittles">Impulsa tus ideas con impresiones personalizadas. <br><span class="light">Solicita tu cotización y recibe asesoramiento profesional para llevar tus proyectos al siguiente nivel.</span></h2>
-        </div>
-    </div> -->
+    <button onclick="agregarAlCarrito('Remito', document.querySelector('.tamañoRemito').value, document.querySelector('.tipoRemito').value, document.querySelector('.tipoCopias').value, document.querySelector('.tipoEncuadernado').value, document.getElementById('cajacantidad').value)">agregar</button>
+    <script src="../js/carrito/addtocart.js"></script>
     <div class="atuMedida">  
         <div class="item-medida">
             <form method="post" class="form_form">

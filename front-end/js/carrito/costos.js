@@ -105,3 +105,5 @@ $.ajax({
         console.log("Respuesta de PHP: " + response);
     }
 });
+
+// carrito
