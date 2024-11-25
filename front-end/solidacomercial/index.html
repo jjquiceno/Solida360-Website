@@ -59,6 +59,15 @@
                     <div id="totalcontainer">
                         <p>Sub<br>total: <span id="signo">$</span><span id="total-precio"></span></p>
                         <button id="pedir" class="">COMPRAR</button>
+                        <script>
+                            document.getElementById('pedir').addEventListener('click', function() {
+                                this.classList.add('rebotar');
+
+                                setTimeout(() =>{
+                                    this.classList.remove('rebotar');
+                                }, 500)
+                            })
+                        </script>
                     </div>
                 </div>
                 <script>
@@ -135,7 +144,6 @@
         </nav>
 
     </div>
-    <h1>estas en el index</h1>
 
     <section class="productDetail">
         <div class="volver">
@@ -162,7 +170,7 @@
                 <div class="perso">
                     <div>
                         <h4 class="light">Tamaño del remito</h4>
-                        <select class="select tamañoRemito" name="tamañoRemito" id="">
+                        <select class="select tamañoRemito" name="tamañoRemito" id="" required>
                             <!-- <option value=""></option> -->
                             <option value="Pequeño">Pequeño</option>
                             <option value="Mediano">Mediano</option>
@@ -171,7 +179,7 @@
                     </div>
                     <div>
                         <h4 class="light">Tipo del Remito</h4>
-                        <select class="select tipoRemito" name="tipoRemito" id="">
+                        <select class="select tipoRemito" name="tipoRemito" id="" required>
                             <!-- <option value=""></option> -->
                             <option value="remito-x">Remito X</option>
                             <option value="remito-l">Remito L</option>
@@ -179,7 +187,7 @@
                     </div>
                     <div>
                         <h4 class="light">Tipo de copias</h4>
-                        <select class="select tipoCopias" name="tipoCopias" id="">
+                        <select class="select tipoCopias" name="tipoCopias" id="" required>
                             <!-- <option value=""></option> -->
                             <option value="duplicado">Duplicado</option>
                             <option value="triplicado">Triplicado</option>
@@ -187,7 +195,7 @@
                     </div>
                     <div>
                         <h4 class="light">Encuadernado</h4>
-                        <select class="select tipoEncuadernado" name="tipoEncuadernado" id="">
+                        <select class="select tipoEncuadernado" name="tipoEncuadernado" id="" required>
                             <!-- <option value=""></option> -->
                             <option value="emblocado">Emblocado</option>
                             <option value="sueltas">Hojas Sueltas</option>
@@ -195,7 +203,7 @@
                     </div>
                     <div>
                         <h4 class="light">Impresión</h4>
-                        <select class="select" name="" id="">
+                        <select class="select" name="" id="" required>
                             <option value=""></option>
                             <option value=""></option>
                             <option value=""></option>
@@ -203,7 +211,7 @@
                     </div>
                     <div>
                         <h4 class="light">papel Interior</h4>
-                        <select class="select" name="" id="">
+                        <select class="select" name="" id="" required>
                             <option value=""></option>
                             <option value=""></option>
                             <option value=""></option>
@@ -218,25 +226,33 @@
                         </div>
                     </div>
                 </div>
-
+                
             </form>
-            <button onclick="agregarAlCarrito('Remito', document.querySelector('.tamañoRemito').value, document.querySelector('.tipoRemito').value, document.querySelector('.tipoCopias').value, document.querySelector('.tipoEncuadernado').value, document.getElementById('cajacantidad').value)">agregar</button>
-
             <br><br>
             <div>
                 <h1>Valor unitario: </h1>
-                <p id="costouni"></p>
+                <p id="costouni">8900</p>
                 <br>
                 <hr>
                 <br>
                 <h2>Total: </h2>
-                <div>
-                    <p id="totalValue"></p>
-                    <button></button>
+                <div id="totaladd">
+                    <p id="totalValue">8900</p>
+                    <button id="addtocartbutton" onclick="agregarAlCarrito('Remito', document.querySelector('.tamañoRemito').value, document.querySelector('.tipoRemito').value, document.querySelector('.tipoCopias').value, document.querySelector('.tipoEncuadernado').value, document.getElementById('cajacantidad').value)">¡AGREGAR!</button>
+                    <script>
+                        document.getElementById('addtocartbutton').addEventListener('click', function() {
+                            this.classList.add('rebotar');
+    
+                            setTimeout(() => {
+                                this.classList.remove('rebotar');
+                            }, 500)
+                        })
+                    </script>
                 </div>
                 <br>
                 <hr>
             </div>
+            
             <script src="../js/carrito/costos.js"></script>
             <script>
                 let total = 0;
@@ -533,6 +549,8 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
     	AOS.init()
+
+        document.addEventListener('contextmenu', event => event.preventDefault());
 	</script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 </body>

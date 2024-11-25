@@ -64,6 +64,18 @@ p{
     position: relative;
     background-color: #fff;
 }
+.blue{
+    color: var(--azul);
+}
+.black{
+    color: var(--negro);
+}
+.bold{
+    font-family: graphie-bold;
+}
+.exlight{
+    font-family: extra-light;
+}
 
 /* --------------------------------------------------header-------------------------------------------------- */
 .header{
@@ -139,9 +151,6 @@ p{
     color: #b8c66c;
     transition: .1s;
 }
-.relative-menu{
-    position: relative;
-}
 .relative-menu a{
     text-decoration: none;
     color: black;
@@ -152,25 +161,28 @@ p{
     background-color: white;
     box-shadow: 10px 10px 50px #b8c66c;
     position: absolute;
-    top: 100%;
     width: 100vw;
-    margin-left: -50px;
     padding: 15px;
     left: 0;
 }
 .hiden-menu > div > div{
     margin-bottom: 15px;
 }
-
 @keyframes appear {
     0%{
-        top: -500%;
+        /* top: -500%; */
+        /* transform: scale(0); */
+        opacity: 0;
     }
     50%{
-        top: -250%;
+        /* top: -250%; */
+        /* transform: scale(.5); */
+        opacity: .5;
     }
     100%{
-        top: 0%;
+        /* top: 0%; */
+        /* transform: scale(1); */
+        opacity: 1;
     }
 }
 .hiden-menu > div > div > li > a{
@@ -178,15 +190,25 @@ p{
     text-decoration: none;
     border-bottom: 1px dashed #b8c66ccc;
 }
+.listas li:hover{
+    background-color: #0d8eab81;
+    border-radius: 15px;
+    transition: .3s ease;
+}
 .listas li:hover .hiden-menu{
     display: flex;
     justify-content: space-around;
     gap: 20px;
-    animation: appear .07s linear;
+    animation: appear .2s linear;
     animation-iteration-count: 1;
+    z-index: 1;
 }
 .guiones{
     border-bottom: dashed rgba(0, 0, 0, 0.247);
+}
+.nav2{
+    /* border: solid black; */
+    position: relative;
 }
 
 /* ---------------------------------------objetos en el carrito */
@@ -236,7 +258,22 @@ p{
     border-radius: 15px;
     font-family: graphie-bold;
     font-size: 2rem;
+    cursor: pointer;
+    color: white;
 }
+
+@keyframes rebotar {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
 #total-precio, 
 #signo{
     font-size: 2rem;

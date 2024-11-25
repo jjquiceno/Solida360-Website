@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/solidacomercial/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-grid">
+            <div class="logo-box">
+                <a href="../../index.html">
+                    <img class="logo" src="../img/iconos/ICONO CON PUNTOS.png" alt="">
+                </a>
+            </div>
+            <div class="containerGrid">
+                <div style="position: relative;">
+                    <input type="text" class="busqueda tittles" name="search" placeholder="buscar productos">
+                </div>
+                <div class="conttt">
+                    <img class="carrito" src="../img/iconos/carrito.png" alt="">
+                </div>
+                <div class="wish-list">
+                    <div class="exs">
+                        <p>Productos (<span id="contador"></span>)</p>
+                        <i id="cerrar" class="fa-solid fa-xmark fa-2x"></i>
+                    </div>
+                    <div id="shoping">
+                    
+                    </div>
+                    <div id="totalcontainer">
+                        <p>Sub<br>total: <span id="signo">$</span><span id="total-precio"></span></p>
+                        <button id="pedir" class="">COMPRAR</button>
+                        <script>
+                            document.getElementById('pedir').addEventListener('click', function() {
+                                this.classList.add('rebotar');
+
+                                setTimeout(() =>{
+                                    this.classList.remove('rebotar');
+                                }, 500)
+                            })
+                        </script>
+                    </div>
+                </div>
+                <script>
+                    const carrito = document.querySelector(".conttt");
+                    const wishList = document.querySelector(".wish-list");
+                    const cerrar = document.getElementById("cerrar");
+                    carrito.addEventListener("click", () => {
+                        carrito.classList.toggle("active");
+                        wishList.classList.toggle("active");
+                    });
+                    cerrar.addEventListener("click", () => {
+                        cerrar.classList.toggle("active");
+                        wishList.classList.toggle("active");
+                    })
+                </script>
+            </div>
+        </div>
+        <nav class="nav2">
+            <ul class="listas">
+                <li class="relative-menu">
+                    <a href="">Imprenta</a>
+                    <ul class="hiden-menu" id="imprenta-navs">
+                        
+                    </ul>
+                    <script>    
+                        fetch('navs/imp-nav.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('imprenta-navs').innerHTML = data;
+                            })
+                    </script>
+                </li>
+                <li class="relative-menu">
+                    <a href="">Carteleria</a>
+                    <ul class="hiden-menu" id="carteleria-navs">
+                        
+                    </ul>
+                    <script>    
+                        fetch('navs/crtl-nav.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('carteleria-navs').innerHTML = data;
+                            })
+                    </script>
+                </li>
+                <li class="relative-menu">
+                    <a href="">Cajas y Bolsas</a>
+                    <ul class="hiden-menu" id="cajasbolsas-navs">
+                        
+                    </ul>
+                    <script>    
+                        fetch('navs/CaBo-nav.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('cajasbolsas-navs').innerHTML = data;
+                            })
+                    </script>
+                </li>
+                <li class="relative-menu">
+                    <a href="">Merchandising</a>
+                    <ul class="hiden-menu" id="merch-navs">
+                        
+                    </ul>
+                    <script>    
+                        fetch('navs/merch-nav.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('merch-navs').innerHTML = data;
+                            })
+                    </script>
+                </li>
+                <li class="relative-menu">
+                    <a href="">Ideas</a>
+                    <ul class="hiden-menu" id="ideas-navs">
+                        
+                    </ul>
+                    <script>    
+                        fetch('navs/idea-nav.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('ideas-navs').innerHTML = data;
+                            })
+                    </script>
+                </li>
+                <li class="relative-menu">
+                    <a href="">Deco & Gift</a>
+                    <ul class="hiden-menu" id="decogift-navs">
+                        
+                    </ul>
+                    <script>    
+                        fetch('navs/DecGift-nav.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('decogift-navs').innerHTML = data;
+                            })
+                    </script>
+                </li>
+                <li class="relative-menu">
+                    <a href="">Cotizacion a Medida</a>
+                    <ul class="hiden-menu" id="catm-navs">
+                        
+                    </ul>
+                    <script>    
+                        fetch('navs/CATM-nav.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                document.getElementById('catm-navs').innerHTML = data;
+                            })
+                    </script>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+.text-recomendaciones{
+    width: fit-content;
+    margin: auto;
+}
+.int-text-recom > h2 > span{
+    border: 1px solid #b8c66c;
+    padding: 5px;
+    border-radius: 30px;
+}
+.separador-hor{
+    border-bottom: 1px solid #b8c66c;
+    width: 70%;
+    margin: auto;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 2%;
+    /* border: solid black; */
+    width: 98%;
+}
+.slide {
+    min-width: 98%;
+    box-sizing: border-box;
+    height: 70vh;
+    transition: .3s ease;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 20px 20px -10px #0d8eab67;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 15px;
+    position: relative;
+    border-bottom: 1px solid var(--azul);
+    border-top: 1px solid var(--azul);
+}
+.slide:hover{
+    transform: scale(1.01);
+    transition: .3s;
+    background-color: white;
+    z-index: 1;
+}
+.slide div{
+    font-family: graphie-regular;
+}
+.slide > :nth-child(1){
+    display: flex;
+    width: 90%;
+    gap: 5px;
+}
+/* .slide > :nth-child(1) > img{
+    object-fit: cover;
+    width: 70%;
+    height: auto;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #b8c66c;
+} */
+.slide > :nth-child(1) > :nth-child(2){
+    /* border: solid black; */
+    padding: 5px;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    width: 60%;
+    height: fit-content;
+    backdrop-filter: blur(15px);
+    background-color: #0d8eab1a;
+    border-radius: 15px;
+}
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.control {
+    background: #b8c66c6c;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: .3s ease;
+}
+.control:hover{
+    background-color: #b8c66ca4;
+    transition: .3s;
+}
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.indicator {
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: .3s ease ;
+}
+.indicator.active {
+    background: #b8c66c;
+    padding: 2px;
+    width: 20px;
+    border-radius: 20px;
+    transition: .3s;
+}
+.suggbuttom{
+    background-color: var(--verde);
+    border-radius: 5px;
+    height: 35px;
+    width: 120px;
+    border: 1px solid var(--negro);
+}
+.suggbletters{
+    color: var(--negro);
+    text-decoration: none;
+    font-size: 18px;
+}
+.slide:hover .suggbuttom{
+    animation: suggbuttom .4s linear;
+    animation-iteration-count: 1;
+}
+@keyframes suggbuttom{
+    0%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(-10px);
+        font-weight: 800;
+    }
+    50%{
+        transform: translateY(0);
+        font-weight: 800;
+    }
+    75%{
+        transform: translateY(-5px);
+        font-weight: 800;
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+/* -----------------------------------------------estilos de las empresas------------------------------------------- */
+#empresas{
+    border: solid black;
+    height: 200px;
+}
+
+/* -------------------------------------------------estilos del work----------------------------------------------- */
+#work{
+    margin-top: 10px;
+    border: solid black;
+    height: 200px;
+}
+
+/* ------------------------------------------estilos del footter---------------------------------------- */
+.caja-patron{
+    position: relative;
+    background-image: url("../img/iconos/patron-recor.png");
+    background-repeat: repeat-x;
+    background-size: 340px;
+    background-color: #fff;
+    height: 90px;
+    width: 100%;
+}
+.footter{
+    height: fit-content;
+    position: relative;
+    background-color: white;
+}
+.foot-interior{
+    background-color: #b8c66c;
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}
+.fot-info{
+    margin: 25px auto;
+    width: 300px;
+    height: 350px;
+}
+.logo-solida-fot{
+    width: 300px;
+}
+#info1 div p{
+    text-align: center;
+    color: white;
+    font-family: graphie-bold;
+}
+#info1 div img{
+    margin-top: 45px;
+}
+.fot-titulos-internos{
+    width: fit-content;
+    margin: 20px 10px;
+    font-family: graphie-bold;
+}
+.fot-titulos-internos h3{
+    color: white;
+}
+#info2 div ul li a{
+    color: white;
+    font-family: graphie-bold;
+}
+#info2 div ul li a:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+#info2 div ul li{
+    width: fit-content;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+.fot-flex{
+    display: flex;
+}
+.fot-flex div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.fot-flex div a p{
+    color: white;
+    font-family: graphie-bold;
+}
+.fot-flex div a p:hover{
+    color: white;
+    border-bottom: 1px solid white;
+}
+.fot-flex div p{
+    color: white;
+    font-family: graphie-bold;
+}
+.footer-iconos{
+    width: 30px;
+}

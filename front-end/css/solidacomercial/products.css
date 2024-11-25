@@ -1,14 +1,16 @@
+:root{
+    --negro: #393E41;
+    --verde: #b8c66c;
+    --naranja: #EE5D23;
+    --azul: #0D8FAB;
+}
 .productDetail{
-    /* border: solid black; */
-    /* height: 100vh; */
     padding-bottom: 6vh;
     display: grid;
     grid-template-columns: 47% 47%;
     justify-content: space-around;
-
 }
 .volver{
-    /* border: solid black; */
     width: fit-content;
     height: fit-content;
     position: absolute;
@@ -19,11 +21,9 @@
 .volver:hover{
     transform: scale(1.1);
     transition: .2s;
-    /* box-shadow: 1px 1px 5px #b8c66c; */
 }
 
 .productImg{
-    /* border: dashed black; */
     padding: 20px;
 }
 .productImg img{
@@ -47,12 +47,8 @@
     column-gap: 30px;
     justify-content: flex-start;
     align-items: center;
-    /* border: solid yellow; */
     width: 100%;
 }
-/* .perso div{
-    border: solid black;
-} */
 .select{
     border: none;
     border-radius: 5px;
@@ -71,7 +67,6 @@
     color: blue;
 }
 .containercant{
-    /* border: solid black; */
     display: flex;
     height: 35px;
 }
@@ -88,7 +83,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .buttons{
     border-radius: 5px;
-    /* border: 1px solid #b8c66c; */
     border: none;
     background-color: #b8c66c;
     width: 12%;
@@ -98,16 +92,65 @@ input[type=number]::-webkit-outer-spin-button {
     cursor: pointer;
     background-color: #b8c66cc7;
 }
+#totaladd{
+    display: flex;
+    gap: 5vw;
+}
+#addtocartbutton{
+    background-color: #b8c66c;
+    border: none;
+    font-family: graphie-bold;
+    border-radius: 5px;
+    width: 70%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: .3s ease;
+    height: 40px;
+}
+#addtocartbutton:hover{
+    background-color: #b8c66cda;
+    animation: add linear .2s;
+    animation-iteration-count: 1;
+}
+@keyframes add {
+    0%{
+        transform: rotate(0deg);
+    }
+    35%{
+        transform: rotate(10deg);
+    }
+    70%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+#addtocartbutton:active{
+    transform: scale(0.9);
+}
+@keyframes rebotar{
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+.rebotar{
+    animation: rebotar 0.5s
+}
 
 /* ---------------------------------------------cotizacion a la medida----------------------------------------------- */
 .text_container{
-    /* border: solid black; */
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     background: linear-gradient(to bottom, rgba(57, 62, 65, 0),#b8c66c, rgba(57, 62, 65, 0));
-
 }
 .text_us{
     width: 80vw;
@@ -127,27 +170,23 @@ input[type=number]::-webkit-outer-spin-button {
     background-blend-mode: multiply;
 }
 .atuMedida{
-    /* border: solid black; */
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    /* padding: 10px; */
-    height: 80vh;
+    height: 100vh;
     margin-bottom: 40px;
 }
 .item-medida{
-    /* border: solid blue; */
     width: calc(100%);
     height: 100%;
 }
 .atuMedida > :nth-child(1){
-    border-radius: 30px;
     background-image: url(../../img/fondo1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: multiply;
-    background-color: #393E41;
+    background-color: var(--negro);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,7 +195,6 @@ input[type=number]::-webkit-outer-spin-button {
 .form_form{
     display: grid;
     gap: 10px;
-    /* border: solid black; */
     border-radius: 20px;
     backdrop-filter: blur(50px);
     width: fit-content;
@@ -165,13 +203,11 @@ input[type=number]::-webkit-outer-spin-button {
     justify-content: center;
     align-items: center;
     padding: 10px 50px;
-    box-shadow: 0.01px 0.01px 10px rgba(255, 255, 255, 0.103);
+    box-shadow: 0.05px 0.05px 10px rgba(255, 255, 255, 0.103);
 }
 .titule{
-    /* border: solid blue; */
     text-align: center;
     width: fit-content;
-    /* margin: auto; */
     backdrop-filter: blur(40px);
     border-radius: 15px;
 }
@@ -183,7 +219,7 @@ input[type=number]::-webkit-outer-spin-button {
     width: 300px;
     height: 40px;
     border-radius: 10px;
-    border: 1px solid #b8c66c;
+    border: 1px solid var(--azul);
     padding: 0 15px;
     background-color: transparent;
     backdrop-filter: blur(20px);
@@ -191,13 +227,14 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 1rem;
     color: #fff;
     outline: none;
+    box-shadow: 0 10px 10px -5px #0d8eab75;
 }
 .label{
     position: absolute;
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
-    color: white;
+    color: var(--azul);
     letter-spacing: 5px;
     font-family: extra-light;
     font-size: 1rem;
@@ -223,14 +260,13 @@ textarea:valid ~ .label{
     width: 200px;
     height: 40px;
     border-radius: 30px;
-    border: 1px solid #b8c66c;
-    background-color: #b8c66c;
+    border: 1px solid var(--azul);
+    background-color: var(--azul);
     cursor: pointer;
-    font-family: extra-light;
-    color: white;
-    word-spacing: 10px;
-    letter-spacing: 5px;
+    color: var(--negro);
     transition: .3s ease-in-out;
+    font-size: 20px;
+    font-family: graphie-bold;
 }
 .enviar:hover{
     transform: scale(1.03);
@@ -243,7 +279,6 @@ textarea:valid ~ .label{
 /* -------------------------------------------slide de recomendaciones---------------------------------------------- */
 .text-recomendaciones{
     width: fit-content;
-    /* border: solid black; */
     margin: auto;
 }
 .int-text-recom > h2 > span{
@@ -257,7 +292,6 @@ textarea:valid ~ .label{
     margin: auto;
 }
 .slider {
-    /* border: solid black; */
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -267,41 +301,57 @@ textarea:valid ~ .label{
     display: flex;
     transition: transform 0.5s ease-in-out;
     gap: 10px;
-    /* padding-left: 10px; */
-    /* border: solid blue; */
 }
 .slide {
     min-width: 30%;
     box-sizing: border-box;
     height: 250px;
     transition: .3s ease;
-    /* border: solid black; */
     border-radius: 10px;
-    box-shadow: 1px 1px 10px #b8c66c;
+    background-color: white;
+    box-shadow: 0 20px 20px -10px #b8c66c;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    padding: 5px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 15px;
+    position: relative;
+    border-bottom: solid var(--verde);
+    /* border-right: solid var(--verde); */
 }
 .slide:hover{
     transform: scale(1.1);
     transition: .3s;
-    /* border: solid blue; */
     background-color: white;
+    z-index: 1;
 }
-/* .slide div{
-    border: solid blue;
-} */
+.slide div{
+    font-family: graphie-regular;
+}
+.slide > :nth-child(1){
+    display: flex;
+    width: 90%;
+    gap: 5px;
+}
 .slide > :nth-child(1) > img{
     object-fit: cover;
-    width: 40%;
+    width: 70%;
     height: auto;
-    /* border: solid black; */
-    margin: auto;
+    /* margin: auto; */
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #b8c66c;
 }
-
+.slide > :nth-child(1) > :nth-child(2){
+    /* border: solid black; */
+    padding: 5px;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    width: 60%;
+    height: fit-content;
+    backdrop-filter: blur(15px);
+    background-color: #0d8eab1a;
+    border-radius: 15px;
+}
 .controls {
     position: absolute;
     top: 50%;
@@ -328,7 +378,6 @@ textarea:valid ~ .label{
 .indicators {
     position: absolute;
     bottom: 10px;
-    /* border: solid black; */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -348,6 +397,42 @@ textarea:valid ~ .label{
     width: 20px;
     border-radius: 20px;
     transition: .3s;
+}
+.suggbuttom{
+    background-color: var(--verde);
+    border-radius: 5px;
+    height: 35px;
+    width: 120px;
+    border: 1px solid var(--negro);
+}
+.suggbletters{
+    color: var(--negro);
+    text-decoration: none;
+    font-size: 18px;
+}
+.slide:hover .suggbuttom{
+    animation: suggbuttom .4s linear;
+    animation-iteration-count: 1;
+}
+@keyframes suggbuttom{
+    0%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(-10px);
+        font-weight: 800;
+    }
+    50%{
+        transform: translateY(0);
+        font-weight: 800;
+    }
+    75%{
+        transform: translateY(-5px);
+        font-weight: 800;
+    }
+    100%{
+        transform: translate(0);
+    }
 }
 
 /* ------------------------------------------estilos del footter---------------------------------------- */
@@ -390,7 +475,6 @@ textarea:valid ~ .label{
 .fot-titulos-internos{
     width: fit-content;
     margin: 20px 10px;
-    /*border-bottom: solid #0D8FAB;*/
     font-family: graphie-bold;
 }
 .fot-titulos-internos h3{
