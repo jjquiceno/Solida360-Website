@@ -35,14 +35,14 @@
     transition: .3s ease;
     border-radius: 10px;
     background-color: white;
-    box-shadow: 0 20px 20px -10px #0d8eab67;
+    box-shadow: 10px 10px 50px #0d8eab67;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     padding: 15px;
     position: relative;
-    border-bottom: 1px solid var(--azul);
-    border-top: 1px solid var(--azul);
+    /* border: 1px solid var(--azul); */
+    /* border-top: 1px solid var(--azul); */
 }
 .slide:hover{
     transform: scale(1.01);
@@ -107,6 +107,9 @@
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    border: 1px solid var(--verde);
+    border-radius: 20px;
+    padding: 5px;
 }
 .indicator {
     width: 10px;
@@ -163,17 +166,128 @@
 
 /* -----------------------------------------------estilos de las empresas------------------------------------------- */
 #empresas{
-    border: solid black;
-    height: 200px;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: solid blue; */
+}
+#ventajas{
+    width: 100%;
+    height: 96%;
+}
+.ven{
+    width: 80%;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.vEn{
+    height: 100%;
+}
+#vene2{
+    display: flex;
+    justify-content: flex-end;
+    height: 15%;
+}
+.contadores{
+    width: 18%;
+    border-radius: 30px;
+    height: 100%;
+    background-color: #b8c66c7c;
+    box-shadow: 1px 1px 10px #b8c66cbb;
+}
+#slogan{
+    height: 55%;
+    border-radius: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-image: url('../../img/carrusel/10.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-color: #b8c66c;
+    backdrop-filter: grayscale(30%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+.slogan-int{
+    padding: 30px;
+    backdrop-filter: blur(20px);
+    font-size: 30px;
+    font-family: graphie-bold;
+    text-align: right;
+    width: 50%;
+    border-radius: 40px;
 }
 
 /* -------------------------------------------------estilos del work----------------------------------------------- */
 #work{
-    margin-top: 10px;
-    border: solid black;
-    height: 200px;
+    /* border: solid black; */
+    height: 200vh;
+    background: 
+        linear-gradient(to bottom, #0d8eab8f, #b8c66c5b, #b8c66c5b, #b8c66c5b, #0d8eab49),
+        url('../../img/carrusel/10.jpg') no-repeat center   
+    ;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
 }
-
+#gallery{
+    /* border: solid black; */
+    width: 95%;
+    height: 95%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 5px;
+}
+.pics{
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px black;
+    transition: .3s ease;
+}
+.pics:hover{
+    box-shadow: 10px 10px 30px black;
+    transform: scale(1.05);
+}
+.p1{grid-row: span 2;}
+.p6, .p4, .p15, .p17{grid-column: span 2;}
+.p9{grid-column: span 2; grid-row: span 2;}
+.p11{grid-row: span 3;}
+.p1, .p2, .p3, .p4, .p5, .p6, .p7, .p8, .p9, .p10, 
+.p11, .p12, .p13, .p14, .p15, .p16, .p17, .p18m .p19, .p20{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.p1{background-image: url('../../img/imp5.png');}
+.p2{background-image: url('../../img/imp1.png');}
+.p3{background-image: url('../../img/imp2.png');}
+.p4{background-image: url('../../img/carro.jpg');}
+.p5{background-image: url('../../img/imp6.png');}
+.p6{background-image: url('../../img/fondo1.png');}
+.p7{background-image: url('../../img/imp7.png');}
+.p8{background-image: url('../../img/galeria/baru.jpg');}
+.p9{background-image: url('../../img/gf-imp2.jpg');}
+.p10{background-image: url('../../img/gf-imp3.jpg');}
+.p11{background-image: url('../../img/pf-imp19.jpg');}
+.p12{background-image: url('../../img/imp1.png');}
+.p13{background-image: url('../../img/imp4.png');}
+.p14{background-image: url('../../img/of-imp13.jpg');}
+.p15{background-image: url('../../img/gf-imp6.jpg');}
+.p16{background-image: url('../../img/pf-imp2.jpg');}
+.p17{background-image: url('../../img/gf-imp7.jpg');}
+.p18{background-image: url('../../img/pf-imp8.jpg');}
+.p19{background-image: url('../../img/gf-imp4.jpg');}
+.p20{background-image: url('../../img/gf-imp9.jpg');}
 /* ------------------------------------------estilos del footter---------------------------------------- */
 .caja-patron{
     position: relative;
