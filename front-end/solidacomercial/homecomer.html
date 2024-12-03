@@ -265,7 +265,7 @@
     <div>
         <div class="slider">
             <div class="slides">
-                <div class="slide">
+                <div class="slide" id="s1">
                     <div>
                         <img src="../img/pf-imp13.jpg" alt="">
                         <div>
@@ -468,7 +468,41 @@
     <div id="empresas">
         <div id="ventajas">
             <div class="ven">
-                <div class="contadores" id="contador1"></div>
+                <div class="contadores" >
+                    <p>clientes satisfechos</p>
+                    <p>+<span id="contador1"></span></p>
+                </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        let start = 0; 
+                        const end = 350;
+                        const duration = 3000; 
+                        const incremenTime = 50; 
+                        const incrementAmount = Math.ceil(end/(duration/incremenTime));
+                        const counterBox = document.getElementById('contador1');
+
+                        function Counter(){
+                            const interval = setInterval(() => {
+                                start += incrementAmount;
+                                if (start >= end) {
+                                    start = end;
+                                    clearInterval(interval);
+                                }
+                                counterBox.textContent = start;
+                            }, incremenTime);
+                        }
+                        const observar = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if(entry.isIntersecting){
+                                    Counter();
+                                    observar.disconnect();
+                                }
+                            });
+                        });
+                        observar.observe(document.querySelector('.contadores'));
+                    });
+                    
+                </script>
                 <div class="contadores" id="contador2"></div>
                 <div class="contadores" id="contador3"></div>
                 <div class="contadores" id="contador4"></div>
@@ -508,16 +542,28 @@
             </div>
             <div id="vene2">
                 <div class="ven vEn">
-                    <div class="contadores" id="contador1"></div>
-                    <div class="contadores" id="contador2"></div>
-                    <div class="contadores" id="contador3"></div>
-                    <div class="contadores" id="contador4"></div>
-                    <div class="contadores" id="contador5"></div>
+                    <div class="contadores" id="contador1">
+                        <p class="bold">CREA</p>
+                    </div>
+                    <div class="contadores" id="contador2">
+                        <p class="bold">INNOVA</p>
+                    </div>
+                    <div class="contadores" id="contador3">
+                        <p class="bold">CRECE</p>
+                    </div>
+                    <div class="contadores" id="contador4">
+                        <p class="bold">SE CREATIVO</p>
+                    </div>
+                    <div class="contadores" id="contador5">
+                        <p class="bold">SE SÓLIDA</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div id="work">
+        <h2 id="work_tt" class="regular">CONOCE NUESTRO <span class="light">TRABAJO</span></h2>
+        <div id="separador"></div>
         <div id="gallery">
             <div class="pics p1"></div>
             <div class="pics p2"></div>
@@ -539,6 +585,44 @@
             <div class="pics p18"></div>
             <div class="pics p19"></div>
             <div class="pics p20"></div>
+        </div>
+    </div>
+    <div class="atuMedida">  
+        <div class="item-medida">
+            <form method="post" class="form_form">
+                <div class="titule">
+                    <h3 class="tittles blue">ESCRÍBENOS</h3>
+                </div>
+                <div class="info-message" data-validate = "El nombre es requerido">
+                    <input class="caja_text" type="text" name="producto" required>
+                    <label class="label" for="producto">PRODUCTO</label>
+                    <span></span>
+                </div>
+                <div class="info-message" data-validate = "El nombre es requerido">
+                    <input class="caja_text" type="text" name="nombre" required>
+                    <label class="label" for="nombre">NOMBRE</label>
+                    <span></span>
+                </div>
+                <div class="info-message" data-validate="El corrreo es necesario">
+                    <input class="caja_text" type="text" name="email" required>
+                    <label class="label" for="email">CORREO</label>
+                    <span></span>
+                </div>
+                <div class="info-message" data-validate="El corrreo es necesario">
+                    <input class="caja_text" type="text" name="wssp" required>
+                    <label class="label" for="wssp">WHATSAPP</label>
+                    <span></span>
+                </div>
+                <div class="info-message" data-validate="Escriba el mensaje por favor">
+                    <textarea name="consulta" id="" cols="30" rows="10" class="caja_text" required></textarea>
+                    <label class="label" for="consulta">CONSULTA</label>
+                    <span></span>
+                </div>
+                <div class="e-b">
+                    <!--<button class="enviar" type="submit">ENVIAR MENSAJE</button>-->
+                    <input type="submit" value="enviar" name="enviar" class="enviar">
+                </div>
+            </form>
         </div>
     </div>
     <section class="footter">
