@@ -32,7 +32,6 @@
                     wishList.classList.toggle("active");
                 })   
             })
-    
     </script> -->
     <div class="header">
         <div class="header-grid">
@@ -252,6 +251,44 @@
                             <option value=""></option>
                             <option value=""></option>
                         </select>
+                    </div>
+                    <div>
+                        <h4 class="light">¿Tienes tu diseño listo?</h4>
+
+                        <input class="cbs" type="checkbox" name="si" onchange="toggleCb(this)">
+                        <input class="cbs" type="checkbox" name="no" onchange="toggleCb(this)">
+
+                        <div class="drops" id="dropSi">
+                            <h5 class="regular">Porfavor adjunta tu arte y nosotros nos encargaremos del resto</h5>
+                            <input type="file">
+                        </div>
+                        <div class="drops" id="dropNo">
+                            <h5 class="regular">No te preocupes, nosotros te ayudamos con tu arte, contactae con nosotros y te ayudaremos</h5>
+                        </div>
+                        <script>
+                            function toggleCb(checkbox){
+                                const dropSi = document.getElementById('dropSi');
+                                const dropNo = document.getElementById('dropNo');
+
+                                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                                checkboxes.forEach((cb) => {
+                                    if(cb !== checkbox) {
+                                        cb.checked = false;
+                                    }
+                                });
+
+                                dropSi.style.display = 'none';
+                                dropNo.style.display = 'none';
+
+                                if (checkbox.checked) {
+                                    if(checkbox.name == "si"){
+                                        dropSi.style.display = 'block';
+                                    }else if(checkbox.name == "no"){
+                                        dropNo.style.display = 'block';
+                                    }
+                                }
+                            }
+                        </script>
                     </div>
                     <div>
                         <h4 class="light">cantidad</h4>

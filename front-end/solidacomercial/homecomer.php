@@ -1,3 +1,18 @@
+<!-- document.getElementById('addtocartbutton').addEventListener('click', function(event) {
+    const form = document.getElementById('producto');
+
+    if (!form.checkValidity()) {
+        event.preventDefault();
+        alert("por favor complete todos los campos");
+    } else {
+        this.classList.add('rebotar');
+        setTimeout(() => {
+            this.classList.remove('rebotar');
+        }, 500);
+
+        agregarAlCarrito('Remito', document.querySelector('.tamañoRemito').value, document.querySelector('.tipoRemito').value, document.querySelector('.tipoCopias').value, document.querySelector('.tipoEncuadernado').value, document.getElementById('cajacantidad').value)
+    }
+}) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -269,7 +284,8 @@
                     <div>
                         <img src="../img/pf-imp13.jpg" alt="">
                         <div>
-                            <h3 class="bold">Roll up</h3>
+                            <h3 class="bold spletters">Roll up</h3>
+                            <div class="separador"></div>
                             <p>Es fácil de transportar y montar, ofreciendo una presentación profesional y atractiva.</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
@@ -282,7 +298,8 @@
                     <div>
                         <img src="../img/pf-imp13.jpg" alt="">
                         <div>
-                            <h3 class="bold">Volantes</h3>
+                            <h3 class="bold spletters">Volantes</h3>
+                            <div class="separador"></div>
                             <p>Son económicos, fáciles de distribuir y efectivos para alcanzar a una audiencia amplia en poco tiempo.</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
@@ -295,7 +312,8 @@
                     <div>
                         <img src="../img/pf-imp13.jpg" alt="">
                         <div>
-                            <h3 class="bold">Carnets</h3>
+                            <h3 class="bold spletters">Carnets</h3>
+                            <div class="separador"></div>
                             <p>Identificaciones personalizadas con información y foto del usuario</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
@@ -308,7 +326,8 @@
                     <div>
                         <img src="../img/pf-imp13.jpg" alt="">
                         <div>
-                            <h3 class="bold">Microperforado</h3>
+                            <h3 class="bold spletters">Microperforado</h3>
+                            <div class="separador"></div>
                             <p>ideal para publicidad en ventanas que permite la visibilidad desde un lado.</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
@@ -321,7 +340,8 @@
                     <div>
                         <img src="../img/pf-imp13.jpg" alt="">
                         <div>
-                            <h3 class="bold">Mugs</h3>
+                            <h3 class="bold spletters">Mugs</h3>
+                            <div class="separador"></div>
                             <p>Tazas personalizadas con logos, imágenes o mensajes, perfectas para regalos corporativos y promoción de marcas.</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
@@ -334,7 +354,8 @@
                     <div>
                         <img src="../img/pf-imp13.jpg" alt="">
                         <div>
-                            <h3 class="bold">Camisetas</h3>
+                            <h3 class="bold spletters">Camisetas</h3>
+                            <div class="separador"></div>
                             <p>Prendas de vestir personalizadas con serigrafía, bordado o impresión digital.</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
@@ -347,7 +368,8 @@
                     <div>
                         <img src="../img/pf-imp13.jpg" alt="">
                         <div>
-                            <h3 class="bold">Trjetas Personales</h3>
+                            <h3 class="bold spletters">Trjetas Personales</h3>
+                            <div class="separador"></div>
                             <p>pequeñas tarjetas impresas con información de contacto, ideales para networking y encuentros profesionales.</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
@@ -360,7 +382,8 @@
                     <div>
                         <img src="../img/pf-imp13.jpg" alt="">
                         <div>
-                            <h3 class="bold">Roll up</h3>
+                            <h3 class="bold spletters">Roll up</h3>
+                            <div class="separador"></div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repudiandae?</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
@@ -373,7 +396,8 @@
                     <div>
                         <img src="../img/pf-imp13.jpg" alt="">
                         <div>
-                            <h3 class="bold">Roll up</h3>
+                            <h3 class="bold spletters">Roll up</h3>
+                            <div class="separador"></div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repudiandae?</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
@@ -386,7 +410,8 @@
                     <div>
                         <img src="../img/pf-imp13.jpg" alt="">
                         <div>
-                            <h3 class="bold">Roll up</h3>
+                            <h3 class="bold spletters">Roll up</h3>
+                            <div class="separador"></div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repudiandae?</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
@@ -468,45 +493,62 @@
     <div id="empresas">
         <div id="ventajas">
             <div class="ven">
-                <div class="contadores" >
+                <div class="contadores" data-end="350" data-time="2500">
                     <p>clientes satisfechos</p>
-                    <p>+<span id="contador1"></span></p>
+                    <p>+<span class="contador"></span></p>
+                </div>
+                <div class="contadores" data-end="1000" data-time="3000">
+                    <p>Proyectos Completados</p>
+                    <p>+<span class="contador"></span></p>
+                </div>
+                <div class="contadores" data-end="260" data-time="3500">
+                    <p>Proyectos Completados</p>
+                    <p>+<span class="contador"></span></p>
+                </div>
+                <div class="contadores" data-end="400" data-time="4000">
+                    <p>Proyectos Completados</p>
+                    <p>+<span class="contador"></span></p>
+                </div>
+                <div class="contadores" data-end="530" data-time="4500">
+                    <p>Proyectos Completados</p>
+                    <p>+<span class="contador"></span></p>
                 </div>
                 <script>
                     document.addEventListener("DOMContentLoaded", function() {
-                        let start = 0; 
-                        const end = 350;
-                        const duration = 3000; 
-                        const incremenTime = 50; 
-                        const incrementAmount = Math.ceil(end/(duration/incremenTime));
-                        const counterBox = document.getElementById('contador1');
+                        const counters = document.querySelectorAll('.contadores');
 
-                        function Counter(){
-                            const interval = setInterval(() => {
-                                start += incrementAmount;
-                                if (start >= end) {
-                                    start = end;
-                                    clearInterval(interval);
-                                }
-                                counterBox.textContent = start;
-                            }, incremenTime);
-                        }
-                        const observar = new IntersectionObserver((entries) => {
-                            entries.forEach(entry => {
-                                if(entry.isIntersecting){
-                                    Counter();
-                                    observar.disconnect();
-                                }
+                        counters.forEach(counter => {
+                            let start = 0; 
+                            const end = parseInt(counter.getAttribute('data-end'));
+                            const duration = parseInt(counter.getAttribute('data-time')); 
+                            const incremenTime = 50; 
+                            const incrementAmount = Math.ceil(end/(duration/incremenTime));
+                            const counterBox = counter.querySelector('.contador');
+
+                            function Counter(){
+                                const interval = setInterval(() => {
+                                    start += incrementAmount;
+                                    if (start >= end) {
+                                        start = end;
+                                        clearInterval(interval);
+                                    }
+                                    counterBox.textContent = start;
+                                }, incremenTime);
+                            }
+                            const observar = new IntersectionObserver((entries) => {
+                                entries.forEach(entry => {
+                                    if(entry.isIntersecting){
+                                        Counter();
+                                        observar.disconnect();
+                                    }
+                                });
                             });
+                            observar.observe(document.querySelector('.contadores'));
                         });
-                        observar.observe(document.querySelector('.contadores'));
+                        
                     });
                     
                 </script>
-                <div class="contadores" id="contador2"></div>
-                <div class="contadores" id="contador3"></div>
-                <div class="contadores" id="contador4"></div>
-                <div class="contadores" id="contador5"></div>
             </div>
             <div id="slogan">
                 <div class="slogan-int">
@@ -734,3 +776,29 @@
     	</script>
 </body>
 </html>
+<?php 
+if (isset($_POST["enviar"])) {
+    $producto = $_POST["producto"];
+    $nombre = $_POST["nombre"];
+    $email = $_POST["email"]; 
+    $wssp = $_POST["wssp"];
+    $consulta = $_POST["consulta"];
+
+    $destinatario = "programacion@solidasas.com";
+
+    $contenido = "Mensaje de la pagina web de: $nombre, \n Contacto de Whatsapp: $wssp \n";
+    $contenido .= "Email: $email \n";
+    $contenido .= "producto: $producto \n";
+    $contenido .= "consulta: $consulta";
+    $asunto = "cotizacion a medida del sitio web";
+    $header = "From: $email"; 
+
+    $mail = mail($destinatario, $asunto, $contenido, $header);
+
+    if ($mail) {
+        echo "<script>alert('El correo se envio correctamente :)')</script>";
+    } else {
+        echo "<script>alert('El correo no se pudo enviar, intente nuevamente :(')</script>";
+    }
+}
+?>

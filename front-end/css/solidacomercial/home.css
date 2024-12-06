@@ -76,6 +76,12 @@ p{
 .exlight{
     font-family: extra-light;
 }
+.spletters{
+    font-size: 3rem;
+    color: #b8c66c;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 10px black;
+}
 
 /* --------------------------------------------------header-------------------------------------------------- */
 .header{

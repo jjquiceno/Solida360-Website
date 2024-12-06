@@ -3,7 +3,7 @@
     --verde: #b8c66c;
     --naranja: #EE5D23;
     --azul: #0D8FAB;
-}
+} 
 .productDetail{
     padding-bottom: 6vh;
     display: grid;
@@ -33,7 +33,9 @@
     border-radius: 15px;
     box-shadow: 10px 10px 50px #b8c66c;
 }
-
+.drops{
+    display: none;
+}
 .costos > :nth-child(1){
     border-bottom: solid rgba(0, 0, 0, 0.178);
     width: 80%;
@@ -143,6 +145,7 @@ input[type=number]::-webkit-outer-spin-button {
 .rebotar{
     animation: rebotar 0.5s
 }
+
 
 /* ---------------------------------------------cotizacion a la medida----------------------------------------------- */
 .text_container{
