@@ -62,6 +62,16 @@
 }
 .slide > :nth-child(1) > :nth-child(1){
     border-radius: 20px 0 0 20px;
+    width: fit-content;
+    height: 287px;
+    display: flex;
+    justify-content: right;
+}
+.slide > :nth-child(1) > :nth-child(1) > img{
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
 }
 .slide > :nth-child(1) > :nth-child(2){
     padding: 5px;
