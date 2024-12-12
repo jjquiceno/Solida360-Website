@@ -37,7 +37,8 @@
             </div>
             <div class="containerGrid">
                 <div style="position: relative;">
-                    <input type="text" class="busqueda tittles" name="search" placeholder="buscar productos">
+                    <input type="text" id="search-input" class="busqueda tittles" name="search" placeholder="buscar productos" onkeyup="searchFunction()">
+                    <!-- <button onclick="searchFunction()">Buscar</button> -->
                 </div>
                 <div class="conttt">
                     <img class="carrito" src="../img/iconos/carrito.png" alt="">
@@ -174,9 +175,23 @@
                 </li>
             </ul>
         </nav>
+        <div id="search-results">
 
+        </div>
+        <script>
+            document.getElementById('search-input').addEventListener('click', function() {
+                const box = document.getElementById('search-results');
+                if(this.checked){
+                    box.style.display = 'none';
+                }else{
+                    box.style.display = 'flex';
+                }
+            })
+        </script>
+        <script src="../js/carrito/search.js"></script>
     </div>
     <script src="../js/carrito/addtocart.js"></script>
+    
     <div>
         <div class="slider">
             <div class="slides">
