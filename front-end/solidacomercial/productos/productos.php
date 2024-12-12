@@ -263,7 +263,7 @@
 
                         <div class="drops" id="dropSi">
                             <h5 class="regular">Porfavor adjunta tu arte y nosotros nos encargaremos del resto</h5>
-                            <input id="addfile" type="file" accept="image/*">
+                            <input id="addfile" type="file" accept=".pdf,image/*">
                         </div>
                         <div class="drops" id="dropNo">
                             <h5 class="regular">No te preocupes, nosotros te ayudamos con tu arte, contactae con nosotros y te ayudaremos</h5>
