@@ -4,7 +4,7 @@ let total = 0;
 // funcion para agregar al carrito todo
 function agregarAlCarrito(producto, tamañoR, tipoR, tipoC, tipoE, selected, cantidad) {
     var valorUnidad = document.getElementById('costouni').textContent;
-    const carritoItems = document.getElementById('shoping');
+    const carritoItems = document.getElementById('objects');
     const item = document.createElement('div');
     item.className = 'carrito-item';
     const itemPrecio = valorUnidad * cantidad;
@@ -49,7 +49,7 @@ function agregarItem(item, producto, tamañoR, tipoR, tipoC, tipoE, selected, ca
         <button class="btn-eliminar">Eliminar</button>    
     `;
 
-    const carritoItems = document.getElementById('shoping');
+    const carritoItems = document.getElementById('objects');
     carritoItems.appendChild(item);
     
     // calculo del total al agregar un producto al carrito
@@ -95,7 +95,7 @@ function eliminarDelCarrito(item, precio, index) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    const carritoItems = document.getElementById('shoping');
+    const carritoItems = document.getElementById('objects');
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     
     carrito.forEach((item, index) => {

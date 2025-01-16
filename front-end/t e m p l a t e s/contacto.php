@@ -31,7 +31,7 @@
                   <li><a href="contacto.php">CONTACTO</a></li>
                 </ul>
             </div>
-            <nav>
+            <nav id="selectmenu">
                 <div class="ham-menu">
                     <span></span>
                     <span></span>

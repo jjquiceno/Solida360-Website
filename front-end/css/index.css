@@ -458,7 +458,7 @@ p{
     z-index: -1;
     transition: .3s ease-in-out;
 }
-.go-top-button .i{
+.go-top-button .i {
     position: absolute;
     font-size: 1.7rem;
     top: 48%;

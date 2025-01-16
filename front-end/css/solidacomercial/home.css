@@ -102,7 +102,7 @@ p{
     left: 50%;
     right: 50%;
     transform: translate(-50%, 0);
-    box-shadow: 10px 10px 50px #45a04971;
+    /* box-shadow: 5px 5px 20px #45a04971; */
 }
 .product-result {
     /* margin-bottom: 15px; */
@@ -186,7 +186,7 @@ p{
     height: 40px;
     width: 80%;
     border: none;
-    box-shadow: 10px 10px 50px #b8c66c;
+    box-shadow: 1px 1px 5px #b8c66c;
     padding-left: 15px;
 }
 .containerGrid > :nth-child(2){
@@ -393,6 +393,57 @@ p{
 .btn-eliminar:hover{
     width: 31%;
 }
+
+/* --------------------------botones de redes---------------------------------- */
+.go-top-container{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 0.5rem;
+    height: 9.9rem;
+    /* border: solid black ; */
+    z-index: 10;
+}
+.go-top-button{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #b8c66c;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease-in-out;
+    animation: popup .3s;
+    animation-iteration-count: 1;
+    z-index: 11;
+}
+.go-top-button .i {
+    position: absolute;
+    font-size: 1.7rem;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    color: #fff;
+    transition: .2s;
+    width: 2rem;
+}
+@keyframes popup{
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    50%{
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    100%{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
 
 /* ----------------------varible para el precio---------------------- */
 #valorproducto{

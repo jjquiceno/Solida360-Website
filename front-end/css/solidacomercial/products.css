@@ -143,7 +143,54 @@ input[type=number]::-webkit-outer-spin-button {
     }
 }
 .rebotar{
-    animation: rebotar 0.5s
+    animation: rebotar 0.5s;
+}
+
+/* ----------------------------------------------estilos del mensaje-------------------------------------------------- */
+/* #container-message{
+    
+} */
+@keyframes appear {
+    0%{
+        left: -700px;
+    }
+    100%{
+        left: 30px;
+    }
+}
+#container-message{
+    position: relative;
+}
+.meessage-add{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    width: fit-content;
+    padding: 15px;
+    background-color: white;
+    height: 50px;
+    animation: appear linear 0.5s;
+    animation-iteration-count: 1;
+}
+.ms-tt{
+    font-family: graphie-light;
+}
+.product-name-ms{
+    font-family: graphie-bold;
+}
+.go-cart{
+    height: 30px;
+    margin-left: 10px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #b8c66c;
+    border: none;
+    cursor: pointer;
+    font-size: larger;
 }
 
 

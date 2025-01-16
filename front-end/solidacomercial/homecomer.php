@@ -1,25 +1,9 @@
-<!-- document.getElementById('addtocartbutton').addEventListener('click', function(event) {
-    const form = document.getElementById('producto');
-
-    if (!form.checkValidity()) {
-        event.preventDefault();
-        alert("por favor complete todos los campos");
-    } else {
-        this.classList.add('rebotar');
-        setTimeout(() => {
-            this.classList.remove('rebotar');
-        }, 500);
-
-        agregarAlCarrito('Remito', document.querySelector('.tamañoRemito').value, document.querySelector('.tipoRemito').value, document.querySelector('.tipoCopias').value, document.querySelector('.tipoEncuadernado').value, document.getElementById('cajacantidad').value)
-    }
-}) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/iconos/logo-solida.png">
-    <!-- <link rel="stylesheet" href="../front-end/css/menu-ham.css"> -->
     <link rel="stylesheet" href="../css/solidacomercial/home.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -38,7 +22,6 @@
             <div class="containerGrid">
                 <div style="position: relative;">
                     <input type="text" id="search-input" class="busqueda tittles" name="search" placeholder="buscar productos" onkeyup="searchFunction()">
-                    <!-- <button onclick="searchFunction()">Buscar</button> -->
                 </div>
                 <div class="conttt">
                     <img class="carrito" src="../img/iconos/carrito.png" alt="">
@@ -53,13 +36,14 @@
                     </div>
                     <div id="totalcontainer">
                         <p>Sub<br>total: <span id="signo">$</span><span id="total-precio"></span></p>
-                        <button id="pedir" class="">COMPRAR</button>
+                        <button id="pedir" class="">CHECKOUT</button>
                         <script>
                             document.getElementById('pedir').addEventListener('click', function() {
                                 this.classList.add('rebotar');
 
                                 setTimeout(() =>{
                                     this.classList.remove('rebotar');
+                                    window.location.href = "productos/checkout/checkout.php";
                                 }, 500)
                             })
                         </script>
@@ -604,6 +588,20 @@
             </form>
         </div>
     </div>
+    <div class="go-top-container show">
+        <div class="go-top-button">
+            <div><img class="i" src="../img/iconos/wats.png" alt=""></div>
+        </div>
+        <div class="go-top-button">
+            <div><img class="i" src="../img/iconos/in.png" alt=""></div>
+        </div>
+        <div class="go-top-button">
+            <div><img class="i" src="../img/instagram.png" alt=""></div>
+        </div>
+        <div class="go-top-button">
+            <div><img class="i" src="" alt=""></div>
+        </div>
+    </div>
     <section class="footter">
         <div class="foot-interior">
             <div class="fot-info" id="info1">
@@ -638,7 +636,7 @@
                     <ul>
                         <div class="fot-flex">
                             <div>
-                                <img src="front-end/img/iconos/ubi.png" alt="" class="footer-iconos">
+                                <img src="../img/iconos/ubi.png" alt="" class="footer-iconos">
                             </div>
                             <div>
                                 <a href="https://maps.app.goo.gl/NkUMMBjKmGbwSTrk6" target="_blank"><p>Cra. 41A #27 A sur 86 - Centro Ejecutivo La Casona Envigado - Oficina 102</p></a>
@@ -646,7 +644,7 @@
                         </div>
                         <div class="fot-flex">
                             <div>
-                                <img src="front-end/img/iconos/mail.png" alt="" class="footer-iconos">
+                                <img src="../img/iconos/mail.png" alt="" class="footer-iconos">
                             </div>
                             <div>
                                 <p>gestion@solidasas.com</p>
@@ -654,7 +652,7 @@
                         </div>
                         <div class="fot-flex">
                             <div>
-                                <img src="front-end/img/iconos/wats.png" alt="" class="footer-iconos">
+                                <img src="../img/iconos/wats.png" alt="" class="footer-iconos">
                             </div>
                             <div>
                                 <!--<a href=""><p>+57 324 569 36 94</p></a>-->
@@ -663,7 +661,7 @@
                         </div>
                         <div class="fot-flex">
                             <div>
-                                <img src="front-end/img/iconos/time.png" alt="" class="footer-iconos">
+                                <img src="../img/iconos/time.png" alt="" class="footer-iconos">
                             </div>
                             <div>
                                 <p>Lunes a viernes de 8:00 a.m. a 5:00 p.m.</p>
@@ -679,7 +677,7 @@
                 <div>
                     <div class="fot-flex">
                         <div>
-                            <img src="front-end/img/iconos/in.png" alt="" class="footer-iconos">
+                            <img src="../img/iconos/in.png" alt="" class="footer-iconos">
                         </div>
                         <div>
                             <a href="https://co.linkedin.com/company/s%C3%B3lida-sas" target="_blank"><p>Linkedin</p></a><br>
@@ -689,7 +687,7 @@
                     </div>
                     <div class="fot-flex">
                         <div>
-                            <img src="front-end/img/iconos/igblanco.png" alt="" class="footer-iconos">
+                            <img src="../img/iconos/igblanco.png" alt="" class="footer-iconos">
                         </div>
                         <div>
                             <a href="https://www.instagram.com/solida360_?igsh=MWFlZW9iaTJ0N3NuMQ%3D%3D" target="_blank"><p>Instagram</p></a>
@@ -697,7 +695,7 @@
                     </div>
                     <div class="fot-flex">
                         <div>
-                            <img src="front-end/img/iconos/ttblanco.png" alt="" class="footer-iconos">
+                            <img src="../img/iconos/ttblanco.png" alt="" class="footer-iconos">
                         </div>
                         <div>
                             <a href="https://www.tiktok.com/@solida.360?_t=8mP23a76KLV&_r=1" target="_blank"><p>Tik Tok</p></a>
