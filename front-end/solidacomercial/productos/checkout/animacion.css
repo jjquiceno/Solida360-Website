@@ -7,27 +7,8 @@
     font-size: 1rem;
     background: linear-gradient(45deg, #393E41, #b8c66c);
     cursor: pointer;
-    transition: .5s;
+    /* transition: background 0.5s linear; */
 }
 #continueB:hover{
-    /* transition: .5s; */
-    animation: bg .5s linear;
-    animation-iteration-count: 1;
-}
-@keyframes bg {
-    0%{
-        background: linear-gradient(45deg, #393E41, #b8c66c);
-    }
-    25%{
-        background: linear-gradient(90deg, #393E41, #b8c66c);
-    }
-    50%{
-        background: linear-gradient(180deg, #393E41, #b8c66c);
-    }
-    75%{
-        background: linear-gradient(360deg, #393E41, #b8c66c);
-    }
-    100%{
-        background: linear-gradient(45deg, #393E41, #b8c66c);
-    }
+    animation: bg .5 linear;
 }

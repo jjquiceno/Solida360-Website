@@ -317,13 +317,10 @@
                     <p id="totalValue">8900</p>
                     <button id="addtocartbutton" onclick="agregarAlCarrito('Remito', document.querySelector('.tamañoRemito').value, document.querySelector('.tipoRemito').value, document.querySelector('.tipoCopias').value, document.querySelector('.tipoEncuadernado').value, document.getElementById('selec').textContent,document.getElementById('cajacantidad').value)">¡AGREGAR!</button>
                     <script>
-                        document.getElementById('addtocartbutton').addEventListener('click', function() {
-                            // this.classList.add('rebotar');
-    
-                            // setTimeout(() => {
-                            //     this.classList.remove('rebotar');
-                            // }, 500)
-
+                        document.getElementById('addtocartbutton').addEventListener('click', function() {    
+                            setTimeout(() => {
+                                location.reload();
+                            }, 1000)
 
                             const containerMessage = document.getElementById('container-message');
 

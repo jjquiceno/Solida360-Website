@@ -12,6 +12,7 @@
     <title>Sólida</title>
 </head>
 <body>
+    <div id="containerAlert"></div>
     <div class="header">
         <div class="header-grid">
             <div class="logo-box">
@@ -706,9 +707,38 @@
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    	<script>
-        	AOS.init()
-    	</script>
+    <script>
+        AOS.init()
+        
+        window.onload = function() {
+            
+            const containerAlert = document.getElementById('containerAlert');
+
+            const div = document.createElement('div');
+            div.classList.add('alert');
+            const flex = document.createElement('div');
+            flex.classList.add('caja-flex-alert');
+            const h2 = document.createElement('h2');
+            h2.classList.add('tittle-alert');
+            h2.textContent = 'Inicia Sesion por favor';
+            const cerrar = document.createElement('i');
+            cerrar.classList.add('fa-solid', 'fa-xmark', 'fa-2x');
+            const text = document.createElement('p');
+            text.classList.add('text');
+            text.textContent = 'para tener mayor informacion sobre tus pedidos, inicia sesion por favor';
+            const enlace = document.createElement('a');
+            enlace.classList.add('enlace');
+            enlace.textContent('iniciar sesion');
+            enlace.href = '';
+
+            flex.appendChild(h2);
+            flex.appendChild(cerrar);
+            div.appendChild(flex);
+            div.appendChild(text);
+            div.appendChild(enlace);
+            containerAlert.appendChild(div);
+        };
+    </script>
 </body>
 </html>
 <?php 

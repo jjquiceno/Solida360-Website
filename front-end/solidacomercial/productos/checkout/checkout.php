@@ -125,8 +125,22 @@
             flex-direction: column;
             justify-content: center;
         }
-
-        
+        #continueB{
+            border-radius: 10px;
+            border: none;
+            height: 200px;
+            width: 300px;
+            font-family: graphie-regular;
+            font-size: 3rem;
+            background: linear-gradient(45deg, #393E41, #b8c66c);
+            cursor: pointer;
+            transition: .5s ease;
+        }
+        #continueB:hover{
+            transition: .5s ease;
+            box-shadow: 0 0 40px 5px rgba(184, 198, 108, 0.29); 
+            font-size: 2.5rem;
+        }
         .h2{
             font-size: 7rem;
             color: #b8c66c;
@@ -154,45 +168,6 @@
                 <div style="position: relative;">
                     <input type="text" id="search-input" class="busqueda tittles" name="search" placeholder="buscar productos" onkeyup="searchFunction()">
                 </div>
-                <!-- <div class="conttt">
-                    <img class="carrito" src="../../../img/iconos/carrito.png" alt="">
-                </div> -->
-                <!-- <div class="wish-list">
-                    <div class="exs">
-                        <p>Productos (<span id="contador"></span>)</p>
-                        <i id="cerrar" class="fa-solid fa-xmark fa-2x"></i>
-                    </div>
-                    <div id="shoping">
-                    
-                    </div>
-                    <div id="totalcontainer">
-                        <p>Sub<br>total: <span id="signo">$</span><span id="total-precio"></span></p>
-                        <button id="pedir" class="">CHECKOUT</button>
-                        <script>
-                            document.getElementById('pedir').addEventListener('click', function() {
-                                this.classList.add('rebotar');
-
-                                setTimeout(() =>{
-                                    this.classList.remove('rebotar');
-                                    window.location.href = "checkout/checkout.php";
-                                }, 500)
-                            })
-                        </script>
-                    </div>
-                </div> -->
-                <script>
-                    const carrito = document.querySelector(".conttt");
-                    const wishList = document.querySelector(".wish-list");
-                    const cerrar = document.getElementById("cerrar");
-                    carrito.addEventListener("click", () => {
-                        carrito.classList.toggle("active");
-                        wishList.classList.toggle("active");
-                    });
-                    cerrar.addEventListener("click", () => {
-                        cerrar.classList.toggle("active");
-                        wishList.classList.toggle("active");
-                    })
-                </script>
             </div>
         </div>
         <nav class="nav2">
