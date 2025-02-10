@@ -89,8 +89,9 @@ p{
     padding: 20px;
     max-width: 90vw;
     max-height: 50vh;
+    min-height: 3vh;
     backdrop-filter: blur(30px);
-    background-color: white;
+    /* background-color: white; */
     position: absolute;
     top: 100%;
     z-index: 1;
@@ -162,13 +163,13 @@ p{
     height: 100%;
 }
 .logo{
-    max-width: 100%;
+    width: 30%;
     height: auto;
 }
 .containerGrid{
     /* border: solid red; */
     display: grid;
-    grid-template-columns: 96% 4%;
+    grid-template-columns: 94% 6%;
     grid-template-rows: 100%;
     justify-content: center;
     align-items: center;
@@ -177,17 +178,26 @@ p{
 .containerGrid > :nth-child(1){
     display: flex;
     justify-content: center;
-    /* padding-left: 10%; */
     align-items: center;
-    /* border: solid black; */
+    /* border: solid blue; */
 }
 .busqueda{
     border-radius: 20px;
     height: 40px;
-    width: 80%;
+    width: 70%;
     border: none;
     box-shadow: 1px 1px 5px #b8c66c;
     padding-left: 15px;
+    /* border: solid black ; */
+}
+#busqueda-box{
+    /* border: solid black; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+#nameSesion{
+    font-size: 1.2rem;
 }
 .containerGrid > :nth-child(2){
     height: fit-content;
@@ -200,12 +210,15 @@ p{
 .conttt:hover, #cerrar:hover{
     transform: scale(1.1);
     transition: .3s ease;
+    cursor: pointer;
 }
 .listas{
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style: none;
+    /* border: solid black; */
+    /* box-shadow: 0 -4px 10px -4px rgba(0,0,0,0.1); */
 }
 .listas li{
     font-family: graphie-regular;
@@ -274,7 +287,64 @@ p{
     /* border: solid black; */
     position: relative;
 }
+#menuSesion{
+    width: fit-content; 
+    height:fit-content; 
+    cursor: pointer;
+    
+}
+#menuSesionFloat{
+    height: 100vh;
+    width: 30vw;
+    position: fixed;
+    top: 0;
+    left: -30vw;
+    z-index: 11;
+    border-radius: 0 20px 20px 0;
+    backdrop-filter: blur(25px);
+    background-color: #0d8eab85;
+    transition: .3s ease;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+#menuSesionFloat.active{
+    left: 0;
+}
+.iconos-box{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;  
+    border-radius: 15px;
+    backdrop-filter: grayscale(50%);
+    padding: 0 10px 0 10px;
+}
+#contactList.active{
+    animation: appearContact .5s ease-in-out;
+    /* border: solid black; */
+}
 
+/* #contactList.disappear{
+    animation: disappearContact .5s linear;
+}
+@keyframes disappearContact {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+} */
+@keyframes appearContact {
+    0%{
+        opacity: 0;
+        height: 0;
+    }
+    100%{
+        opacity: 1;
+        height: fit-content;
+    }
+}
 /* ---------------------------------------objetos en el carrito */
 .wish-list{
     top: 0;
@@ -444,6 +514,59 @@ p{
     }
 }
 
+/* ---------------------------------------estilos de la alerta-------------------------------------------- */
+#containerAlert{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    transition: opacity .5s ease;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    opacity: 0;
+}
+
+#alert{
+    width: 60%;
+    height: fit-content;
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#flex-x{
+    width: 98%;
+    display: flex;
+    justify-content: end;
+}
+#alert-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 3px 5px;
+    width: 98%;
+}
+.form_f{
+    gap: 10px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+.form_f > .info-message > input{
+    color: black;
+}
 
 /* ----------------------varible para el precio---------------------- */
 #valorproducto{

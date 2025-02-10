@@ -1,3 +1,34 @@
+<?php 
+    session_start();
+    // $_SESSION['loggedin'] = true;
+    include("../../../back-end/conexion.php");
+    // include("../../back-end/log-in.php");
+    $status = $_SESSION['status'] = 1;
+    if(isset($_SESSION['email'])){
+        $email = $_SESSION['email'];
+    }else{
+        $email = "";
+    }
+    $fila = "SELECT `name` FROM `users` WHERE email = '$email' ";
+    $plan = "SELECT `plan` FROM `users` WHERE email = '$email' ";
+    $resultado =  mysqli_query($conexion, $fila);
+    $resultplan = mysqli_query($conexion, $plan);
+
+    if (mysqli_num_rows($resultado) > 0) {
+        // Si hay resultados, mostrarlos
+        while($row = mysqli_fetch_assoc($resultado)) {
+            $_SESSION['name'] = $row['name'];
+            if (mysqli_num_rows($resultplan) > 0) {
+                while($row = mysqli_fetch_assoc($resultplan)){
+                    $_SESSION['plan'] = $row['plan'];
+                }
+            }
+        }
+    }else{
+        echo "No hay resultados";
+    }
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,23 +40,187 @@
     <link rel="stylesheet" href="../../css/scroll.css">
     <title>Document</title>
     <style>
-        
+        .circles {
+            position: fixed; /* Fijar el contenedor de los círculos */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1; /* Asegurar que el fondo esté detrás del contenido */
+        }
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(5px);
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: background-color 2s linear;
+        }
     </style>
 </head>
 <body>
+    <div class="circles" id="circles"></div>
+    <script src="../../js/circles.js"></script>
+    <div id="containerAlert">
+        <div id="alert" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2000">
+            <div id="flex-x">
+                <i id="cerrar-alert" class="fa-solid fa-xmark fa-2x" style="cursor: pointer;"></i>
+            </div>
+            <div id="alert-flex">
+                <div>
+                    <h2 class="tittles">Queremos Saber quien eres</h2>
+                    <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad porro alias sed, veritatis ullam nobis iusto velit officia suscipit provident iure perferendis aspernatur sapiente eveniet inventore asperiores similique ut corporis.</p>
+                </div>
+                <div class="form">
+                    <form name="form" action="../../../back-end/log-in.php" method="post" class="form_f">
+                        <div class="titule">
+                            <h3 class="tittles">INICIA SESION</h3>
+                        </div>
+                        <input type="hidden" name="csrf_token" value="<>">
+                        <div class="info-message" data-validate="el correo es requerido">
+                            <input class="caja_text" type="email" name="email" required>
+                            <label class="label" for="email">CORREO</label>
+                            <span></span>
+                        </div>
+                        <div class="info-message" data-validate="el correo es requerido">
+                            <input class="caja_text" type="password" name="password" required>
+                            <label class="label" for="password">CONTRASEÑA</label>
+                            <span></span>
+                        </div>
+                        <div style="display: none;">
+                            <!-- <p id="ubicacion">home</p> -->
+                            <p id="path" style="display: none;"></p>
+                            <script>
+                                const pathName = window.location.pathname;
+                                document.getElementById('path').innerHTML = pathName;
+                            </script>
+                            <input type="hidden" name="ubicacionValue" id="ubicacionValue">
+                        </div>
+                        <div class="enlaces">
+                            <a href="../recuperacion/email.html">Olvide mi contraseña</a>
+                            <a href="">No estoy registrado</a>
+                        </div>
+                        <div class="e-b">
+                            <input id="Log" for="form" type="submit" value="enviar" name="log" onclick="document.getElementById('ubicacionValue').value = document.getElementById('path').innerText" class="enviar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="header">
         <div class="header-grid">
-            <div class="logo-box">
-                <a href="../homecomer.php">
-                    <img class="logo" src="../../img/iconos/ICONO CON PUNTOS.png" alt="">
-                </a>
+            <div class="logo-box" style="padding-left: 15px; display: flex; align-items: center;">
+                <div id="menuSesion">
+                    <i class="fa-solid fa-bars fa-2x"></i>
+                </div>
+                <div id="menuSesionFloat">
+                    <div style="width: 90%; height: 90%;">
+                        <div>
+                            <div class="iconos-box">
+                                <i id="closeMenuSesion" class="fa-solid fa-xmark fa-2x" style="cursor: pointer;"></i>
+                                <img class="logo" src="../../img/iconos/ICONO CON PUNTOS.png" alt="">
+                            </div>
+                        </div>
+                        <br>
+                        <div id="user">
+                            <h2 class="bold" style="font-size: 1.2rem;">
+                                Bienvenido 
+                                <span id="nameSesion" class="light">
+                                    <?php 
+                                        echo $_SESSION['name'];
+                                    ?>
+                                </span> 
+                            </h2>
+                            <h2 id="usercontent" class="bold" style="font-size: 1.2rem;">Aun no se ha iniciado sesion</h2>
+                        </div>
+                        <br>
+                        <div class="contactOptions">
+                            <h2 id="contactTittle" class="bold" style="font-size: 1.2rem; cursor: default;">¿Necesiats ayuda? ¡CONTACTANOS!</h2>
+                            <div id="contactList">
+                                <ul style="list-style: none;">
+                                    <li class="bold"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">Whatsapp</a></li>
+                                    <li class="bold"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">correo</a></li>
+                                    <li class="bold"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">instagram</a></li>
+                                    <li class="bold"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">linkedin</a></li>
+                                </ul>
+                            </div>
+                            
+                            <script>
+                                const tittle = document.getElementById('contactTittle');
+                                const contactList = document.getElementById('contactList');
+                                contactList.style.display = 'none';
+                                tittle.addEventListener("click", () => {
+                                    contactList.style.display = 'block';
+                                    contactList.classList.toggle("active");
+                                    contactList.addEventListener("mouseover", () => {
+                                        contactList.style.display = 'block';
+                                    });
+                                });
+                                tittle.addEventListener("mouseout", () => {
+                                    contactList.classList.remove("active");
+                                    contactList.style.display = 'none';
+                                    contactList.addEventListener("mouseout", () => {
+                                        contactList.style.display = 'none';
+                                        // contactList.classList.toggle("disappear");
+                                        // setTimeout(() => {
+                                        //     contactList.classList.remove("disappear");
+                                        // },500)
+                                    })
+                                });
+                            </script>
+                        </div>
+                        <br>
+                        <div id="logoutbutton">
+                            <form name="closeform" style="height: 100%;" action="../../../back-end/log-out.php" method="post">
+                                
+                                <div style="display: none;">
+                                    <!-- <p id="ubicacion">home</p> -->
+                                    <p id="pathclose" style="display: none;"></p>
+                                    <script>
+                                        const pathNameClose = window.location.pathname;
+                                        document.getElementById('pathclose').innerHTML = pathName;
+                                    </script>
+                                    <input type="hidden" name="ubicacionValueclose" id="ubicacionValueClose">
+                                </div>
+                                <input id="closeSesion" for="closeform" style="border: none; background: none;" type="submit" value="Cerar Sesion" onclick="document.getElementById('ubicacionValueClose').value = document.getElementById('pathclose').innerText" class="enviar">
+                            </form>
+                        </div>
+                        
+                        <div id="loginB">
+                            <h2 id="loginButton" class="bold" style="font-size: 1.2rem; cursor: pointer;">login</h2>
+                        </div>
+                        
+                        <br>
+                        <div>
+                            <h2 class="bold"><a href="../../../index.html" style="text-decoration: none; color: black; font-size: 1.2rem;">Salir del comercio y volver al inicio</a></h2>
+                        </div>
+                        
+                        <br>
+                        <div>
+                            <h2 class="bold"><a href="../homecomer.php" style="text-decoration: none; color: black; font-size: 1.2rem;">Volver al inicio del comercio</a></h2>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const toggle = document.getElementById('menuSesion');
+                    const toggleMenu = document.getElementById('menuSesionFloat');
+                    const close = document.getElementById('closeMenuSesion');
+                    toggle.addEventListener("click", () => {
+                        toggleMenu.classList.toggle("active");
+                    });
+                    close.addEventListener("click", () => {
+                        toggleMenu.classList.remove("active");
+                    });
+                </script>
             </div>
             <div class="containerGrid">
-                <div style="position: relative;">
-                    <input type="text" id="search-input" class="busqueda tittles" name="search" placeholder="buscar productos" onkeyup="searchFunction()">
+                <div style="position: relative;" id="busqueda-box">
+                    <input type="text" id="search-input" class="busqueda tittles" name="search" placeholder="Buscar productos" onkeyup="searchFunction()">
                 </div>
                 <div class="conttt">
-                    <img class="carrito" src="../../img/iconos/carrito.png" alt="">
+                    <!-- <img class="carrito" src="../img/iconos/carrito.png" alt=""> -->
+                    <i class="fa-solid fa-cart-shopping fa-2x"></i>
                 </div>
                 <div class="wish-list">
                     <div class="exs">
@@ -67,7 +262,7 @@
         </div>
         <nav class="nav2">
             <ul class="listas">
-            <li class="relative-menu">
+                <li class="relative-menu">
                     <a href="">Imprenta</a>
                     <ul class="hiden-menu" id="imprenta-navs">
                         
@@ -171,11 +366,11 @@
                 }else{
                     box.style.display = 'flex';
                 }
-            })
+            });
         </script>
         <script src="../../js/carrito/search.js"></script>
-        
     </div>
+    <!-- <script src="../js/carrito/addtocart.js"></script> -->
     <div id="container-message">
 
     </div>
@@ -675,6 +870,7 @@
         // document.addEventListener('contextmenu', event => event.preventDefault());
 	</script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="../../js/loginadvice.js"></script>
 </body>
 </html>
 <?php 

@@ -172,6 +172,7 @@ body{
     }
 }
 
+
 /* -----------------------------------------------estilos de las empresas------------------------------------------- */
 #empresas{
     height: 65vh;
@@ -441,38 +442,7 @@ textarea:valid ~ .label{
     animation: rebotar 0.5s;
 }
 
-/* ---------------------------------------estilos de la alerta-------------------------------------------- */
-#containerAlert{
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(20px);
-    transition: opacity .5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 10;
-    opacity: 0;
-}
-#alert{
-    width: 60%;
-    height: 60%;
-    border-radius: 20px;
-    background-color: white;
-    display: flex; /* Asegura que el contenido se muestre correctamente */
-    flex-direction: column; /* Permite apilar elementos verticalmente */
-    padding: 20px; /* Espaciado interno para el contenido */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
-}
-#alert-flex{
-    border: solid black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3px 5px;
-}
+
 
 /* ------------------------------------------estilos del footter---------------------------------------- */
 .caja-patron{
