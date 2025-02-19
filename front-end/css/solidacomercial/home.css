@@ -46,7 +46,6 @@ html{
 .light{
     font-family: extra-light;
     letter-spacing: 2px;
-    
 }
 p{
     font-family: graphie-regular;
@@ -59,7 +58,6 @@ p{
     color: black;
     font-family: extra-light;
 }
-
 .all{
     position: relative;
     background-color: #fff;
@@ -91,7 +89,6 @@ p{
     max-height: 50vh;
     min-height: 3vh;
     backdrop-filter: blur(30px);
-    /* background-color: white; */
     position: absolute;
     top: 100%;
     z-index: 1;
@@ -103,29 +100,24 @@ p{
     left: 50%;
     right: 50%;
     transform: translate(-50%, 0);
-    /* box-shadow: 5px 5px 20px #45a04971; */
 }
 .product-result {
-    /* margin-bottom: 15px; */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
     width: 150px;
 }
-
 .product-result h3 {
     margin: 0;
     font-size: 18px;
     color: #333;
 }
-
 .product-result p {
     margin: 5px 0;
     font-size: 14px;
     color: #666;
 }
-
 .product-result a {
     display: inline-block;
     padding: 5px 10px;
@@ -135,11 +127,9 @@ p{
     border-radius: 5px;
     margin-top: 10px;
 }
-
 .product-result a:hover {
     background-color: #45a049;
 }
-
 
 /* --------------------------------------------------header-------------------------------------------------- */
 .header{
@@ -153,12 +143,9 @@ p{
 }
 .header-grid{
     display: grid;
-    grid-template-columns: 10% 90%;
-    /* border: solid green; */
-    padding-left: 3%;
+    grid-template-columns: 100%;
 }
 .nav1{
-    /* border: solid blue; */
     height: 70%;
     height: 100%;
 }
@@ -167,33 +154,30 @@ p{
     height: auto;
 }
 .containerGrid{
-    /* border: solid red; */
-    display: grid;
-    grid-template-columns: 94% 6%;
-    grid-template-rows: 100%;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding-right: 5%;
+    padding-right: 2%;
+    padding-left: 2%;
 }
 .containerGrid > :nth-child(1){
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: solid blue; */
 }
 .busqueda{
     border-radius: 20px;
     height: 40px;
-    width: 70%;
+    width: 80%;
     border: none;
     box-shadow: 1px 1px 5px #b8c66c;
     padding-left: 15px;
-    /* border: solid black ; */
+    font-size: 2rem;
 }
 #busqueda-box{
-    /* border: solid black; */
     display: flex;
-    justify-content: left;
+    width: 70%;
+    justify-content: center;
     align-items: center;
 }
 #nameSesion{
@@ -217,8 +201,6 @@ p{
     justify-content: space-around;
     align-items: center;
     list-style: none;
-    /* border: solid black; */
-    /* box-shadow: 0 -4px 10px -4px rgba(0,0,0,0.1); */
 }
 .listas li{
     font-family: graphie-regular;
@@ -247,18 +229,12 @@ p{
 }
 @keyframes appear {
     0%{
-        /* top: -500%; */
-        /* transform: scale(0); */
         opacity: 0;
     }
     50%{
-        /* top: -250%; */
-        /* transform: scale(.5); */
         opacity: .5;
     }
     100%{
-        /* top: 0%; */
-        /* transform: scale(1); */
         opacity: 1;
     }
 }
@@ -284,14 +260,18 @@ p{
     border-bottom: dashed rgba(0, 0, 0, 0.247);
 }
 .nav2{
-    /* border: solid black; */
     position: relative;
 }
 #menuSesion{
     width: fit-content; 
     height:fit-content; 
     cursor: pointer;
-    
+}
+.menu1-sesionfloat{
+    display: block;
+}
+.menu2-sesionfloat{
+    display: none;
 }
 #menuSesionFloat{
     height: 100vh;
@@ -320,21 +300,8 @@ p{
     padding: 0 10px 0 10px;
 }
 #contactList.active{
-    animation: appearContact .5s ease-in-out;
-    /* border: solid black; */
+    animation: appearContact .5s linear;
 }
-
-/* #contactList.disappear{
-    animation: disappearContact .5s linear;
-}
-@keyframes disappearContact {
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-} */
 @keyframes appearContact {
     0%{
         opacity: 0;
@@ -345,16 +312,20 @@ p{
         height: fit-content;
     }
 }
+.separador-sesion{
+    border-bottom: 1px solid #393e4186;
+    width: 100%;
+}
+
 /* ---------------------------------------objetos en el carrito */
 .wish-list{
     top: 0;
     height: 100%;
-    width: 30%;
-    max-width: 30%;
+    width: 30vw;
     position: fixed;
     z-index: 1;
     top: 0;
-    right: -30%;
+    right: -30vw;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 10% 80% 10%;
@@ -395,7 +366,6 @@ p{
     cursor: pointer;
     color: white;
 }
-
 @keyframes rebotar {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -407,7 +377,6 @@ p{
         transform: translateY(-15px);
     }
 }
-
 #total-precio, 
 #signo{
     font-size: 2rem;
@@ -471,7 +440,6 @@ p{
     right: 1rem;
     width: 0.5rem;
     height: 9.9rem;
-    /* border: solid black ; */
     z-index: 10;
 }
 .go-top-button{
@@ -563,6 +531,7 @@ p{
     justify-content: center;
     align-items: center;
     padding: 10px 0;
+    /* border: solid blue; */
 }
 .form_f > .info-message > input{
     color: black;
@@ -571,4 +540,82 @@ p{
 /* ----------------------varible para el precio---------------------- */
 #valorproducto{
     display: none;
+}
+
+/* responsive */
+/* @media screen and (max-width: 1050px){
+
+} */
+@media screen and (max-width: 600px){
+    
+}
+@media screen and (max-width: 1050px){
+    #menuSesionFloat{
+        width: 50vw;
+        left: -50vw;
+    }
+    .wish-list{
+        width: 60vw;
+        right: -60vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    #shoping{
+        max-height: 70%;
+    }
+    #pedir{
+        padding: 10px;
+    }
+    #totalcontainer{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        height: fit-content;
+    }
+    .listas{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+    }
+    .responsive-menu{
+        display: none;
+    }
+    .menu1-sesionfloat{
+        display: none;
+    }
+    .menu2-sesionfloat{
+        display: block;
+    }
+    .typed{
+        color: #b8c66c;
+    }
+    .containerGrid{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .busqueda{
+        font-size: 1.5rem;
+    }
+    #alert{
+        display: flex;
+        padding: 0;
+        width: fit-content;
+        padding: 10px;
+    }
+    
+    #none{
+        display: none;
+    }
+    #titlelittle{
+        font-size: 1.5rem;
+        display: none;
+    }
+}
+@media screen and (max-width: 430px) {
+    .label{
+        font-size: 1rem;
+    }
 }

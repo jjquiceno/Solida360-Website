@@ -575,3 +575,84 @@ textarea:valid ~ .label{
 .footer-iconos{
     width: 30px;
 }
+
+/* responsive */
+/* @media screen and (max-width: 1050px){
+    .foot-interior{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+    }
+    .fot-info{
+        margin: 25px 0;
+    }
+} */
+@media screen and (max-width: 600px){
+    
+}
+@media screen and (max-width: 1050px){
+    .productDetail{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .costos{
+        width: 100%;
+    }
+    .perso{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-left: 10px;
+        width: 100%;
+    }
+    .int-text-recom > h2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #addtocartbutton{
+        width: 50%;
+    }
+    .form_form{
+        width: 90%;
+        padding: 0;
+    }
+    .caja_text{
+        width: 90%;
+    }
+    .slide {
+        min-width: 80%;
+    }
+    .slide > :nth-child(1) > :nth-child(2) > :nth-child(2){
+        display: none;
+    }
+    .slide > :nth-child(1) > img{
+        object-fit: cover;
+        height: 15vh;
+        width: auto;
+    }
+    #alert{
+        display: flex;
+        padding: 0;
+        width: fit-content;
+        padding: 10px;
+    }
+    #none{
+        display: none;
+    }
+    .foot-interior{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+    }
+    .fot-info{
+        margin: 25px 0;
+    }
+}
+@media screen and (max-width: 430px) {
+    
+}

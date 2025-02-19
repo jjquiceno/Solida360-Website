@@ -6,10 +6,31 @@ const nextButton = document.querySelector('.next');
 const indicators = document.querySelectorAll('.indicator');
 
 function updateSlider() {
-slides.style.transform = `translateX(${-index * 30}%)`;
-indicators.forEach((indicator, i) => {
-    indicator.classList.toggle('active', i === index);
-});
+    let translateValue;
+
+    if(window.matchMedia("(max-width: 430px)").matches){
+        // translateValue = 80;
+        slides.style.transform = `translateX(${-index * 80}%)`;
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
+        });
+    }else if(window.matchMedia("(max-width: 1050px)").matches){
+        slides.style.transform = `translateX(${-index * 80}%)`;
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
+        });
+    }else if(window.matchMedia("(max-width: 600px)").matches){
+        slides.style.transform = `translateX(${-index * 80}%)`;
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
+        });
+    }else{
+        slides.style.transform = `translateX(${-index * 30}%)`;
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
+        });
+    }
+    
 }
 
 prevButton.addEventListener('click', () => {

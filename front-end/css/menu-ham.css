@@ -185,6 +185,9 @@ nav {
     }
 }
 @media screen and (max-width: 430px){
+    .osm{
+        margin-top: 200px;
+    }
     .caja-logo{
         margin: auto auto auto 10px;
     }

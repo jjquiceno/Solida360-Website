@@ -80,8 +80,8 @@
             </div>
             <div id="alert-flex">
                 <div>
-                    <h2 class="tittles">Queremos Saber quien eres</h2>
-                    <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad porro alias sed, veritatis ullam nobis iusto velit officia suscipit provident iure perferendis aspernatur sapiente eveniet inventore asperiores similique ut corporis.</p>
+                    <h2 class="tittles" id="titlelittle">Queremos Saber quien eres</h2>
+                    <p class="" id="none">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad porro alias sed, veritatis ullam nobis iusto velit officia suscipit provident iure perferendis aspernatur sapiente eveniet inventore asperiores similique ut corporis.</p>
                 </div>
                 <div class="form">
                     <form name="form" action="../../../../back-end/log-in.php" method="post" class="form_f">
@@ -110,6 +110,7 @@
                         </div>
                         <div class="enlaces">
                             <a href="../recuperacion/email.html">Olvide mi contraseña</a>
+                            <br>
                             <a href="">No estoy registrado</a>
                         </div>
                         <div class="e-b">
@@ -122,112 +123,107 @@
     </div>
     <div class="header">
         <div class="header-grid">
-            <div class="logo-box" style="padding-left: 15px; display: flex; align-items: center;">
-                <div id="menuSesion">
-                    <i class="fa-solid fa-bars fa-2x"></i>
-                </div>
-                <div id="menuSesionFloat">
-                    <div style="width: 90%; height: 90%;">
-                        <div>
-                            <div class="iconos-box">
-                                <i id="closeMenuSesion" class="fa-solid fa-xmark fa-2x" style="cursor: pointer;"></i>
-                                <img class="logo" src="../../../img/iconos/ICONO CON PUNTOS.png" alt="">
-                            </div>
-                        </div>
-                        <br>
-                        <div id="user">
-                            <h2 class="bold" style="font-size: 1.2rem;">
-                                Bienvenido 
-                                <span id="nameSesion" class="light">
-                                    <?php 
-                                        echo $_SESSION['name'];
-                                    ?>
-                                </span> 
-                            </h2>
-                            <h2 id="usercontent" class="bold" style="font-size: 1.2rem;">Aun no se ha iniciado sesion</h2>
-                        </div>
-                        <br>
-                        <div class="contactOptions">
-                            <h2 id="contactTittle" class="bold" style="font-size: 1.2rem; cursor: default;">¿Necesiats ayuda? ¡CONTACTANOS!</h2>
-                            <div id="contactList">
-                                <ul style="list-style: none;">
-                                    <li class="bold"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">Whatsapp</a></li>
-                                    <li class="bold"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">correo</a></li>
-                                    <li class="bold"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">instagram</a></li>
-                                    <li class="bold"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">linkedin</a></li>
-                                </ul>
-                            </div>
-                            
-                            <script>
-                                const tittle = document.getElementById('contactTittle');
-                                const contactList = document.getElementById('contactList');
-                                contactList.style.display = 'none';
-                                tittle.addEventListener("click", () => {
-                                    contactList.style.display = 'block';
-                                    contactList.classList.toggle("active");
-                                    contactList.addEventListener("mouseover", () => {
-                                        contactList.style.display = 'block';
-                                    });
-                                });
-                                tittle.addEventListener("mouseout", () => {
-                                    contactList.classList.remove("active");
-                                    contactList.style.display = 'none';
-                                    contactList.addEventListener("mouseout", () => {
-                                        contactList.style.display = 'none';
-                                        // contactList.classList.toggle("disappear");
-                                        // setTimeout(() => {
-                                        //     contactList.classList.remove("disappear");
-                                        // },500)
-                                    })
-                                });
-                            </script>
-                        </div>
-                        <br>
-                        <div id="logoutbutton">
-                            <form name="closeform" style="height: 100%;" action="../../../../back-end/log-out.php" method="post">
-                                
-                                <div style="display: none;">
-                                    <!-- <p id="ubicacion">home</p> -->
-                                    <p id="pathclose" style="display: none;"></p>
-                                    <script>
-                                        const pathNameClose = window.location.pathname;
-                                        document.getElementById('pathclose').innerHTML = pathName;
-                                    </script>
-                                    <input type="hidden" name="ubicacionValueclose" id="ubicacionValueClose">
+            <div class="containerGrid">
+                <div class="logo-box" style="padding-left: 15px; display: flex; align-items: center;">
+                    <div id="menuSesion">
+                        <i class="fa-solid fa-bars fa-2x"></i>
+                    </div>
+                    <div id="menuSesionFloat">
+                        <div style="width: 90%; height: 90%;">
+                            <div>
+                                <div class="iconos-box">
+                                    <i id="closeMenuSesion" class="fa-solid fa-xmark fa-2x" style="cursor: pointer;"></i>
+                                    <img class="logo" src="../img/iconos/ICONO CON PUNTOS.png" alt="">
                                 </div>
-                                <input class="bold" id="closeSesion" for="closeform" style="cursor: pointer; color: black; font-size: 1.2rem; border: none; background: none;" type="submit" value="Cerar Sesion" onclick="document.getElementById('ubicacionValueClose').value = document.getElementById('pathclose').innerText">
-                            </form>
-                        </div>
-                        <div id="loginB">
-                            <h2 id="loginButton" class="bold" style="font-size: 1.2rem; cursor: pointer;">login</h2>
-                        </div>
-                        
-                        <br>
-                        <div>
-                            <h2 class="bold"><a href="../../../../../index.html" style="text-decoration: none; color: black; font-size: 1.2rem;">Salir del comercio y volver al inicio</a></h2>
-                        </div>
-                        
-                        <br>
-                        <div>
-                            <h2 class="bold"><a href="../../homecomer.php" style="text-decoration: none; color: black; font-size: 1.2rem;">Volver al inicio del comercio</a></h2>
+                            </div>
+                            <br>
+                            <div id="user">
+                                <h2 class="bold" style="font-size: 1.2rem;">
+                                    Bienvenido 
+                                    <span id="nameSesion" class="light">
+                                        <?php 
+                                            echo $_SESSION['name'];
+                                        ?>
+                                    </span> 
+                                </h2>
+                                <h2 id="usercontent" class="bold" style="font-size: 1.2rem;">Aun no se ha iniciado sesion</h2>
+                            </div>
+                            <div class="separador-sesion"></div>
+                            <br>
+                            <div class="contactOptions">
+                                <h2 id="contactTittle" class="regular" style="font-size: 1.2rem; cursor: default;">¿Necesiats ayuda? ¡CONTACTANOS!</h2>
+                                <div id="contactList">
+                                    <ul style="list-style: none;">
+                                        <li class="regular"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">Whatsapp</a></li>
+                                        <li class="regular"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">correo</a></li>
+                                        <li class="regular"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">instagram</a></li>
+                                        <li class="regular"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">linkedin</a></li>
+                                    </ul>
+                                </div>
+                                <script>
+                                    const tittle = document.getElementById('contactTittle');
+                                    const contactList = document.getElementById('contactList');
+                                    contactList.style.display = 'none';
+                                    tittle.addEventListener("mouseover", () => {
+                                        contactList.style.display = 'block';
+                                        contactList.classList.toggle("active");
+                                        contactList.addEventListener("mouseover", () => {
+                                            contactList.style.display = 'block';
+                                        });
+                                    });
+                                    tittle.addEventListener("mouseout", () => {
+                                        contactList.classList.remove("active");
+                                        contactList.style.display = 'none';
+                                        contactList.addEventListener("mouseout", () => {
+                                            contactList.style.display = 'none';
+                                            // contactList.classList.toggle("disappear");
+                                            // setTimeout(() => {
+                                            //     contactList.classList.remove("disappear");
+                                            // },500)
+                                        })
+                                    });
+                                </script>
+                            </div>
+                            <div class="separador-sesion"></div>
+                            <div id="logoutbutton">
+                                <form name="closeform" style="height: 100%;" action="../../back-end/log-out.php" method="post">
+                                    
+                                    <div style="display: none;">
+                                        <!-- <p id="ubicacion">home</p> -->
+                                        <p id="pathclose" style="display: none;"></p>
+                                        <script>
+                                            const pathNameClose = window.location.pathname;
+                                            document.getElementById('pathclose').innerHTML = pathName;
+                                        </script>
+                                        <input type="hidden" name="ubicacionValueclose" id="ubicacionValueClose">
+                                    </div>
+                                    <input class="regular" id="closeSesion" for="closeform" style="cursor: pointer; color: black; font-size: 1.2rem; border: none; background: none;" type="submit" value="Cerar Sesion" onclick="document.getElementById('ubicacionValueClose').value = document.getElementById('pathclose').innerText">
+                                </form>
+                            </div>
+                            <div id="loginB">
+                                <h2 id="loginButton" class="regular" style="font-size: 1.2rem; cursor: pointer;">login</h2>
+                            </div>
+                            <div class="separador-sesion"></div>
+                            <div>
+                                <h2 class="regular"><a href="../../index.html" style="text-decoration: none; color: black; font-size: 1.2rem;">Salir del comercio y volver al inicio</a></h2>
+                            </div>
+                            <div class="separador-sesion"></div>
                         </div>
                     </div>
+                    <script>
+                        const toggle = document.getElementById('menuSesion');
+                        const toggleMenu = document.getElementById('menuSesionFloat');
+                        const close = document.getElementById('closeMenuSesion');
+                        toggle.addEventListener("click", () => {
+                            toggleMenu.classList.toggle("active");
+                        });
+                        close.addEventListener("click", () => {
+                            toggleMenu.classList.remove("active");
+                        });
+                    </script>
                 </div>
-                <script>
-                    const toggle = document.getElementById('menuSesion');
-                    const toggleMenu = document.getElementById('menuSesionFloat');
-                    const close = document.getElementById('closeMenuSesion');
-                    toggle.addEventListener("click", () => {
-                        toggleMenu.classList.toggle("active");
-                    });
-                    close.addEventListener("click", () => {
-                        toggleMenu.classList.remove("active");
-                    });
-                </script>
-            </div>
-            <div class="containerGrid">
                 <div style="position: relative;" id="busqueda-box">
-                    <input type="text" id="search-input" class="busqueda tittles" name="search" placeholder="Buscar productos" onkeyup="searchFunction()">
+                    <input type="text" id="search-input" class="busqueda regular" name="search" placeholder="Buscar productos" onkeyup="searchFunction()">
                 </div>
                 <div class="conttt">
                     <!-- <img class="carrito" src="../img/iconos/carrito.png" alt=""> -->
@@ -238,7 +234,7 @@
                         <p>Productos (<span id="contador"></span>)</p>
                         <i id="cerrar" class="fa-solid fa-xmark fa-2x"></i>
                     </div>
-                    <div id="shoping">
+                    <!-- <div id="shoping">
                     
                     </div>
                     <div id="totalcontainer">
@@ -250,11 +246,11 @@
 
                                 setTimeout(() =>{
                                     this.classList.remove('rebotar');
-                                    window.location.href = "checkout/checkout.php";
+                                    window.location.href = "productos/checkout/checkout.php";
                                 }, 500)
                             })
                         </script>
-                    </div>
+                    </div> -->
                 </div>
                 <script>
                     const carrito = document.querySelector(".conttt");
@@ -271,101 +267,104 @@
                 </script>
             </div>
         </div>
-        <nav class="nav2">
-            <ul class="listas">
-                <li class="relative-menu">
-                    <a href="">Imprenta</a>
-                    <ul class="hiden-menu" id="imprenta-navs">
-                        
-                    </ul>
-                    <script>    
-                        fetch('../../navs/imp-nav.html')
-                            .then(response => response.text())
-                            .then(data => {
-                                document.getElementById('imprenta-navs').innerHTML = data;
-                            })
-                    </script>
-                </li>
-                <li class="relative-menu">
-                    <a href="">Carteleria</a>
-                    <ul class="hiden-menu" id="carteleria-navs">
-                        
-                    </ul>
-                    <script>    
-                        fetch('../../navs/crtl-nav.html')
-                            .then(response => response.text())
-                            .then(data => {
-                                document.getElementById('carteleria-navs').innerHTML = data;
-                            })
-                    </script>
-                </li>
-                <li class="relative-menu">
-                    <a href="">Cajas y Bolsas</a>
-                    <ul class="hiden-menu" id="cajasbolsas-navs">
-                        
-                    </ul>
-                    <script>    
-                        fetch('../../navs/CaBo-nav.html')
-                            .then(response => response.text())
-                            .then(data => {
-                                document.getElementById('cajasbolsas-navs').innerHTML = data;
-                            })
-                    </script>
-                </li>
-                <li class="relative-menu">
-                    <a href="">Merchandising</a>
-                    <ul class="hiden-menu" id="merch-navs">
-                        
-                    </ul>
-                    <script>    
-                        fetch('../../navs/merch-nav.html')
-                            .then(response => response.text())
-                            .then(data => {
-                                document.getElementById('merch-navs').innerHTML = data;
-                            })
-                    </script>
-                </li>
-                <li class="relative-menu">
-                    <a href="">Ideas</a>
-                    <ul class="hiden-menu" id="ideas-navs">
-                        
-                    </ul>
-                    <script>    
-                        fetch('../../navs/idea-nav.html')
-                            .then(response => response.text())
-                            .then(data => {
-                                document.getElementById('ideas-navs').innerHTML = data;
-                            })
-                    </script>
-                </li>
-                <li class="relative-menu">
-                    <a href="">Deco & Gift</a>
-                    <ul class="hiden-menu" id="decogift-navs">
-                        
-                    </ul>
-                    <script>    
-                        fetch('../../navs/DecGift-nav.html')
-                            .then(response => response.text())
-                            .then(data => {
-                                document.getElementById('decogift-navs').innerHTML = data;
-                            })
-                    </script>
-                </li>
-                <li class="relative-menu">
-                    <a href="">Cotizacion a Medida</a>
-                    <ul class="hiden-menu" id="catm-navs">
-                        
-                    </ul>
-                    <script>    
-                        fetch('../../navs/CATM-nav.html')
-                            .then(response => response.text())
-                            .then(data => {
-                                document.getElementById('catm-navs').innerHTML = data;
-                            })
-                    </script>
-                </li>
-            </ul>
-        </nav>
+        <div class="responsive-menu">
+            <nav class="nav2">
+                <ul class="listas">
+                    <li class="relative-menu">
+                        <a href="">Imprenta</a>
+                        <ul class="hiden-menu" id="imprenta-navs">
+                            
+                        </ul>
+                        <script>    
+                            fetch('navs/imp-nav.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('imprenta-navs').innerHTML = data;
+                                })
+                        </script>
+                    </li>
+                    <li class="relative-menu">
+                        <a href="">Carteleria</a>
+                        <ul class="hiden-menu" id="carteleria-navs">
+                            
+                        </ul>
+                        <script>    
+                            fetch('navs/crtl-nav.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('carteleria-navs').innerHTML = data;
+                                })
+                        </script>
+                    </li>
+                    <li class="relative-menu">
+                        <a href="">Cajas y Bolsas</a>
+                        <ul class="hiden-menu" id="cajasbolsas-navs">
+                            
+                        </ul>
+                        <script>    
+                            fetch('navs/CaBo-nav.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('cajasbolsas-navs').innerHTML = data;
+                                })
+                        </script>
+                    </li>
+                    <li class="relative-menu">
+                        <a href="">Merchandising</a>
+                        <ul class="hiden-menu" id="merch-navs">
+                            
+                        </ul>
+                        <script>    
+                            fetch('navs/merch-nav.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('merch-navs').innerHTML = data;
+                                })
+                        </script>
+                    </li>
+                    <li class="relative-menu">
+                        <a href="">Ideas</a>
+                        <ul class="hiden-menu" id="ideas-navs">
+                            
+                        </ul>
+                        <script>    
+                            fetch('navs/idea-nav.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('ideas-navs').innerHTML = data;
+                                })
+                        </script>
+                    </li>
+                    <li class="relative-menu">
+                        <a href="">Deco & Gift</a>
+                        <ul class="hiden-menu" id="decogift-navs">
+                            
+                        </ul>
+                        <script>    
+                            fetch('navs/DecGift-nav.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('decogift-navs').innerHTML = data;
+                                })
+                        </script>
+                    </li>
+                    <li class="relative-menu">
+                        <a href="">Cotizacion a Medida</a>
+                        <ul class="hiden-menu" id="catm-navs">
+                            
+                        </ul>
+                        <script>    
+                            fetch('navs/CATM-nav.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('catm-navs').innerHTML = data;
+                                })
+                        </script>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
         <div id="search-results">
 
         </div>
@@ -379,7 +378,7 @@
                 }
             });
         </script>
-        <script src="../../../js/carrito/search.js"></script>
+        <script src="../js/carrito/search.js"></script>
     </div>
     <section id="main-content">
         <div id="detallesFact">
@@ -394,6 +393,7 @@
                         <label class="envio_label" for="razon_social">RAZON SOCIAL</label>
                         <span></span>
                     </div>
+                    <br class="celspace">
                     <div class="info-message" data-validate="el correo es requerido">
                         <input class="envio_text" id="envio_name" type="text" name="nombre" value="<?php echo $_SESSION['name']; ?>" required>
                         <label class="envio_label" for="nombre">NOMBRE</label>
@@ -407,6 +407,7 @@
                         <label class="envio_label" for="correo_electronico">EMAIL</label>
                         <span></span>
                     </div>
+                    <br class="celspace">
                     <div class="info-message" data-validate="el correo es requerido">
                         <input class="envio_text" type="text" id="envio_number" name="telefono" value="<?php 
                             if(empty($_SESSION['phone_number'])){
@@ -426,6 +427,7 @@
                         <label class="envio_label" for="direccion_envio">DIRECCION</label>
                         <span></span>
                     </div>
+                    <br class="celspace">
                     <div class="info-message" data-validate="el correo es requerido">
                         <input class="envio_text" type="text" name="municipio" required>
                         <label class="envio_label" for="municipio">MUNICIPIO</label>
@@ -439,6 +441,7 @@
                         <label class="envio_label" for="barrio">BARRIO</label>
                         <span></span>
                     </div>
+                    <br class="celspace">
                     <div class="info-message" data-validate="el correo es requerido">
                         <input class="envio_text" type="number" name="codigo_postal" required>
                         <label class="envio_label" for="codigo_postal">CODIGO POSTAL</label>
@@ -446,6 +449,25 @@
                     </div>
                 </div>
                 <br>
+                <!-- estos son los inputs no visibles -->
+                <div class="row_form" style="display: none;">
+                    <div class="info-message" data-validate="el correo es requerido">
+                        <input class="envio_text" type="text" name="estado_pago" value="SIN PAGAR" required>
+                    </div>
+                    <div class="info-message" data-validate="el correo es requerido">
+                        <input id="costo_pedido" class="envio_text" type="number" name="costo_pedido" required>
+                    </div>
+                    <div class="info-message" data-validate="el correo es requerido">
+                        <input id="descripcion_pedido" class="envio_text" type="text" name="descripcion_pedido" required>
+                    </div>
+                </div>
+                <script>
+                    window.onload =function(){
+                        document.getElementById('costo_pedido').value = document.getElementById('total-precio').textContent
+                        document.getElementById('descripcion_pedido').value = document.getElementById('shoping').textContent
+                    }
+                </script>
+                <!-- fin de los inputs no visibles -->
                 <div class="row_form">
                     <div class="info-message" data-validate="el correo es requerido">
                         <input class="envio_text" type="number" name="cedula_num" value="<?php echo $_SESSION['documento']; ?>" required>
@@ -461,10 +483,133 @@
         </div>
         <div></div>
         <div id="cartPreview">
+            <div id="shoping" style="max-height: 80%;">
 
-
+            </div>
+            <p>Sub total: <span id="signo">$</span><span id="total-precio"></span></p>
         </div>
     </section>
+    <div>
+        
+    </div>
+    <script>
+        let total = 0;
+        // var contador = 0;
+
+        // funcion para agregar al carrito todo
+        function agregarAlCarrito(producto, tamañoR, tipoR, tipoC, tipoE, selected, cantidad) {
+            var valorUnidad = document.getElementById('costouni').textContent;
+            const carritoItems = document.getElementById('shoping');
+            const item = document.createElement('div');
+            item.className = 'carrito-item';
+            const itemPrecio = valorUnidad * cantidad;
+
+            // agregar el archivo
+            const archivoInput = document.getElementById('addfile');
+            const archivo = archivoInput.files[0];
+
+            // si hay un archivo leerlo como base 64
+            let archivoBase64 = ''; 
+            let archivoNombre = '';
+            if (archivo) {
+                archivoNombre = archivo.name;
+                const reader = new FileReader();
+                reader.onloadend = function() {
+                    archivoBase64 = reader.result; // esto contendra el archivo en base64 
+                    agregarItem(item, producto, tamañoR, tipoR, tipoC, tipoE, selected, cantidad, itemPrecio, archivoBase64, archivoNombre);
+                };
+                reader.readAsDataURL(archivo); // leer el archivo como base64
+            } else {
+                // si no hay archivo, simplemente agrega el item sin archivo
+                agregarItem(item, producto, tamañoR, tipoR, tipoC, tipoE, selected, cantidad, itemPrecio, null, null);
+            }
+        }
+
+        function agregarItem(item, producto, tamañoR, tipoR, tipoC, tipoE, selected, cantidad, itemPrecio, archivoBase64, archivoNombre) {
+            // mostrar la información
+            item.innerHTML = `
+                <ul class="listCaract">
+                    <li><b>${producto}</b></li>
+                    <li>Cantidad: <b>${cantidad}</b></li>
+                    <li>Tamaño: <b>${tamañoR}</b></li>
+                    <li>Tipo Remito: <b>${tipoR}</b></li>
+                    <li>Tipo Copias: <b>${tipoC}</b></li>
+                    <li>Tipo Encuadernado: <b>${tipoE}</b></li>
+                    <li>Arte <b>${selected}</b></li>
+                    <li>Archivo: <b>${archivoNombre ? archivoNombre : 'no hay archivo'}</b></li>
+                    ${archivoBase64 ? `<li><img src="${archivoBase64}" alt="${archivoNombre}" style="max-width: 200px; height: 100px;"></li>` : ''}
+                    <div class="separador"></div>
+                    <br>
+                </ul>
+            `;
+
+            const carritoItems = document.getElementById('shoping');
+            carritoItems.appendChild(item);
+            
+            // calculo del total al agregar un producto al carrito
+            total += itemPrecio;
+            document.getElementById('total-precio').textContent = total;
+
+            // variable contadora de numero de productos en el carrito
+            // contador += 1;
+            // document.getElementById('contador').textContent = contador;
+
+            // Guardar el carrito en localStorage
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            carrito.push({
+                producto,
+                tamañoR,
+                tipoR,
+                tipoC,
+                tipoE,
+                cantidad,
+                archivo: archivoBase64,
+                archivoNombre
+            });
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+
+            localStorage.setItem('total', total);
+            // localStorage.setItem('contador', contador)
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const carritoItems = document.getElementById('shoping');
+            const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            
+            carrito.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = 'carrito-item';
+                
+                div.innerHTML = `
+                    <ul class="listCaract">
+                        <li><b>${item.producto}</b></li>
+                        <li>Cantidad: <b>${item.cantidad}</b></li>
+                        <li>Tamaño: <b>${item.tamañoR}</b></li>
+                        <li>Tipo Remito: <b>${item.tipoR}</b></li>
+                        <li>Tipo Copias: <b>${item.tipoC}</b></li>
+                        <li>Tipo Encuadernado: <b>${item.tipoE}</b></li>
+                        <li>Arte <b>${item.arte}</b></li>
+                        <li>Archivo: <b>${item.archivoNombre ? item.archivoNombre : 'no hay archivo'}</b></li>
+                        ${item.archivo ? `<li><img src="${item.archivo}" alt="${item.archivoNombre}" style="max-width: 200px; height: 100px;"></li>` : ''}
+                        <div class="separador"></div>
+                        <br>
+                    </ul>
+                `;
+
+                carritoItems.appendChild(div);
+                
+                // Actualizar el total y contador
+                total += item.precio;
+            });
+
+            document.getElementById('total-precio').textContent = total;
+        });
+    </script>
+    <!-- <script>
+        window.onload = function(){
+            document.getElementById('carritoText').textContent = document.getElementById('shoping').textContent;
+        }
+    </script> -->
     <section class="footter">
         <div class="foot-interior">
             <div class="fot-info" id="info1">
@@ -569,6 +714,6 @@
         </div>
     </section>
     <script src="../../../js/loginadvice.js"></script>
-    <script src="../../../js/carrito/addtocart.js"></script>
+    <!-- <script src="../../../js/carrito/addtocart.js"></script> -->
 </body>
 </html>

@@ -185,21 +185,48 @@
             color: var(--azul);
             font-family: graphie-light;
         }
+        @media screen and (max-width: 1050px){
+            .h3{
+                display: none;
+            }
+            .h2{
+                font-size: 3rem;
+            }
+            .info-continue{
+                width: fit-content;
+                border-radius: 40px;
+                height: fit-content;
+                padding: 10px;
+            }
+            #continue{
+                display: flex;
+                flex-direction: column;
+            }
+            .foot-interior{
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: 100%;
+            }
+            .fot-info{
+                margin: 25px 0;
+            }
+        }
     </style>
 </head>
 <body>
-<div id="containerAlert">
+    <div id="containerAlert">
         <div id="alert" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2000">
             <div id="flex-x">
                 <i id="cerrar-alert" class="fa-solid fa-xmark fa-2x" style="cursor: pointer;"></i>
             </div>
             <div id="alert-flex">
                 <div>
-                    <h2 class="tittles">Queremos Saber quien eres</h2>
-                    <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad porro alias sed, veritatis ullam nobis iusto velit officia suscipit provident iure perferendis aspernatur sapiente eveniet inventore asperiores similique ut corporis.</p>
+                    <h2 class="tittles" id="titlelittle">Queremos Saber quien eres</h2>
+                    <p class="" id="none">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad porro alias sed, veritatis ullam nobis iusto velit officia suscipit provident iure perferendis aspernatur sapiente eveniet inventore asperiores similique ut corporis.</p>
                 </div>
                 <div class="form">
-                    <form name="form" action="../../../back-end/log-in.php" method="post" class="form_f">
+                    <form name="form" action="../../../../back-end/log-in.php" method="post" class="form_f">
                         <div class="titule">
                             <h3 class="tittles">INICIA SESION</h3>
                         </div>
@@ -225,6 +252,7 @@
                         </div>
                         <div class="enlaces">
                             <a href="../recuperacion/email.html">Olvide mi contraseña</a>
+                            <br>
                             <a href="">No estoy registrado</a>
                         </div>
                         <div class="e-b">
@@ -235,212 +263,261 @@
             </div>
         </div>
     </div>
+    <!-- <div id="advice">
+
+    </div>
+    <script>
+        fetch('../../navs/sesionadvice.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('advice').innerHTML = data;
+            })
+    </script> -->
+    
     <div class="header">
         <div class="header-grid">
-            <div class="logo-box" style="padding-left: 15px; display: flex; align-items: center;">
-                <div id="menuSesion">
-                    <i class="fa-solid fa-bars fa-2x"></i>
-                </div>
-                <div id="menuSesionFloat">
-                    <div style="width: 90%; height: 90%;">
-                        <div>
-                            <div class="iconos-box">
-                                <i id="closeMenuSesion" class="fa-solid fa-xmark fa-2x" style="cursor: pointer;"></i>
-                                <img class="logo" src="../../../img/iconos/ICONO CON PUNTOS.png" alt="">
-                            </div>
-                        </div>
-                        <br>
-                        <div id="user">
-                            <h2 class="bold" style="font-size: 1.2rem;">
-                                Bienvenido 
-                                <span id="nameSesion" class="light">
-                                    <?php 
-                                        echo $_SESSION['name'];
-                                    ?>
-                                </span> 
-                            </h2>
-                            <h2 id="usercontent" class="bold" style="font-size: 1.2rem;">Aun no se ha iniciado sesion</h2>
-                        </div>
-                        <br>
-                        <div class="contactOptions">
-                            <h2 id="contactTittle" class="bold" style="font-size: 1.2rem; cursor: default;">¿Necesiats ayuda? ¡CONTACTANOS!</h2>
-                            <div id="contactList">
-                                <ul style="list-style: none;">
-                                    <li class="bold"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">Whatsapp</a></li>
-                                    <li class="bold"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">correo</a></li>
-                                    <li class="bold"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">instagram</a></li>
-                                    <li class="bold"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">linkedin</a></li>
-                                </ul>
-                            </div>
-                            
-                            <script>
-                                const tittle = document.getElementById('contactTittle');
-                                const contactList = document.getElementById('contactList');
-                                contactList.style.display = 'none';
-                                tittle.addEventListener("click", () => {
-                                    contactList.style.display = 'block';
-                                    contactList.classList.toggle("active");
-                                    contactList.addEventListener("mouseover", () => {
-                                        contactList.style.display = 'block';
-                                    });
-                                });
-                                tittle.addEventListener("mouseout", () => {
-                                    contactList.classList.remove("active");
-                                    contactList.style.display = 'none';
-                                    contactList.addEventListener("mouseout", () => {
-                                        contactList.style.display = 'none';
-                                        // contactList.classList.toggle("disappear");
-                                        // setTimeout(() => {
-                                        //     contactList.classList.remove("disappear");
-                                        // },500)
-                                    })
-                                });
-                            </script>
-                        </div>
-                        <br>
-                        <div id="logoutbutton">
-                            <form name="closeform" style="height: 100%;" action="../../../../back-end/log-out.php" method="post">
-                                
-                                <div style="display: none;">
-                                    <!-- <p id="ubicacion">home</p> -->
-                                    <p id="pathclose" style="display: none;"></p>
-                                    <script>
-                                        const pathNameClose = window.location.pathname;
-                                        document.getElementById('pathclose').innerHTML = pathName;
-                                    </script>
-                                    <input type="hidden" name="ubicacionValueclose" id="ubicacionValueClose">
+            <div class="containerGrid">
+                <div class="logo-box" style="padding-left: 15px; display: flex; align-items: center;">
+                    <div id="menuSesion">
+                        <i class="fa-solid fa-bars fa-2x"></i>
+                    </div>
+                    <div id="menuSesionFloat">
+                        <div style="width: 90%; height: 90%;">
+                            <div>
+                                <div class="iconos-box">
+                                    <i id="closeMenuSesion" class="fa-solid fa-xmark fa-2x" style="cursor: pointer;"></i>
+                                    <img class="logo" src="../../../img/iconos/ICONO CON PUNTOS.png" alt="">
                                 </div>
-                                <input class="bold" id="closeSesion" for="closeform" style="cursor: pointer; color: black; font-size: 1.2rem; border: none; background: none;" type="submit" value="Cerar Sesion" onclick="document.getElementById('ubicacionValueClose').value = document.getElementById('pathclose').innerText">
-                            </form>
-                        </div>
-                        <div id="loginB">
-                            <h2 id="loginButton" class="bold" style="font-size: 1.2rem; cursor: pointer;">login</h2>
-                        </div>
-                        
-                        <br>
-                        <div>
-                            <h2 class="bold"><a href="../../../../../index.html" style="text-decoration: none; color: black; font-size: 1.2rem;">Salir del comercio y volver al inicio</a></h2>
-                        </div>
-                        
-                        <br>
-                        <div>
-                            <h2 class="bold"><a href="../../homecomer.php" style="text-decoration: none; color: black; font-size: 1.2rem;">Volver al inicio del comercio</a></h2>
+                            </div>
+                            <br>
+                            <div id="user">
+                                <h2 class="bold" style="font-size: 1.2rem;">
+                                    Bienvenido 
+                                    <span id="nameSesion" class="light">
+                                        <?php 
+                                            echo $_SESSION['name'];
+                                        ?>
+                                    </span> 
+                                </h2>
+                                <h2 id="usercontent" class="bold" style="font-size: 1.2rem;">Aun no se ha iniciado sesion</h2>
+                            </div>
+                            <div class="separador-sesion"></div>
+                            <br>
+                            <div class="contactOptions">
+                                <h2 id="contactTittle" class="regular" style="font-size: 1.2rem; cursor: default;">¿Necesiats ayuda? ¡CONTACTANOS!</h2>
+                                <div id="contactList">
+                                    <ul style="list-style: none;">
+                                        <li class="regular"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">Whatsapp</a></li>
+                                        <li class="regular"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">correo</a></li>
+                                        <li class="regular"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">instagram</a></li>
+                                        <li class="regular"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">linkedin</a></li>
+                                    </ul>
+                                </div>
+                                <script>
+                                    const tittle = document.getElementById('contactTittle');
+                                    const contactList = document.getElementById('contactList');
+                                    contactList.style.display = 'none';
+                                    tittle.addEventListener("mouseover", () => {
+                                        contactList.style.display = 'block';
+                                        contactList.classList.toggle("active");
+                                        contactList.addEventListener("mouseover", () => {
+                                            contactList.style.display = 'block';
+                                        });
+                                    });
+                                    tittle.addEventListener("mouseout", () => {
+                                        contactList.classList.remove("active");
+                                        contactList.style.display = 'none';
+                                        contactList.addEventListener("mouseout", () => {
+                                            contactList.style.display = 'none';
+                                            // contactList.classList.toggle("disappear");
+                                            // setTimeout(() => {
+                                            //     contactList.classList.remove("disappear");
+                                            // },500)
+                                        })
+                                    });
+                                </script>
+                            </div>
+                            <div class="separador-sesion"></div>
+                            <div id="logoutbutton">
+                                <form name="closeform" style="height: 100%;" action="../../../../back-end/log-out.php" method="post">
+                                    
+                                    <div style="display: none;">
+                                        <!-- <p id="ubicacion">home</p> -->
+                                        <p id="pathclose" style="display: none;"></p>
+                                        <script>
+                                            const pathNameClose = window.location.pathname;
+                                            document.getElementById('pathclose').innerHTML = pathName;
+                                        </script>
+                                        <input type="hidden" name="ubicacionValueclose" id="ubicacionValueClose">
+                                    </div>
+                                    <input class="regular" id="closeSesion" for="closeform" style="cursor: pointer; color: black; font-size: 1.2rem; border: none; background: none;" type="submit" value="Cerar Sesion" onclick="document.getElementById('ubicacionValueClose').value = document.getElementById('pathclose').innerText">
+                                </form>
+                            </div>
+                            <div id="loginB">
+                                <h2 id="loginButton" class="regular" style="font-size: 1.2rem; cursor: pointer;">login</h2>
+                            </div>
+                            <div class="separador-sesion"></div>
+                            <div>
+                                <h2 class="regular"><a href="../../../../index.html" style="text-decoration: none; color: black; font-size: 1.2rem;">Salir del comercio y volver al inicio</a></h2>
+                            </div>
+                            <div class="separador-sesion"></div>
                         </div>
                     </div>
+                    <script>
+                        const toggle = document.getElementById('menuSesion');
+                        const toggleMenu = document.getElementById('menuSesionFloat');
+                        const close = document.getElementById('closeMenuSesion');
+                        toggle.addEventListener("click", () => {
+                            toggleMenu.classList.toggle("active");
+                        });
+                        close.addEventListener("click", () => {
+                            toggleMenu.classList.remove("active");
+                        });
+                    </script>
+                </div>
+                <div style="position: relative;" id="busqueda-box">
+                    <input type="text" id="search-input" class="busqueda regular" name="search" placeholder="Buscar productos" onkeyup="searchFunction()">
+                </div>
+                <div class="conttt">
+                    <!-- <img class="carrito" src="../img/iconos/carrito.png" alt=""> -->
+                    <i class="fa-solid fa-cart-shopping fa-2x"></i>
+                </div>
+                <div class="wish-list">
+                    <div class="exs">
+                        <p>Productos (<span id="contador"></span>)</p>
+                        <i id="cerrar" class="fa-solid fa-xmark fa-2x"></i>
+                    </div>
+                    <div id="shoping">
+                    
+                    </div>
+                    <!-- <div id="totalcontainer">
+                        <p>Sub<br>total: <span id="signo">$</span><span id="total-precio"></span></p>
+                        <button id="pedir" class="">CHECKOUT</button>
+                        <script>
+                            document.getElementById('pedir').addEventListener('click', function() {
+                                this.classList.add('rebotar');
+
+                                setTimeout(() =>{
+                                    this.classList.remove('rebotar');
+                                    window.location.href = "checkout.php";
+                                }, 500)
+                            })
+                        </script>
+                    </div> -->
                 </div>
                 <script>
-                    const toggle = document.getElementById('menuSesion');
-                    const toggleMenu = document.getElementById('menuSesionFloat');
-                    const close = document.getElementById('closeMenuSesion');
-                    toggle.addEventListener("click", () => {
-                        toggleMenu.classList.toggle("active");
+                    const carrito = document.querySelector(".conttt");
+                    const wishList = document.querySelector(".wish-list");
+                    const cerrar = document.getElementById("cerrar");
+                    carrito.addEventListener("click", () => {
+                        carrito.classList.toggle("active");
+                        wishList.classList.toggle("active");
                     });
-                    close.addEventListener("click", () => {
-                        toggleMenu.classList.remove("active");
-                    });
+                    cerrar.addEventListener("click", () => {
+                        cerrar.classList.toggle("active");
+                        wishList.classList.toggle("active");
+                    })
                 </script>
             </div>
-            <div class="containerGrid">
-                <div style="position: relative;" id="busqueda-box">
-                    <input type="text" id="search-input" class="busqueda tittles" name="search" placeholder="Buscar productos" onkeyup="searchFunction()">
-                </div>
-            </div>
         </div>
-        <nav class="nav2">
-            <ul class="listas">
-                <li class="relative-menu">
-                    <a href="">Imprenta</a>
-                    <ul class="hiden-menu" id="imprenta-navs">
-                        
-                    </ul>
-                    <script>    
-                        fetch('../../navs/imp-nav.html')
-                            .then(response => response.text())
-                            .then(data => {
-                                document.getElementById('imprenta-navs').innerHTML = data;
-                            })
-                    </script>
-                </li>
-                <li class="relative-menu">
-                    <a href="">Carteleria</a>
-                    <ul class="hiden-menu" id="carteleria-navs">
-                        
-                    </ul>
-                    <script>    
-                        fetch('../../navs/crtl-nav.html')
-                            .then(response => response.text())
-                            .then(data => {
-                                document.getElementById('carteleria-navs').innerHTML = data;
-                            })
-                    </script>
-                </li>
-                <li class="relative-menu">
-                    <a href="">Cajas y Bolsas</a>
-                    <ul class="hiden-menu" id="cajasbolsas-navs">
-                        
-                    </ul>
-                    <script>    
-                        fetch('../../navs/CaBo-nav.html')
-                            .then(response => response.text())
-                            .then(data => {
-                                document.getElementById('cajasbolsas-navs').innerHTML = data;
-                            })
-                    </script>
-                </li>
-                <li class="relative-menu">
-                    <a href="">Merchandising</a>
-                    <ul class="hiden-menu" id="merch-navs">
-                        
-                    </ul>
-                    <script>    
-                        fetch('../../navs/merch-nav.html')
-                            .then(response => response.text())
-                            .then(data => {
-                                document.getElementById('merch-navs').innerHTML = data;
-                            })
-                    </script>
-                </li>
-                <li class="relative-menu">
-                    <a href="">Ideas</a>
-                    <ul class="hiden-menu" id="ideas-navs">
-                        
-                    </ul>
-                    <script>    
-                        fetch('../../navs/idea-nav.html')
-                            .then(response => response.text())
-                            .then(data => {
-                                document.getElementById('ideas-navs').innerHTML = data;
-                            })
-                    </script>
-                </li>
-                <li class="relative-menu">
-                    <a href="">Deco & Gift</a>
-                    <ul class="hiden-menu" id="decogift-navs">
-                        
-                    </ul>
-                    <script>    
-                        fetch('../../navs/DecGift-nav.html')
-                            .then(response => response.text())
-                            .then(data => {
-                                document.getElementById('decogift-navs').innerHTML = data;
-                            })
-                    </script>
-                </li>
-                <li class="relative-menu">
-                    <a href="">Cotizacion a Medida</a>
-                    <ul class="hiden-menu" id="catm-navs">
-                        
-                    </ul>
-                    <script>    
-                        fetch('../../navs/CATM-nav.html')
-                            .then(response => response.text())
-                            .then(data => {
-                                document.getElementById('catm-navs').innerHTML = data;
-                            })
-                    </script>
-                </li>
-            </ul>
-        </nav>
+        <div class="responsive-menu">
+            <nav class="nav2">
+                <ul class="listas">
+                    <li class="relative-menu">
+                        <a href="">Imprenta</a>
+                        <ul class="hiden-menu" id="imprenta-navs">
+                            
+                        </ul>
+                        <script>    
+                            fetch('../../navs/imp-nav.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('imprenta-navs').innerHTML = data;
+                                })
+                        </script>
+                    </li>
+                    <li class="relative-menu">
+                        <a href="">Carteleria</a>
+                        <ul class="hiden-menu" id="carteleria-navs">
+                            
+                        </ul>
+                        <script>    
+                            fetch('../../navs/crtl-nav.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('carteleria-navs').innerHTML = data;
+                                })
+                        </script>
+                    </li>
+                    <li class="relative-menu">
+                        <a href="">Cajas y Bolsas</a>
+                        <ul class="hiden-menu" id="cajasbolsas-navs">
+                            
+                        </ul>
+                        <script>    
+                            fetch('../../navs/CaBo-nav.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('cajasbolsas-navs').innerHTML = data;
+                                })
+                        </script>
+                    </li>
+                    <li class="relative-menu">
+                        <a href="">Merchandising</a>
+                        <ul class="hiden-menu" id="merch-navs">
+                            
+                        </ul>
+                        <script>    
+                            fetch('../../navs/merch-nav.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('merch-navs').innerHTML = data;
+                                })
+                        </script>
+                    </li>
+                    <li class="relative-menu">
+                        <a href="">Ideas</a>
+                        <ul class="hiden-menu" id="ideas-navs">
+                            
+                        </ul>
+                        <script>    
+                            fetch('../../navs/idea-nav.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('ideas-navs').innerHTML = data;
+                                })
+                        </script>
+                    </li>
+                    <li class="relative-menu">
+                        <a href="">Deco & Gift</a>
+                        <ul class="hiden-menu" id="decogift-navs">
+                            
+                        </ul>
+                        <script>    
+                            fetch('../../navs/DecGift-nav.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('decogift-navs').innerHTML = data;
+                                })
+                        </script>
+                    </li>
+                    <li class="relative-menu">
+                        <a href="">Cotizacion a Medida</a>
+                        <ul class="hiden-menu" id="catm-navs">
+                            
+                        </ul>
+                        <script>    
+                            fetch('../../navs/CATM-nav.html')
+                                .then(response => response.text())
+                                .then(data => {
+                                    document.getElementById('catm-navs').innerHTML = data;
+                                })
+                        </script>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
         <div id="search-results">
 
         </div>
@@ -485,11 +562,11 @@
         <div class="separador"></div>
         <div class="totales">
             <div style="text-align: right;">
-                <h2>Sub total: </h2>
-                <span id="signo">$</span><span id="total-precio"></span>
+                <h2 class="bold black">Sub total: </h2>
+                <span class="bold black" id="signo">$</span><span class="light black" id="total-precio"></span>
             </div>
             <div class="separador-tenue"></div>
-            <h2>Datos de entrega:</h2>
+            <h2 class="bold black">Datos adicionales:</h2>
             <p></p>
         </div>
         

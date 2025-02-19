@@ -11,9 +11,10 @@ function searchFunction() {
         { name: 'Microperforado', description: 'Publicidad en ventanas con microperforado.', link: 'personalizar-microperforado.html' },
         { name: 'Stickers', description: 'Crea stickers personalizados para cualquier ocasión.', link: 'personalizar-stickers.html' },
         { name: 'Mugs', description: 'Personaliza mugs con tus diseños favoritos.', link: 'personalizar-mugs.html' },
+        { name: 'Remitos', description: 'libretas rapiidas', link: '../../front-end/solidacomercial/productos/productos.php' },
         { name: 'Camisetas', description: 'Diseña camisetas únicas para cualquier evento.', link: 'personalizar-camisetas.html' }
     ];
-
+    
     // Mostrar o esconder resultados
     if (input === '') {
         resultsContainer.textContent = ''; // No mostrar nada si el input está vacío

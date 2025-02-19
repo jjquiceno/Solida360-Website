@@ -241,7 +241,6 @@ body{
 
 /* -------------------------------------------------estilos del work----------------------------------------------- */
 #work{
-    /* border: solid black; */
     height: 200vh;
     background: 
         linear-gradient(to bottom, #0d8eab8f, #b8c66c5b, #b8c66c5b, #0d8eab49),
@@ -270,7 +269,6 @@ body{
     margin: 10px 0;
 }
 #gallery{
-    /* border: solid yellow; */
     width: 95%;
     height: 95%;
     display: grid;
@@ -332,8 +330,6 @@ body{
 .item-medida{
     width: calc(100%);
     height: 100%;
-}
-.atuMedida > :nth-child(1){
     background-image: url(../../img/fondo1.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -524,4 +520,134 @@ textarea:valid ~ .label{
 }
 .footer-iconos{
     width: 30px;
+}
+.formtitle{
+    font-family: graphie-bold;
+    word-spacing: 3px;
+    color: #b8c66c;
+    font-size: 2rem;
+}
+
+/* estilos responsive */
+
+@media screen and (max-width: 1050px){
+    .slide{
+        height: 80vh;
+    }
+    .slide > :nth-child(1){
+        flex-direction: column;
+        align-items: center;
+        max-height: 75vh;
+    }
+    .slide > :nth-child(1) > :nth-child(1) > img{
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .slide > :nth-child(1) > :nth-child(2){
+        border-radius: 0 0 20px 20px;
+        border-left: none;
+        border-top: solid var(--verde);
+        width: 100%;
+    }
+    #little{
+        font-size: 4rem;
+    }
+    .spletters{
+        font-size: 4rem;
+    }
+    .slide > :nth-child(1) > :nth-child(2) > :nth-child(3){
+        font-size: 3rem;
+    }
+    .slogan-int{
+        width: 90%;
+        height: 85%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    .slogan-int h2{
+        font-size: 5rem;
+    }
+    #slogan{
+        height: 90%;
+        margin: 0;
+        width: 100%;
+    }
+    .ven{
+        display: none;
+    }
+    #vene2{
+        display: none;
+    }
+    #ventajas{
+        height: 100%;
+        display: flex;
+        align-items: center;  
+    }
+    #empresas{
+        height: 50vh;
+    }
+    #work{
+        height: 80vh;
+    }
+    #work_tt{
+        font-size: 3rem;
+    }
+    .form_form{
+        width: 90%;
+    }
+    .caja_text{
+        width: 100%;
+        height: 100%;
+    }
+    .label{
+        font-size: 2rem;
+    }
+    .info-message{
+        width: 80%;
+        height: 5vh;
+    }
+    .formtitle{
+        font-size: 5rem;
+    }
+    .enviar{
+        margin: auto;
+        width: 200px;
+        height: 7vh;
+        font-size: 2.5rem;
+    }
+    .foot-interior{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+    }
+    .fot-info{
+        margin: 25px 0;
+    }
+}
+@media screen and (max-width: 600px) {
+    #little{
+        font-size: 3rem;
+    }
+    .spletters{
+        font-size: 3rem;
+    }
+    .slide > :nth-child(1) > :nth-child(2) > :nth-child(3){
+        font-size: 1rem;
+    }
+    .slogan-int h2{
+        font-size: 3rem;
+    }
+    .formtitle{
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width: 430px) {
+    #work_tt{
+        font-size: 2rem;
+    }
 }

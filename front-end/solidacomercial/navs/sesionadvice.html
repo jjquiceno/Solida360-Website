@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .separador-sesion{
+            bottom: 1px solid black;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="containerAlert">
+        <div id="alert" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2000">
+            <div id="flex-x">
+                <i id="cerrar-alert" class="fa-solid fa-xmark fa-2x" style="cursor: pointer;"></i>
+            </div>
+            <div id="alert-flex">
+                <div>
+                    <h2 class="tittles">Queremos Saber quien eres</h2>
+                    <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad porro alias sed, veritatis ullam nobis iusto velit officia suscipit provident iure perferendis aspernatur sapiente eveniet inventore asperiores similique ut corporis.</p>
+                </div>
+                <div class="form">
+                    <form name="form" action="../../../back-end/log-in.php" method="post" class="form_f">
+                        <div class="titule">
+                            <h3 class="tittles">INICIA SESION</h3>
+                        </div>
+                        <input type="hidden" name="csrf_token" value="<>">
+                        <div class="info-message" data-validate="el correo es requerido">
+                            <input class="caja_text" type="email" name="email" required>
+                            <label class="label" for="email">CORREO</label>
+                            <span></span>
+                        </div>
+                        <div class="info-message" data-validate="el correo es requerido">
+                            <input class="caja_text" type="password" name="password" required>
+                            <label class="label" for="password">CONTRASEÑA</label>
+                            <span></span>
+                        </div>
+                        <div style="display: none;">
+                            <!-- <p id="ubicacion">home</p> -->
+                            <p id="path" style="display: none;"></p>
+                            <script>
+                                const pathName = window.location.pathname;
+                                document.getElementById('path').innerHTML = pathName;
+                            </script>
+                            <input type="hidden" name="ubicacionValue" id="ubicacionValue">
+                        </div>
+                        <div class="enlaces">
+                            <a href="../recuperacion/email.html">Olvide mi contraseña</a>
+                            <a href="">No estoy registrado</a>
+                        </div>
+                        <div class="e-b">
+                            <input id="Log" for="form" type="submit" value="enviar" name="log" onclick="document.getElementById('ubicacionValue').value = document.getElementById('path').innerText" class="enviar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

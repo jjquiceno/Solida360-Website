@@ -1,10 +1,8 @@
 #main-content{
-    /* border: solid black; */
     height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 #main-content > :nth-child(2){
     border: 1px solid var(--verde);
@@ -16,13 +14,10 @@
     backdrop-filter: blur(30px);
     border-radius: 10px;
     padding: 10px;
-    /* border: solid black; */
 }
 #main-content > :nth-child(1){
     width: 55%;
-    /* border: 1px solid var(--verde); */
     background-color: rgba(184, 198, 108, 0.11);
-
 }
 #main-content > :nth-child(3){
     width: 35%;
@@ -86,4 +81,46 @@ textarea:valid ~ .envio_label{
     border: none;
     font-size: 1rem;
 
+}
+.celspace{
+    display: none;
+}
+
+/* responsive */
+@media screen and (max-width: 1050px){
+    #main-content{
+        display: flex;
+        flex-direction: column;
+        height: 250vh;
+        padding-top: 10px;
+    }
+    #main-content > :nth-child(1){
+        width: 90%;
+        height: fit-content;
+    }
+    #main-content > :nth-child(2){
+        border: 1px solid var(--verde);
+        height: 0;
+        width: 95%;
+    }
+    #main-content > :nth-child(3){
+        width: 90%;
+        height: fit-content;
+    }
+    .row_form{
+        display: flex;
+        flex-direction: column;
+    }
+    .celspace{
+        display: block;
+    }
+    .foot-interior{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+    }
+    .fot-info{
+        margin: 25px 0;
+    }
 }
