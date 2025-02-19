@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="../css/nosotros.css">
     <link rel="stylesheet" href="../css/menu-ham.css">
     <link rel="icon" href="../img/iconos/logo-solida.png">
-    
 </head>
 <body>
     <div class="cont_nav">
@@ -34,25 +33,33 @@
                 <img class="logo" src="../img/iconos/ICONO CON PUNTOS.png" alt="">
             </div>
             <div class="off-screen-menu">
-                <ul>
-                  <li><a href="../../index.html">INICIO</a></li>
-                  <li><a href="nosotros.html">NOSOTROS</a></li>
-                  <li><a href="servicios.html">SERVICIOS</a></li>
-                  <li><a href="impresos.html">IMPRESOS</a></li>
-                  <li><a href="contacto.php">CONTACTO</a></li>
-        
+                <ul class="osm">
+                    <li><a href="../../index.html">INICIO</a></li>
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="servicios.html">SERVICIOS</a></li>
+                    <li><a href="impresos.html">IMPRESOS</a></li>
+                    <li><a href="contacto.php">CONTACTO</a></li>
+                    <li><a href="¿log-in2.html">LOG-IN</a></li>
+                    <li><a href="../solidacomercial/homecomer.php">COMERCIO</a></li>
                 </ul>
             </div>
-          
-              <nav>
+             
+            <nav id="selectmenu">
                 <div class="ham-menu">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-              </nav>
-          
-              <script src="../js/menu-ham.js"></script>
+            </nav>
+            <script>
+                const select = document.getElementById('selectmenu');
+                const hamMenu = document.querySelector(".ham-menu");
+                const offScreenMenu = document.querySelector(".off-screen-menu");
+                select.addEventListener("click", () => {
+                    hamMenu.classList.toggle("active");
+                    offScreenMenu.classList.toggle("active");
+                });
+            </script>
         </nav>
     </div>
     <video class="video" src="../img/videos/BANNER-SÓLIDA2.mp4" autoplay muted loop></video>
@@ -67,7 +74,25 @@
             </main>
        </div>
        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-       <script src="../js/conocenos.js"></script>
+       <script>
+            const typed = new Typed('.typed', {
+                strings: [
+                    '<i class="mascota">CONÓCENOS</i>'
+                ],
+
+                typeSpeed: 60, 
+                startDelay: 300,
+                backSpeed: 60,
+                smartBackspace: true, 
+                shuffle: false, 
+                backDelay: 1100,
+                loop: true,
+                loopCount: 1,
+                showCursor: true, 
+                cursorChar: '|',
+                contentType: 'html',
+            });
+       </script>
     </section>
     <section class="manifiesto">
         <div class="manifiesto-interior">

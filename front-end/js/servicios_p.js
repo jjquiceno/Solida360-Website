@@ -8,10 +8,6 @@ const typed = new Typed('.typed', {
 		'<i class="mascota">PAUTA</i>',
         '<i class="mascota">CAMPAÑAS INSTITUCIONALES</i>',
         '<i class="mascota">FOTOGRAFÍA</i>'
-
-
-
-
 	],
 
 	//stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.

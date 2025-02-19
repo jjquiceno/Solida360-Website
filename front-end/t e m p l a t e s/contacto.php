@@ -23,14 +23,17 @@
                 <img class="logo" src="../img/iconos/ICONO CON PUNTOS.png" alt="">
             </div>
             <div class="off-screen-menu">
-                <ul>
-                  <li><a href="../../index.html">INICIO</a></li>
-                  <li><a href="nosotros.html">NOSOTROS</a></li>
-                  <li><a href="servicios.html">SERVICIOS</a></li>
-                  <li><a href="impresos.html">IMPRESOS</a></li>
-                  <li><a href="contacto.php">CONTACTO</a></li>
+                <ul class="osm">
+                    <li><a href="../../index.html">INICIO</a></li>
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="servicios.html">SERVICIOS</a></li>
+                    <li><a href="impresos.html">IMPRESOS</a></li>
+                    <li><a href="contacto.php">CONTACTO</a></li>
+                    <li><a href="¿log-in2.html">LOG-IN</a></li>
+                    <li><a href="../solidacomercial/homecomer.php">COMERCIO</a></li>
                 </ul>
             </div>
+            
             <nav id="selectmenu">
                 <div class="ham-menu">
                     <span></span>
@@ -38,7 +41,15 @@
                     <span></span>
                 </div>
             </nav>
-                <script src="../js/menu-ham.js"></script>
+            <script>
+                const select = document.getElementById('selectmenu');
+                const hamMenu = document.querySelector(".ham-menu");
+                const offScreenMenu = document.querySelector(".off-screen-menu");
+                select.addEventListener("click", () => {
+                    hamMenu.classList.toggle("active");
+                    offScreenMenu.classList.toggle("active");
+                });
+            </script>
         </nav>
     </div>
     <section class="slogan">
@@ -51,7 +62,26 @@
             </main>
        </div>
        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-       <script src="../js/contact.js"></script>
+       <script>
+            const typed = new Typed('.typed', {
+                strings: [
+                    '<i class="mascota">CONTÁCTANOS</i>'
+                ],
+
+                //stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
+                typeSpeed: 60, // Velocidad en mlisegundos para poner una letra,
+                startDelay: 300, // Tiempo de retraso en iniciar la animacion. Aplica tambien cuando termina y vuelve a iniciar,
+                backSpeed: 60, // Velocidad en milisegundos para borrrar una letra,
+                smartBackspace: true, // Eliminar solamente las palabras que sean nuevas en una cadena de texto.
+                shuffle: false, // Alterar el orden en el que escribe las palabras.
+                backDelay: 1100, // Tiempo de espera despues de que termina de escribir una palabra.
+                loop: true, // Repetir el array de strings
+                loopCount: 1, // Cantidad de veces a repetir el array.  false = infinite
+                showCursor: true, // Mostrar cursor palpitanto
+                cursorChar: '|', // Caracter para el cursor
+                contentType: 'html', // 'html' o 'null' para texto sin formato
+            });
+       </script>
     </section>
     <video class="video" src="../img/videos/BANNER-SÓLIDA2.mp4" autoplay muted loop></video>
     <section class="container_1">

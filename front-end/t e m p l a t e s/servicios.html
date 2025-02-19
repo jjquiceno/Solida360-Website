@@ -37,24 +37,33 @@
           />
         </div>
         <div class="off-screen-menu">
-            <ul>
+            <ul class="osm">
                 <li><a href="../../index.html">INICIO</a></li>
                 <li><a href="nosotros.html">NOSOTROS</a></li>
                 <li><a href="servicios.html">SERVICIOS</a></li>
                 <li><a href="impresos.html">IMPRESOS</a></li>
                 <li><a href="contacto.php">CONTACTO</a></li>
+                <li><a href="¿log-in2.html">LOG-IN</a></li>
+                <li><a href="../solidacomercial/homecomer.php">COMERCIO</a></li>
             </ul>
         </div>
-
-        <nav>
+         
+        <nav id="selectmenu">
             <div class="ham-menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </nav>
-
-        <script src="../js/menu-ham.js"></script>
+        <script>
+            const select = document.getElementById('selectmenu');
+            const hamMenu = document.querySelector(".ham-menu");
+            const offScreenMenu = document.querySelector(".off-screen-menu");
+            select.addEventListener("click", () => {
+                hamMenu.classList.toggle("active");
+                offScreenMenu.classList.toggle("active");
+            });
+        </script>
       </nav>
     </div>
     <div class="container-carousel">
