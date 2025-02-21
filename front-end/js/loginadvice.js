@@ -3,7 +3,12 @@ const userBox = document.getElementById('user');
 const userContent = document.getElementById('usercontent');
 const logoutButton = document.getElementById('logoutbutton');
 const login = document.getElementById('loginButton');
+const config = document.getElementById('configButton');
+const cob = document.getElementById('cob');
 
+cob.addEventListener("click", () => {
+    window.location.href = "../t e m p l a t e s/config.html";
+})
 login.addEventListener("click", () => {
     const cerrarAlerta = document.getElementById('cerrar-alert');
     const caja = document.getElementById('containerAlert');
@@ -22,13 +27,13 @@ login.addEventListener("click", () => {
     });
 })
 function checkStatus(){
-    console.log(status); 
     const nameSesion = document.getElementById('nameSesion').textContent.trim();
     if (nameSesion === "") {
         console.log('se inició sesión');
         userBox.style.display = 'block';
         userContent.style.display = 'block';
         logoutButton.style.display = 'none';
+        config.style.display = 'none'
         window.onload = function() {
             const cerrarAlerta = document.getElementById('cerrar-alert');
             const caja = document.getElementById('containerAlert');
@@ -52,8 +57,8 @@ function checkStatus(){
         // logoutButton.style.display = 'none';
         userContent.style.display = 'none';
         login.style.display = 'none';
+        config.style.display = 'block';
         userBox.style.display = 'block';
     }
 }
 checkStatus();
-console.log(status);

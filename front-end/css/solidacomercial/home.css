@@ -47,6 +47,9 @@ html{
     font-family: extra-light;
     letter-spacing: 2px;
 }
+.light-w{
+    font-family: extra-light;
+}
 p{
     font-family: graphie-regular;
     font-size: 18px;
@@ -87,7 +90,7 @@ p{
     padding: 20px;
     max-width: 90vw;
     max-height: 50vh;
-    min-height: 3vh;
+    min-height: 1vh;
     backdrop-filter: blur(30px);
     position: absolute;
     top: 100%;
@@ -140,6 +143,7 @@ p{
     grid-template-columns: 100%;
     grid-template-rows: 70% 30%;
     position: relative;
+    /* background-color: white; */
 }
 .header-grid{
     display: grid;
@@ -281,8 +285,9 @@ p{
     left: -30vw;
     z-index: 11;
     border-radius: 0 20px 20px 0;
-    backdrop-filter: blur(25px);
-    background-color: #0d8eab85;
+    backdrop-filter: blur(30px);
+    background-color: rgba(255, 255, 255, 0.966);
+    box-shadow: 1px 0 10px 1px rgba(0, 0, 0, 0.158);
     transition: .3s ease;
     display: flex; 
     justify-content: center; 
@@ -296,9 +301,23 @@ p{
     justify-content: space-between;
     align-items: center;  
     border-radius: 15px;
-    backdrop-filter: grayscale(50%);
+    box-shadow: .2px .2px 20px .2px rgba(0, 0, 0, 0.158);
+    backdrop-filter: grayscale(100%);
     padding: 0 10px 0 10px;
+    /* border: solid black; */
 }
+.campos{
+    margin: 5px 0;
+    height: 50px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 5px;
+    backdrop-filter: blur(50px);
+    box-shadow: .1px 0 5px .1px rgba(0, 0, 0, 0.123);
+}
+
 #contactList.active{
     animation: appearContact .5s linear;
 }
@@ -331,9 +350,11 @@ p{
     grid-template-rows: 10% 80% 10%;
     font-size: 20px;
     transition: .3s ease;
-    background-color: #b8c66c;
+    background-color: rgba(255, 255, 255, 0.89);
+    backdrop-filter: blur(30px);
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+    box-shadow: -1px 0 10px 1px rgba(0, 0, 0, 0.158);
     gap: 0;
 }
 .wish-list.active {
@@ -389,7 +410,7 @@ p{
     margin: 0 auto;
     scrollbar-width: none; 
     -ms-overflow-style: none; 
-    box-shadow: 0 5px 8px -5px var(--negro);
+    /* box-shadow: 0 5px 8px -5px var(--negro); */
 }
 #shoping::-webkit-scrollbar {
     display: none;
