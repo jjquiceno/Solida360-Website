@@ -42,11 +42,9 @@
     <title>Document</title>
     <style>
         .revisiones{
-            /* border: solid black; */
             height: fit-content;
         }
         .semiradio-izquierda{
-            /* border: solid black; */
             width: fit-content;
             border-radius: 0 25px 25px 0;
             padding: 0 30px;
@@ -63,12 +61,10 @@
             width: 95%;
             margin-left: 5%;
             border-left: 2px solid var(--negro);
-            /* border-bottom: 2px solid var(--negro); */
             min-height: 200px;
             height: fit-content;
         }
         #invert-position{
-            /* border: solid black; */
             width: 100%;
             height: fit-content;
             display: flex;
@@ -91,8 +87,6 @@
             width: 95%;
             margin-right: 5%;
             border-right: 2px solid var(--negro);
-            /* border-bottom: 2px solid var(--negro); */
-            /* text-align: right; */
             display: flex;
             flex-direction: column;
             align-items: end;
@@ -242,7 +236,6 @@
                             <span></span>
                         </div>
                         <div style="display: none;">
-                            <!-- <p id="ubicacion">home</p> -->
                             <p id="path" style="display: none;"></p>
                             <script>
                                 const pathName = window.location.pathname;
@@ -263,17 +256,6 @@
             </div>
         </div>
     </div>
-    <!-- <div id="advice">
-
-    </div>
-    <script>
-        fetch('../../navs/sesionadvice.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('advice').innerHTML = data;
-            })
-    </script> -->
-    
     <div class="header">
         <div class="header-grid">
             <div class="containerGrid">
@@ -303,8 +285,8 @@
                             </div>
                             <div class="separador-sesion"></div>
                             <br>
-                            <div class="contactOptions">
-                                <h2 id="contactTittle" class="regular" style="font-size: 1.2rem; cursor: default;">¿Necesiats ayuda? ¡CONTACTANOS!</h2>
+                            <div class="campos contactOptions">
+                                <h2 id="contactTittle" class="light-w" style="font-size: 1.2rem; cursor: default;">¿Necesiats ayuda? ¡CONTACTANOS!</h2>
                                 <div id="contactList">
                                     <ul style="list-style: none;">
                                         <li class="regular"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">Whatsapp</a></li>
@@ -329,20 +311,14 @@
                                         contactList.style.display = 'none';
                                         contactList.addEventListener("mouseout", () => {
                                             contactList.style.display = 'none';
-                                            // contactList.classList.toggle("disappear");
-                                            // setTimeout(() => {
-                                            //     contactList.classList.remove("disappear");
-                                            // },500)
                                         })
                                     });
                                 </script>
                             </div>
-                            <div class="separador-sesion"></div>
-                            <div id="logoutbutton">
-                                <form name="closeform" style="height: 100%;" action="../../../../back-end/log-out.php" method="post">
+                            <div id="logoutbutton" class="campos">
+                                <form name="closeform" style="height: fit-content;" action="../../../../back-end/log-out.php" method="post">
                                     
                                     <div style="display: none;">
-                                        <!-- <p id="ubicacion">home</p> -->
                                         <p id="pathclose" style="display: none;"></p>
                                         <script>
                                             const pathNameClose = window.location.pathname;
@@ -350,17 +326,29 @@
                                         </script>
                                         <input type="hidden" name="ubicacionValueclose" id="ubicacionValueClose">
                                     </div>
-                                    <input class="regular" id="closeSesion" for="closeform" style="cursor: pointer; color: black; font-size: 1.2rem; border: none; background: none;" type="submit" value="Cerar Sesion" onclick="document.getElementById('ubicacionValueClose').value = document.getElementById('pathclose').innerText">
+                                    <button id="closeSesion" for="closeform" style="cursor: pointer; color: black; border: none; background: none;" type="submit" onclick="document.getElementById('ubicacionValueClose').value = document.getElementById('pathclose').innerText"><h2 class="light-w" style="font-size: 1.2rem;">Cerrar Sesion</h2></button>
                                 </form>
                             </div>
                             <div id="loginB">
-                                <h2 id="loginButton" class="regular" style="font-size: 1.2rem; cursor: pointer;">login</h2>
+                                <h2 id="loginButton" class="campos light-w" style="font-size: 1.2rem; cursor: pointer;">login</h2>
                             </div>
-                            <div class="separador-sesion"></div>
-                            <div>
-                                <h2 class="regular"><a href="../../../../index.html" style="text-decoration: none; color: black; font-size: 1.2rem;">Salir del comercio y volver al inicio</a></h2>
+                            <div id="configButton">
+                                <h2 id="cob" class="campos light-w" style="font-size: 1.2rem; cursor: pointer;">Ajustes de tu perfil</h2>
                             </div>
-                            <div class="separador-sesion"></div>
+                            <div id="homeComer" class="campos">
+                                <h2 class="light-w" style="font-size: 1.2rem; cursor: pointer;">Volver al comercio</h2>
+                            </div>
+                            <div id="allProducts" class="campos">
+                                <h2 id="vbackh" class="light-w" style="font-size: 1.2rem; cursor: pointer;"><a id="enlaceP" href="../allproducts.php">Ver todos los productos</a></h2>
+                                <script>
+                                    document.getElementById('vbackh').addEventListener("click", () => {
+                                        window.location.href = '../homecomer.php';
+                                    })
+                                </script>
+                            </div>
+                            <div class="campos">
+                                <h2 class="light-w"><a href="../../../../index.html" style="text-decoration: none; color: black; font-size: 1.2rem;">Salir del comercio y volver al inicio</a></h2>
+                            </div>
                         </div>
                     </div>
                     <script>

@@ -95,7 +95,7 @@
         <div class="header-grid">
             <div class="containerGrid">
                 <div class="logo-box" style="padding-left: 15px; display: flex; align-items: center;">
-                    <div id="menuSesion">
+                    <div id="menuSesion" data-aos="fade-right" data-aos-duration="800">
                         <i class="fa-solid fa-bars fa-2x"></i>
                     </div>
                     <div id="menuSesionFloat">
@@ -175,7 +175,17 @@
                             </div>
                             <div id="configButton">
                                 <h2 id="cob" class="campos light-w" style="font-size: 1.2rem; cursor: pointer;">Ajustes de tu perfil</h2>
-
+                            </div>
+                            <div id="homeComer" class="campos">
+                                <h2 class="light-w" style="font-size: 1.2rem; cursor: pointer;">Volver al comercio</h2>
+                            </div>
+                            <div id="allProducts" class="campos">
+                                <h2 id="vbackh" class="light-w" style="font-size: 1.2rem; cursor: pointer;"><a id="enlaceP" href="productos/allproducts.php">Ver todos los productos</a></h2>
+                                <script>
+                                    document.getElementById('vbackh').addEventListener("click", () => {
+                                        window.location.href = 'homecomer.php';
+                                    })
+                                </script>
                             </div>
                             <div class="campos">
                                 <h2 class="light-w"><a href="../../index.html" style="text-decoration: none; color: black; font-size: 1.2rem;">Salir del comercio y volver al inicio</a></h2>
@@ -195,11 +205,10 @@
                         });
                     </script>
                 </div>
-                <div style="position: relative;" id="busqueda-box">
+                <div style="position: relative;" id="busqueda-box" data-aos="fade-down" data-aos-duration="800">
                     <input type="text" id="search-input" class="busqueda regular" name="search" placeholder="Buscar productos" onkeyup="searchFunction()">
                 </div>
-                <div class="conttt">
-                    <!-- <img class="carrito" src="../img/iconos/carrito.png" alt=""> -->
+                <div class="conttt" data-aos="fade-left" data-aos-duration="800">
                     <i class="fa-solid fa-cart-shopping fa-2x"></i>
                 </div>
                 <div class="wish-list">
@@ -241,8 +250,8 @@
             </div>
         </div>
         <div class="responsive-menu">
-            <nav class="nav2">
-                <ul class="listas">
+            <nav class="nav2" >
+                <ul class="listas" >
                     <li class="relative-menu">
                         <a href="">Imprenta</a>
                         <ul class="hiden-menu" id="imprenta-navs">
@@ -355,7 +364,7 @@
     </div>
     <script src="../js/carrito/addtocart.js"></script>
     
-    <div>
+    <div data-aos="fade-up" data-aos-duration="800">
         <div class="slider">
             <div class="slides">
                 <div class="slide" id="s1">
@@ -593,23 +602,23 @@
     <div id="empresas">
         <div id="ventajas">
             <div class="ven">
-                <div class="contadores" data-end="350" data-time="2500">
+                <div class="contadores" data-end="350" data-time="2500" data-aos="fade-right" data-aos-duration="800" data-aos-delay="0">
                     <p>clientes satisfechos</p>
                     <p>+<span class="contador"></span></p>
                 </div>
-                <div class="contadores" data-end="1000" data-time="3000">
+                <div class="contadores" data-end="1000" data-time="3000" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
                     <p>Proyectos Completados</p>
                     <p>+<span class="contador"></span></p>
                 </div>
-                <div class="contadores" data-end="260" data-time="3500">
+                <div class="contadores" data-end="260" data-time="3500" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
                     <p>Proyectos Completados</p>
                     <p>+<span class="contador"></span></p>
                 </div>
-                <div class="contadores" data-end="400" data-time="4000">
+                <div class="contadores" data-end="400" data-time="4000" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
                     <p>Proyectos Completados</p>
                     <p>+<span class="contador"></span></p>
                 </div>
-                <div class="contadores" data-end="530" data-time="4500">
+                <div class="contadores" data-end="530" data-time="4500" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">
                     <p>Proyectos Completados</p>
                     <p>+<span class="contador"></span></p>
                 </div>
@@ -651,7 +660,7 @@
                 </script>
             </div>
             <div id="slogan">
-                <div class="slogan-int">
+                <div class="slogan-int" data-aos="zoom-in" data-aos-duration="800">
                     <h2>MÁS ALLÁ <br><span class="typed"> </span></h2>
                 </div>
                 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
@@ -684,19 +693,19 @@
             </div>
             <div id="vene2">
                 <div class="ven vEn">
-                    <div class="contadores" id="contador1">
+                    <div class="contadores" id="contador1" data-aos="fade-left" data-aos-duration="800" data-aos-delay="0">
                         <p class="bold">CREA</p>
                     </div>
-                    <div class="contadores" id="contador2">
+                    <div class="contadores" id="contador2" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
                         <p class="bold">INNOVA</p>
                     </div>
-                    <div class="contadores" id="contador3">
+                    <div class="contadores" id="contador3" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
                         <p class="bold">CRECE</p>
                     </div>
-                    <div class="contadores" id="contador4">
+                    <div class="contadores" id="contador4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
                         <p class="bold">SE CREATIVO</p>
                     </div>
-                    <div class="contadores" id="contador5">
+                    <div class="contadores" id="contador5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
                         <p class="bold">SE SÓLIDA</p>
                     </div>
                 </div>
@@ -707,60 +716,60 @@
         <h2 id="work_tt" class="regular">CONOCE NUESTRO <span class="light">TRABAJO</span></h2>
         <div id="separador"></div>
         <div id="gallery">
-            <div class="pics p1"></div>
-            <div class="pics p2"></div>
-            <div class="pics p3"></div>
-            <div class="pics p4"></div>
-            <div class="pics p5"></div>
-            <div class="pics p6"></div>
-            <div class="pics p7"></div>
-            <div class="pics p8"></div>
-            <div class="pics p9"></div>
-            <div class="pics p10"></div>
-            <div class="pics p11"></div>
-            <div class="pics p12"></div>
-            <div class="pics p13"></div>
-            <div class="pics p14"></div>
-            <div class="pics p15"></div>
-            <div class="pics p16"></div>
-            <div class="pics p17"></div>
-            <div class="pics p18"></div>
-            <div class="pics p19"></div>
-            <div class="pics p20"></div>
+            <div class="pics p1" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="0"></div>
+            <div class="pics p2" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="50"></div>
+            <div class="pics p3" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="100"></div>
+            <div class="pics p4" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="150"></div>
+            <div class="pics p5" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="200"></div>
+            <div class="pics p6" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="250"></div>
+            <div class="pics p7" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="300"></div>
+            <div class="pics p8" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="350"></div>
+            <div class="pics p9" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="400"></div>
+            <div class="pics p10" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="450"></div>
+            <div class="pics p11" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="500"></div>
+            <div class="pics p12" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="550"></div>
+            <div class="pics p13" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="600"></div>
+            <div class="pics p14" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="650"></div>
+            <div class="pics p15" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="100"></div>
+            <div class="pics p16" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="150"></div>
+            <div class="pics p17" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="200"></div>
+            <div class="pics p18" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="250"></div>
+            <div class="pics p19" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="300"></div>
+            <div class="pics p20" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="350"></div>
         </div>
     </div>
     <div class="atuMedida">  
         <div class="item-medida">
-            <form method="post" class="form_form">
+            <form method="post" class="form_form" data-aos="fade-down" data-aos-duration="800" data-aos-delay="0">
                 <div class="titule">
                     <h3 class="blue formtitle">ESCRÍBENOS</h3>
                 </div>
-                <div class="info-message" data-validate = "El nombre es requerido">
+                <div class="info-message" data-validate = "El nombre es requerido" data-aos="fade-left" data-aos-duration="800" data-aos-delay="0">
                     <input class="caja_text" type="text" name="producto" required>
                     <label class="label" for="producto">PRODUCTO</label>
                     <span></span>
                 </div>
-                <div class="info-message" data-validate = "El nombre es requerido">
+                <div class="info-message" data-validate = "El nombre es requerido" data-aos="fade-left" data-aos-duration="800" data-aos-delay="50">
                     <input class="caja_text" type="text" name="nombre" required>
                     <label class="label" for="nombre">NOMBRE</label>
                     <span></span>
                 </div>
-                <div class="info-message" data-validate="El corrreo es necesario">
+                <div class="info-message" data-validate="El corrreo es necesario" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
                     <input class="caja_text" type="text" name="email" required>
                     <label class="label" for="email">CORREO</label>
                     <span></span>
                 </div>
-                <div class="info-message" data-validate="El corrreo es necesario">
+                <div class="info-message" data-validate="El corrreo es necesario" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
                     <input class="caja_text" type="text" name="wssp" required>
                     <label class="label" for="wssp">WHATSAPP</label>
                     <span></span>
                 </div>
-                <div class="info-message" data-validate="Escriba el mensaje por favor">
+                <div class="info-message" data-validate="Escriba el mensaje por favor" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
                     <textarea name="consulta" id="" cols="30" rows="10" class="caja_text" required></textarea>
                     <label class="label" for="consulta">CONSULTA</label>
                     <span></span>
                 </div>
-                <div class="e-b">
+                <div class="e-b" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">
                     <!--<button class="enviar" type="submit">ENVIAR MENSAJE</button>-->
                     <input type="submit" value="enviar" name="enviar" class="enviar">
                 </div>

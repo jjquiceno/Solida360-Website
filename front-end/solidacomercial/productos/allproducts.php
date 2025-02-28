@@ -36,19 +36,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/solidacomercial/home.css">
     <link rel="stylesheet" href="../../css/solidacomercial/products.css">
+    <link rel="stylesheet" href="../../css/solidacomercial/allp.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../../css/scroll.css">
     <title>Document</title>
     <style>
         .circles {
-            position: fixed; /* Fijar el contenedor de los círculos */
+            position: fixed; 
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: -1; /* Asegurar que el fondo esté detrás del contenido */
+            z-index: -1; 
         }
         .circle {
             position: absolute;
@@ -57,7 +58,6 @@
             background-color: rgba(255, 255, 255, 0.1);
             transition: background-color 2s linear;
         }
-        
     </style>
 </head>
 <body>
@@ -383,380 +383,52 @@
     <div id="container-message">
 
     </div>
-    <section class="productDetail">
-        <div class="productImg" data-aos="fade-right" data-aos-duration="800">
-            <img src="../../img/gf-imp3.jpg" alt="">
-        </div>
-        <div class="costos">
-            <div>
-                <h1 class="tittles">Remitos</h1>
-                <p id="valorproducto">10000</p>
-            </div>
-            <form method="post">
-                <div class="perso">
-                    <div data-aos="fadde-right" data-aos-duration="700">
-                        <h4 class="light">Tamaño del remito</h4>
-                        <select class="select tamañoRemito" name="tamañoRemito" id="" required>
-                            <!-- <option value=""></option> -->
-                            <option value="Pequeño">Pequeño</option>
-                            <option value="Mediano">Mediano</option>
-                            <option value="Grande">Grande</option>
-                        </select>
-                    </div>
-                    <div data-aos="fade-left" data-aos-duration="700" >
-                        <h4 class="light">Tipo del Remito</h4>
-                        <select class="select tipoRemito" name="tipoRemito" id="" required>
-                            <!-- <option value=""></option> -->
-                            <option value="remito-x">Remito X</option>
-                            <option value="remito-l">Remito L</option>
-                        </select>
-                    </div>
-                    <div data-aos="fade-right" data-aos-duration="700">
-                        <h4 class="light">Tipo de copias</h4>
-                        <select class="select tipoCopias" name="tipoCopias" id="" required>
-                            <!-- <option value=""></option> -->
-                            <option value="duplicado">Duplicado</option>
-                            <option value="triplicado">Triplicado</option>
-                        </select>
-                    </div>
-                    <div data-aos="fade-left" data-aos-duration="700">
-                        <h4 class="light">Encuadernado</h4>
-                        <select class="select tipoEncuadernado" name="tipoEncuadernado" id="" required>
-                            <!-- <option value=""></option> -->
-                            <option value="emblocado">Emblocado</option>
-                            <option value="sueltas">Hojas Sueltas</option>
-                        </select>
-                    </div>
-                    <div data-aos="fade-right" data-aos-duration="700">
-                        <h4 class="light">Impresión</h4>
-                        <select class="select" name="" id="" required>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                        </select>
-                    </div>
-                    <div data-aos="fade-left" data-aos-duration="700">
-                        <h4 class="light">papel Interior</h4>
-                        <select class="select" name="" id="" required>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
-                        </select>
-                    </div>
-                    <div data-aos="fade-right" data-aos-duration="700">
-                        <h4 class="light">¿Tienes tu diseño listo?</h4>
-
-                        <div id="checkboxes">
-                            <input class="cbs" type="checkbox" name="si" onchange="toggleCb(this)">
-                            <input class="cbs" type="checkbox" name="no" onchange="toggleCb(this)">
-                        </div>
-                        <p>seleccionado: <span id="selec"></span></p>
-
-                        <div class="drops" id="dropSi">
-                            <h5 class="regular">Porfavor adjunta tu arte y nosotros nos encargaremos del resto</h5>
-                            <input id="addfile" type="file" accept=".pdf,image/*">
-                        </div>
-                        <div class="drops" id="dropNo">
-                            <h5 class="regular">No te preocupes, nosotros te ayudamos con tu arte, contactae con nosotros y te ayudaremos</h5>
-                        </div>
-                        <script>
-                            function toggleCb(checkbox){
-                                const dropSi = document.getElementById('dropSi');
-                                const dropNo = document.getElementById('dropNo');
-                                const selected = document.getElementById('selec');
-                                
-                                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-                                checkboxes.forEach((cb) => {
-                                    if(cb !== checkbox) {
-                                        cb.checked = false;
-                                    }
-                                });
-
-                                dropSi.style.display = 'none';
-                                dropNo.style.display = 'none';
-
-                                if (checkbox.checked) {
-                                    if(checkbox.name == "si"){
-                                        dropSi.style.display = 'block';
-                                        selected.textContent = "si";
-                                    }else if(checkbox.name == "no"){
-                                        dropNo.style.display = 'block';
-                                        selected.textContent = "no";
-                                    }
-                                }
-                            }
-                        </script>
-                    </div>
-                    <div data-aos="fade-left" data-aos-duration="700">
-                        <h4 class="light">cantidad</h4>
-                        <div class="containercant">
-                            <input type="button" value="-" class="minuscant buttons">
-                            <input type="number" id="cajacantidad" class="cant" step="1" min="1" max="" value="1" placeholder="" inputmode="numeric">
-                            <input type="button" value="+" class="pluscant buttons">
-                        </div>
-                    </div>
-                </div>
-            </form>
-            <br><br>
-            <div>
-                <h1>Valor unitario: </h1>
-                <p id="costouni">8900</p>
-                <br>
-                <hr>
-                <br>
-                <h2>Total: </h2>
-                <div id="totaladd">
-                    <p id="totalValue">8900</p>
-                    <button id="addtocartbutton" onclick="agregarAlCarrito('Remito', document.querySelector('.tamañoRemito').value, document.querySelector('.tipoRemito').value, document.querySelector('.tipoCopias').value, document.querySelector('.tipoEncuadernado').value, document.getElementById('selec').textContent,document.getElementById('cajacantidad').value)">¡AGREGAR!</button>
-                    <script>
-                        document.getElementById('addtocartbutton').addEventListener('click', function() {    
-                            setTimeout(() => {
-                                location.reload();
-                            }, 1000)
-
-                            const containerMessage = document.getElementById('container-message');
-
-                            const textBox = document.createElement('div');
-                            textBox.classList.add('meessage-add');
-                            
-                            const t1 = document.createElement('h2');
-                            t1.classList.add('ms-tt');
-                            t1.textContent = 'se ha añadido un producto al carrito: ';
-
-                            const t2 = document.createElement('h2');
-                            t2.classList.add('product-name-ms');
-                            t2.textContent = 'Remitos';
-
-                            const button = document.createElement('button');
-                            button.classList.add('go-cart');
-                            button.textContent = 'ver';
-                            button.onclick = function () {
-                                wishList.classList.toggle("active");
-                                containerMessage.innerHTML = '';
-                            }
-
-
-                            textBox.appendChild(t1);
-                            textBox.appendChild(t2);
-                            textBox.appendChild(button);
-                            containerMessage.appendChild(textBox);
-
-                            setTimeout(() => {
-                                textBox.style.display = 'none';
-                            }, 5000);
-                        });
-                        
-                    </script>
-                </div>
-                <br>
-                <hr>
-            </div>
-            <script src="../../js/carrito/costos.js"></script>
-            <script src="../../js/carrito/addtocart.js"></script>
-        </div>
-    </section>
-    <section id="bg">
-        <div class="atuMedida">  
-            <div class="item-medida">
-                <form method="post" class="form_form">
-                    <div class="titule">
-                        <h3 class="tittles blue">ESCRÍBENOS</h3>
-                    </div>
-                    <div class="info-message" data-validate = "El nombre es requerido">
-                        <input class="caja_text" type="text" name="producto" required>
-                        <label class="label" for="producto">PRODUCTO</label>
-                        <span></span>
-                    </div>
-                    <div class="info-message" data-validate = "El nombre es requerido">
-                        <input class="caja_text" type="text" name="nombre" required>
-                        <label class="label" for="nombre">NOMBRE</label>
-                        <span></span>
-                    </div>
-                    <div class="info-message" data-validate="El corrreo es necesario">
-                        <input class="caja_text" type="text" name="email" required>
-                        <label class="label" for="email">CORREO</label>
-                        <span></span>
-                    </div>
-                    <div class="info-message" data-validate="El corrreo es necesario">
-                        <input class="caja_text" type="text" name="wssp" required>
-                        <label class="label" for="wssp">WHATSAPP</label>
-                        <span></span>
-                    </div>
-                    <div class="info-message" data-validate="Escriba el mensaje por favor">
-                        <textarea name="consulta" id="" cols="30" rows="10" class="caja_text" required></textarea>
-                        <label class="label" for="consulta">CONSULTA</label>
-                        <span></span>
-                    </div>
-                    <div class="e-b">
-                        <!--<button class="enviar" type="submit">ENVIAR MENSAJE</button>-->
-                        <input type="submit" value="enviar" name="enviar" class="enviar">
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="text-recomendaciones">
-            <div class="int-text-recom">
-                <h2 class="tittles"><span class="light">¡Recomendaciones</span>Para Ti!</h2>
-            </div>
-        </div>
-        <br>
-        <div class="separador-hor"></div>
-        <section class="recomendaciones">
-            <div class="slider">
-                <div class="slides">
-                    <div class="slide">
-                        <div>
-                            <img src="../../img/pf-imp13.jpg" alt="">
-                            <div>
-                                <h3 class="bold">Roll up</h3>
-                                <p>Es fácil de transportar y montar, ofreciendo una presentación profesional y atractiva.</p>
-                                <div>
-                                    <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div>
-                            <img src="../../img/pf-imp13.jpg" alt="">
-                            <div>
-                                <h3 class="bold">Volantes</h3>
-                                <p>Son económicos, fáciles de distribuir y efectivos para alcanzar a una audiencia amplia en poco tiempo.</p>
-                                <div>
-                                    <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div>
-                            <img src="../../img/pf-imp13.jpg" alt="">
-                            <div>
-                                <h3 class="bold">Carnets</h3>
-                                <p>Identificaciones personalizadas con información y foto del usuario</p>
-                                <div>
-                                    <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div>
-                            <img src="../../img/pf-imp13.jpg" alt="">
-                            <div>
-                                <h3 class="bold">Microperforado</h3>
-                                <p>ideal para publicidad en ventanas que permite la visibilidad desde un lado.</p>
-                                <div>
-                                    <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div>
-                            <img src="../../img/pf-imp13.jpg" alt="">
-                            <div>
-                                <h3 class="bold">Mugs</h3>
-                                <p>Tazas personalizadas con logos, imágenes o mensajes, perfectas para regalos corporativos y promoción de marcas.</p>
-                                <div>
-                                    <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div>
-                            <img src="../../img/pf-imp13.jpg" alt="">
-                            <div>
-                                <h3 class="bold">Camisetas</h3>
-                                <p>Prendas de vestir personalizadas con serigrafía, bordado o impresión digital.</p>
-                                <div>
-                                    <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div>
-                            <img src="../../img/pf-imp13.jpg" alt="">
-                            <div>
-                                <h3 class="bold">Trjetas Personales</h3>
-                                <p>pequeñas tarjetas impresas con información de contacto, ideales para networking y encuentros profesionales.</p>
-                                <div>
-                                    <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div>
-                            <img src="../../img/pf-imp13.jpg" alt="">
-                            <div>
-                                <h3 class="bold">Roll up</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repudiandae?</p>
-                                <div>
-                                    <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div>
-                            <img src="../../img/pf-imp13.jpg" alt="">
-                            <div>
-                                <h3 class="bold">Roll up</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repudiandae?</p>
-                                <div>
-                                    <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div>
-                            <img src="../../img/pf-imp13.jpg" alt="">
-                            <div>
-                                <h3 class="bold">Roll up</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repudiandae?</p>
-                                <div>
-                                    <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="controls">
-                    <button class="control prev"><i class="fa-solid fa-arrow-right fa-flip-both fa-2x" style="color: black;"></i></button>
-                    <button class="control next"><i class="fa-solid fa-arrow-right fa-2x" style="color: black;"></i></button>
-                </div>
-                <div class="indicators">
-                    <div class="indicator"></div>
-                    <div class="indicator"></div>
-                    <div class="indicator"></div>
-                    <div class="indicator"></div>
-                    <div class="indicator"></div>
-                    <div class="indicator"></div>
-                    <div class="indicator"></div>
-                    <div class="indicator"></div>
-                    <div class="indicator"></div>
-                    <div class="indicator"></div>
-                </div>
-            </div>
-            <script src="../../js/carrito/slidercart.js"></script>
-        </section>
-    </section>
     
+    <div class="texts" data-aos="zoom-in" data-aos-duration="600">
+        <div class="backg">
+            <div class="blur">
+                <div class="typeContainer">
+                    <h1 id="text1T" class="light">¡LLEVA TU EMPRESA <br> A OTRO NIVEL!</h1>
+                    <h1 id="text2T"><span class="typed bold green"></span></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+        const typed = new Typed('.typed', {
+            strings: [
+                '<i class="mascota">MUGS</i>',
+                '<i class="mascota">RULL UPS</i>',
+                '<i class="mascota">REMITOS</i>',
+                '<i class="mascota">TARJETAS PERSONALES</i>',
+                '<i class="mascota">VOLANTES</i>',
+                '<i class="mascota">PASACALLES</i>'
+            ],
+
+            //stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
+            typeSpeed: 60, // Velocidad en mlisegundos para poner una letra,
+            startDelay: 300, // Tiempo de retraso en iniciar la animacion. Aplica tambien cuando termina y vuelve a iniciar,
+            backSpeed: 60, // Velocidad en milisegundos para borrrar una letra,
+            smartBackspace: true, // Eliminar solamente las palabras que sean nuevas en una cadena de texto.
+            shuffle: false, // Alterar el orden en el que escribe las palabras.
+            backDelay: 1100, // Tiempo de espera despues de que termina de escribir una palabra.
+            loop: true, // Repetir el array de strings
+            loopCount: false, // Cantidad de veces a repetir el array.  false = infinite
+            showCursor: true, // Mostrar cursor palpitanto
+            cursorChar: '|', // Caracter para el cursor
+            contentType: 'html', // 'html' o 'null' para texto sin formato
+        });
+    </script>
+    <div class="ready">
+        <h1 class="tittles cajatittle">¿DE QUE FORMA QUIERES CRECER HOY?</h1>
+    </div>
+    <div class="separadorall"></div>
+    <div id="containerProducts" class="containerProducts">
+            
+    </div>
+
+    <script src="../../js/carrito/allp.js"></script>
     <section class="footter">
         <div class="foot-interior">
             <div class="fot-info" id="info1">
@@ -867,29 +539,3 @@
     <script src="../../js/loginadvice.js"></script>
 </body>
 </html>
-<?php 
-if (isset($_POST["enviar"])) {
-    $producto = $_POST["producto"];
-    $nombre = $_POST["nombre"];
-    $email = $_POST["email"]; 
-    $wssp = $_POST["wssp"];
-    $consulta = $_POST["consulta"];
-
-    $destinatario = "programacion@solidasas.com";
-
-    $contenido = "Mensaje de la pagina web de: $nombre, \n Contacto de Whatsapp: $wssp \n";
-    $contenido .= "Email: $email \n";
-    $contenido .= "producto: $producto \n";
-    $contenido .= "consulta: $consulta";
-    $asunto = "cotizacion a medida del sitio web";
-    $header = "From: $email"; 
-
-    $mail = mail($destinatario, $asunto, $contenido, $header);
-
-    if ($mail) {
-        echo "<script>alert('El correo se envio correctamente :)')</script>";
-    } else {
-        echo "<script>alert('El correo no se pudo enviar, intente nuevamente :(')</script>";
-    }
-}
-?>

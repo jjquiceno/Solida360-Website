@@ -47,19 +47,19 @@
         }
         body {
             margin: 0;
-            overflow-y: scroll; /* Permitir el scroll vertical */
+            overflow-y: scroll; 
             overflow-x: hidden;
             /* background-color: #121212; */
             transition: background-color 10s linear;
         }
         .circles {
-            position: fixed; /* Fijar el contenedor de los círculos */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: -1; /* Asegurar que el fondo esté detrás del contenido */
+            z-index: -1;
         }
         .circle {
             position: absolute;
@@ -100,7 +100,6 @@
                             <span></span>
                         </div>
                         <div style="display: none;">
-                            <!-- <p id="ubicacion">home</p> -->
                             <p id="path" style="display: none;"></p>
                             <script>
                                 const pathName = window.location.pathname;
@@ -133,7 +132,7 @@
                             <div>
                                 <div class="iconos-box">
                                     <i id="closeMenuSesion" class="fa-solid fa-xmark fa-2x" style="cursor: pointer;"></i>
-                                    <img class="logo" src="../img/iconos/ICONO CON PUNTOS.png" alt="">
+                                    <img class="logo" src="../../../img/iconos/ICONO CON PUNTOS.png" alt="">
                                 </div>
                             </div>
                             <br>
@@ -150,8 +149,8 @@
                             </div>
                             <div class="separador-sesion"></div>
                             <br>
-                            <div class="contactOptions">
-                                <h2 id="contactTittle" class="regular" style="font-size: 1.2rem; cursor: default;">¿Necesiats ayuda? ¡CONTACTANOS!</h2>
+                            <div class="campos contactOptions">
+                                <h2 id="contactTittle" class="light-w" style="font-size: 1.2rem; cursor: default;">¿Necesiats ayuda? ¡CONTACTANOS!</h2>
                                 <div id="contactList">
                                     <ul style="list-style: none;">
                                         <li class="regular"><a href="" class="black" style="text-decoration: none; font-size: 1rem;">Whatsapp</a></li>
@@ -184,12 +183,10 @@
                                     });
                                 </script>
                             </div>
-                            <div class="separador-sesion"></div>
-                            <div id="logoutbutton">
-                                <form name="closeform" style="height: 100%;" action="../../back-end/log-out.php" method="post">
+                            <div class="campos" id="logoutbutton">
+                                <form name="closeform" style="height: fit-content;" action="../../back-end/log-out.php" method="post">
                                     
                                     <div style="display: none;">
-                                        <!-- <p id="ubicacion">home</p> -->
                                         <p id="pathclose" style="display: none;"></p>
                                         <script>
                                             const pathNameClose = window.location.pathname;
@@ -197,17 +194,29 @@
                                         </script>
                                         <input type="hidden" name="ubicacionValueclose" id="ubicacionValueClose">
                                     </div>
-                                    <input class="regular" id="closeSesion" for="closeform" style="cursor: pointer; color: black; font-size: 1.2rem; border: none; background: none;" type="submit" value="Cerar Sesion" onclick="document.getElementById('ubicacionValueClose').value = document.getElementById('pathclose').innerText">
+                                    <button id="closeSesion" for="closeform" style="cursor: pointer; color: black; border: none; background: none;" type="submit" onclick="document.getElementById('ubicacionValueClose').value = document.getElementById('pathclose').innerText"><h2 class="light-w" style="font-size: 1.2rem;">Cerrar Sesion</h2></button>
                                 </form>
                             </div>
                             <div id="loginB">
-                                <h2 id="loginButton" class="regular" style="font-size: 1.2rem; cursor: pointer;">login</h2>
+                                <h2 id="loginButton" class="campos light-w" style="font-size: 1.2rem; cursor: pointer;">login</h2>
                             </div>
-                            <div class="separador-sesion"></div>
-                            <div>
-                                <h2 class="regular"><a href="../../index.html" style="text-decoration: none; color: black; font-size: 1.2rem;">Salir del comercio y volver al inicio</a></h2>
+                            <div id="configButton">
+                                <h2 id="cob" class="campos light-w" style="font-size: 1.2rem; cursor: pointer;">Ajustes de tu perfil</h2>
                             </div>
-                            <div class="separador-sesion"></div>
+                            <div id="homeComer" class="campos">
+                                <h2 class="light-w" style="font-size: 1.2rem; cursor: pointer;">Volver al comercio</h2>
+                            </div>
+                            <div id="allProducts" class="campos">
+                                <h2 id="vbackh" class="light-w" style="font-size: 1.2rem; cursor: pointer;">Ver todos los productos</h2>
+                                <script>
+                                    document.getElementById('vbackh').addEventListener("click", () => {
+                                        window.location.href = '../homecomer.php';
+                                    })
+                                </script>
+                            </div>
+                            <div class="campos">
+                                <h2 class="light-w"><a href="../../index.html" style="text-decoration: none; color: black; font-size: 1.2rem;">Salir del comercio y volver al inicio</a></h2>
+                            </div>
                         </div>
                     </div>
                     <script>

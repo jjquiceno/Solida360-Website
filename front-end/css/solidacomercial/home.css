@@ -68,6 +68,9 @@ p{
 .blue{
     color: var(--azul);
 }
+.green{
+    color: var(--verde);
+}
 .black{
     color: var(--negro);
 }
@@ -316,8 +319,15 @@ p{
     padding-left: 5px;
     backdrop-filter: blur(50px);
     box-shadow: .1px 0 5px .1px rgba(0, 0, 0, 0.123);
+    transition: .5s ease;
 }
-
+.campos:hover{
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.336);
+}
+#enlaceP{
+    text-decoration: none;
+    color: black;
+}
 #contactList.active{
     animation: appearContact .5s linear;
 }
