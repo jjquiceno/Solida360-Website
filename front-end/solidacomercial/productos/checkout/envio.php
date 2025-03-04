@@ -210,13 +210,14 @@
                                 <h2 id="vbackh" class="light-w" style="font-size: 1.2rem; cursor: pointer;">Ver todos los productos</h2>
                                 <script>
                                     document.getElementById('vbackh').addEventListener("click", () => {
-                                        window.location.href = '../homecomer.php';
+                                        window.location.href = '../../homecomer.php';
                                     })
                                 </script>
                             </div>
                             <div class="campos">
                                 <h2 class="light-w"><a href="../../index.html" style="text-decoration: none; color: black; font-size: 1.2rem;">Salir del comercio y volver al inicio</a></h2>
                             </div>
+                            <div data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0"></div>
                         </div>
                     </div>
                     <script>

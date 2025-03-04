@@ -26,6 +26,21 @@ login.addEventListener("click", () => {
         }, 500);
     });
 })
+function pasVisible(){
+    const contra = document.getElementById('contra');
+    const eye = document.getElementById('eye');
+    const noEye = document.getElementById('no-eye');
+    eye.addEventListener("click", () => {
+        contra.type = 'text';
+        eye.style.display = 'none';
+        noEye.style.display = 'block';
+    });
+    noEye.addEventListener("click", () => {
+        contra.type = 'password';
+        eye.style.display = 'block';
+        noEye.style.display = 'none';
+    })
+}
 function checkStatus(){
     const nameSesion = document.getElementById('nameSesion').textContent.trim();
     if (nameSesion === "") {
@@ -62,3 +77,4 @@ function checkStatus(){
     }
 }
 checkStatus();
+pasVisible();

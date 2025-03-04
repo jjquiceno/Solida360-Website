@@ -342,7 +342,7 @@
                                 <h2 id="vbackh" class="light-w" style="font-size: 1.2rem; cursor: pointer;"><a id="enlaceP" href="../allproducts.php">Ver todos los productos</a></h2>
                                 <script>
                                     document.getElementById('vbackh').addEventListener("click", () => {
-                                        window.location.href = '../homecomer.php';
+                                        window.location.href = '../../homecomer.php';
                                     })
                                 </script>
                             </div>

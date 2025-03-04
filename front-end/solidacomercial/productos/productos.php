@@ -1,8 +1,6 @@
 <?php 
     session_start();
-    // $_SESSION['loggedin'] = true;
     include("../../../back-end/conexion.php");
-    // include("../../back-end/log-in.php");
     $status = $_SESSION['status'] = 1;
     if(isset($_SESSION['email'])){
         $email = $_SESSION['email'];
@@ -15,7 +13,6 @@
     $resultplan = mysqli_query($conexion, $plan);
 
     if (mysqli_num_rows($resultado) > 0) {
-        // Si hay resultados, mostrarlos
         while($row = mysqli_fetch_assoc($resultado)) {
             $_SESSION['name'] = $row['name'];
             if (mysqli_num_rows($resultplan) > 0) {
@@ -42,13 +39,13 @@
     <title>Document</title>
     <style>
         .circles {
-            position: fixed; /* Fijar el contenedor de los círculos */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: -1; /* Asegurar que el fondo esté detrás del contenido */
+            z-index: -1;
         }
         .circle {
             position: absolute;
@@ -85,8 +82,10 @@
                             <span></span>
                         </div>
                         <div class="info-message" data-validate="el correo es requerido">
-                            <input class="caja_text" type="password" name="password" required>
+                            <input id="contra" class="caja_text" type="password" name="password" required>
                             <label class="label" for="password">CONTRASEÑA</label>
+                            <i id="eye" class="fa-solid fa-eye"></i>
+                            <i id="no-eye" class="fa-solid fa-eye-slash"></i>
                             <span></span>
                         </div>
                         <div style="display: none;">
@@ -166,10 +165,6 @@
                                         contactList.style.display = 'none';
                                         contactList.addEventListener("mouseout", () => {
                                             contactList.style.display = 'none';
-                                            // contactList.classList.toggle("disappear");
-                                            // setTimeout(() => {
-                                            //     contactList.classList.remove("disappear");
-                                            // },500)
                                         })
                                     });
                                 </script>
@@ -178,7 +173,6 @@
                                 <form name="closeform" style="height: fit-content;" action="../../../back-end/log-out.php" method="post">
                                     
                                     <div style="display: none;">
-                                        <!-- <p id="ubicacion">home</p> -->
                                         <p id="pathclose" style="display: none;"></p>
                                         <script>
                                             const pathNameClose = window.location.pathname;
@@ -396,8 +390,7 @@
                 <div class="perso">
                     <div data-aos="fadde-right" data-aos-duration="700">
                         <h4 class="light">Tamaño del remito</h4>
-                        <select class="select tamañoRemito" name="tamañoRemito" id="" required>
-                            <!-- <option value=""></option> -->
+                        <select class="select tamañoRemito" name="tamañoRemito" required>
                             <option value="Pequeño">Pequeño</option>
                             <option value="Mediano">Mediano</option>
                             <option value="Grande">Grande</option>
@@ -405,31 +398,28 @@
                     </div>
                     <div data-aos="fade-left" data-aos-duration="700" >
                         <h4 class="light">Tipo del Remito</h4>
-                        <select class="select tipoRemito" name="tipoRemito" id="" required>
-                            <!-- <option value=""></option> -->
+                        <select class="select tipoRemito" name="tipoRemito" required>
                             <option value="remito-x">Remito X</option>
                             <option value="remito-l">Remito L</option>
                         </select>
                     </div>
                     <div data-aos="fade-right" data-aos-duration="700">
                         <h4 class="light">Tipo de copias</h4>
-                        <select class="select tipoCopias" name="tipoCopias" id="" required>
-                            <!-- <option value=""></option> -->
+                        <select class="select tipoCopias" name="tipoCopias" required>
                             <option value="duplicado">Duplicado</option>
                             <option value="triplicado">Triplicado</option>
                         </select>
                     </div>
                     <div data-aos="fade-left" data-aos-duration="700">
                         <h4 class="light">Encuadernado</h4>
-                        <select class="select tipoEncuadernado" name="tipoEncuadernado" id="" required>
-                            <!-- <option value=""></option> -->
+                        <select class="select tipoEncuadernado" name="tipoEncuadernado" required>
                             <option value="emblocado">Emblocado</option>
                             <option value="sueltas">Hojas Sueltas</option>
                         </select>
                     </div>
                     <div data-aos="fade-right" data-aos-duration="700">
                         <h4 class="light">Impresión</h4>
-                        <select class="select" name="" id="" required>
+                        <select class="select" required>
                             <option value=""></option>
                             <option value=""></option>
                             <option value=""></option>
@@ -437,7 +427,7 @@
                     </div>
                     <div data-aos="fade-left" data-aos-duration="700">
                         <h4 class="light">papel Interior</h4>
-                        <select class="select" name="" id="" required>
+                        <select class="select" required>
                             <option value=""></option>
                             <option value=""></option>
                             <option value=""></option>
@@ -588,7 +578,6 @@
                         <span></span>
                     </div>
                     <div class="e-b">
-                        <!--<button class="enviar" type="submit">ENVIAR MENSAJE</button>-->
                         <input type="submit" value="enviar" name="enviar" class="enviar">
                     </div>
                 </form>
@@ -612,7 +601,6 @@
                                 <p>Es fácil de transportar y montar, ofreciendo una presentación profesional y atractiva.</p>
                                 <div>
                                     <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                                 </div>
                             </div>
                         </div>
@@ -625,7 +613,6 @@
                                 <p>Son económicos, fáciles de distribuir y efectivos para alcanzar a una audiencia amplia en poco tiempo.</p>
                                 <div>
                                     <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                                 </div>
                             </div>
                         </div>
@@ -638,7 +625,6 @@
                                 <p>Identificaciones personalizadas con información y foto del usuario</p>
                                 <div>
                                     <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                                 </div>
                             </div>
                         </div>
@@ -651,7 +637,6 @@
                                 <p>ideal para publicidad en ventanas que permite la visibilidad desde un lado.</p>
                                 <div>
                                     <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                                 </div>
                             </div>
                         </div>
@@ -664,7 +649,6 @@
                                 <p>Tazas personalizadas con logos, imágenes o mensajes, perfectas para regalos corporativos y promoción de marcas.</p>
                                 <div>
                                     <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                                 </div>
                             </div>
                         </div>
@@ -677,7 +661,6 @@
                                 <p>Prendas de vestir personalizadas con serigrafía, bordado o impresión digital.</p>
                                 <div>
                                     <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                                 </div>
                             </div>
                         </div>
@@ -690,7 +673,6 @@
                                 <p>pequeñas tarjetas impresas con información de contacto, ideales para networking y encuentros profesionales.</p>
                                 <div>
                                     <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                                 </div>
                             </div>
                         </div>
@@ -703,7 +685,6 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repudiandae?</p>
                                 <div>
                                     <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                                 </div>
                             </div>
                         </div>
@@ -716,7 +697,6 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repudiandae?</p>
                                 <div>
                                     <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                                 </div>
                             </div>
                         </div>
@@ -729,7 +709,6 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repudiandae?</p>
                                 <div>
                                     <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                    <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                                 </div>
                             </div>
                         </div>
@@ -791,7 +770,7 @@
                     <ul>
                         <div class="fot-flex">
                             <div>
-                                <img src="front-end/img/iconos/ubi.png" alt="" class="footer-iconos">
+                                <img src="../../img/iconos/ubi.png" alt="" class="footer-iconos">
                             </div>
                             <div>
                                 <a href="https://maps.app.goo.gl/NkUMMBjKmGbwSTrk6" target="_blank"><p>Cra. 41A #27 A sur 86 - Centro Ejecutivo La Casona Envigado - Oficina 102</p></a>
@@ -799,7 +778,7 @@
                         </div>
                         <div class="fot-flex">
                             <div>
-                                <img src="front-end/img/iconos/mail.png" alt="" class="footer-iconos">
+                                <img src="../../img/iconos/mail.png" alt="" class="footer-iconos">
                             </div>
                             <div>
                                 <p>gestion@solidasas.com</p>
@@ -807,16 +786,15 @@
                         </div>
                         <div class="fot-flex">
                             <div>
-                                <img src="front-end/img/iconos/wats.png" alt="" class="footer-iconos">
+                                <img src="../../img/iconos/wats.png" alt="" class="footer-iconos">
                             </div>
                             <div>
-                                <!--<a href=""><p>+57 324 569 36 94</p></a>-->
                                 <p>+57 324 569 36 94</p>
                             </div>
                         </div>
                         <div class="fot-flex">
                             <div>
-                                <img src="front-end/img/iconos/time.png" alt="" class="footer-iconos">
+                                <img src="../../img/iconos/time.png" alt="" class="footer-iconos">
                             </div>
                             <div>
                                 <p>Lunes a viernes de 8:00 a.m. a 5:00 p.m.</p>
@@ -832,17 +810,15 @@
                 <div>
                     <div class="fot-flex">
                         <div>
-                            <img src="front-end/img/iconos/in.png" alt="" class="footer-iconos">
+                            <img src="../../img/iconos/in.png" alt="" class="footer-iconos">
                         </div>
                         <div>
                             <a href="https://co.linkedin.com/company/s%C3%B3lida-sas" target="_blank"><p>Linkedin</p></a><br>
-                            <!--<a href="https://www.instagram.com/solida360_?igsh=MWFlZW9iaTJ0N3NuMQ%3D%3D"><p>Instagram</p></a>-->
-                            <!--<a href="https://www.tiktok.com/@solida.360?_t=8mP23a76KLV&_r=1"><p>Tik Tok</p></a>-->
                         </div>
                     </div>
                     <div class="fot-flex">
                         <div>
-                            <img src="front-end/img/iconos/igblanco.png" alt="" class="footer-iconos">
+                            <img src="../../img/iconos/igblanco.png" alt="" class="footer-iconos">
                         </div>
                         <div>
                             <a href="https://www.instagram.com/solida360_?igsh=MWFlZW9iaTJ0N3NuMQ%3D%3D" target="_blank"><p>Instagram</p></a>
@@ -850,7 +826,7 @@
                     </div>
                     <div class="fot-flex">
                         <div>
-                            <img src="front-end/img/iconos/ttblanco.png" alt="" class="footer-iconos">
+                            <img src="../../img/iconos/ttblanco.png" alt="" class="footer-iconos">
                         </div>
                         <div>
                             <a href="https://www.tiktok.com/@solida.360?_t=8mP23a76KLV&_r=1" target="_blank"><p>Tik Tok</p></a>

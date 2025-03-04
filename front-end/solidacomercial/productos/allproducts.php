@@ -463,7 +463,7 @@
                     <ul>
                         <div class="fot-flex">
                             <div>
-                                <img src="front-end/img/iconos/ubi.png" alt="" class="footer-iconos">
+                                <img src="../../img/iconos/ubi.png" alt="" class="footer-iconos">
                             </div>
                             <div>
                                 <a href="https://maps.app.goo.gl/NkUMMBjKmGbwSTrk6" target="_blank"><p>Cra. 41A #27 A sur 86 - Centro Ejecutivo La Casona Envigado - Oficina 102</p></a>
@@ -471,7 +471,7 @@
                         </div>
                         <div class="fot-flex">
                             <div>
-                                <img src="front-end/img/iconos/mail.png" alt="" class="footer-iconos">
+                                <img src="../../img/iconos/mail.png" alt="" class="footer-iconos">
                             </div>
                             <div>
                                 <p>gestion@solidasas.com</p>
@@ -479,7 +479,7 @@
                         </div>
                         <div class="fot-flex">
                             <div>
-                                <img src="front-end/img/iconos/wats.png" alt="" class="footer-iconos">
+                                <img src="../../img/iconos/wats.png" alt="" class="footer-iconos">
                             </div>
                             <div>
                                 <!--<a href=""><p>+57 324 569 36 94</p></a>-->
@@ -488,7 +488,7 @@
                         </div>
                         <div class="fot-flex">
                             <div>
-                                <img src="front-end/img/iconos/time.png" alt="" class="footer-iconos">
+                                <img src="../../img/iconos/time.png" alt="" class="footer-iconos">
                             </div>
                             <div>
                                 <p>Lunes a viernes de 8:00 a.m. a 5:00 p.m.</p>
@@ -504,17 +504,16 @@
                 <div>
                     <div class="fot-flex">
                         <div>
-                            <img src="front-end/img/iconos/in.png" alt="" class="footer-iconos">
+                            <img src="../../img/iconos/in.png" alt="" class="footer-iconos">
                         </div>
                         <div>
                             <a href="https://co.linkedin.com/company/s%C3%B3lida-sas" target="_blank"><p>Linkedin</p></a><br>
-                            <!--<a href="https://www.instagram.com/solida360_?igsh=MWFlZW9iaTJ0N3NuMQ%3D%3D"><p>Instagram</p></a>-->
-                            <!--<a href="https://www.tiktok.com/@solida.360?_t=8mP23a76KLV&_r=1"><p>Tik Tok</p></a>-->
+                        
                         </div>
                     </div>
                     <div class="fot-flex">
                         <div>
-                            <img src="front-end/img/iconos/igblanco.png" alt="" class="footer-iconos">
+                            <img src="../../img/iconos/igblanco.png" alt="" class="footer-iconos">
                         </div>
                         <div>
                             <a href="https://www.instagram.com/solida360_?igsh=MWFlZW9iaTJ0N3NuMQ%3D%3D" target="_blank"><p>Instagram</p></a>
@@ -522,7 +521,7 @@
                     </div>
                     <div class="fot-flex">
                         <div>
-                            <img src="front-end/img/iconos/ttblanco.png" alt="" class="footer-iconos">
+                            <img src="../../img/iconos/ttblanco.png" alt="" class="footer-iconos">
                         </div>
                         <div>
                             <a href="https://www.tiktok.com/@solida.360?_t=8mP23a76KLV&_r=1" target="_blank"><p>Tik Tok</p></a>

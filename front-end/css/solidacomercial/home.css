@@ -146,7 +146,6 @@ p{
     grid-template-columns: 100%;
     grid-template-rows: 70% 30%;
     position: relative;
-    /* background-color: white; */
 }
 .header-grid{
     display: grid;
@@ -307,7 +306,6 @@ p{
     box-shadow: .2px .2px 20px .2px rgba(0, 0, 0, 0.158);
     backdrop-filter: grayscale(100%);
     padding: 0 10px 0 10px;
-    /* border: solid black; */
 }
 .campos{
     margin: 5px 0;
@@ -420,7 +418,6 @@ p{
     margin: 0 auto;
     scrollbar-width: none; 
     -ms-overflow-style: none; 
-    /* box-shadow: 0 5px 8px -5px var(--negro); */
 }
 #shoping::-webkit-scrollbar {
     display: none;
@@ -436,7 +433,6 @@ p{
     border-bottom: 1px solid var(--negro);
     display: flex;
     margin-bottom: 15px;
-    
 }
 .carrito-item > ul li{
     font-family: graphie-regular;
@@ -528,7 +524,6 @@ p{
     z-index: 10;
     opacity: 0;
 }
-
 #alert{
     width: 60%;
     height: fit-content;
@@ -562,10 +557,13 @@ p{
     justify-content: center;
     align-items: center;
     padding: 10px 0;
-    /* border: solid blue; */
 }
 .form_f > .info-message > input{
     color: black;
+}
+#no-eye{
+    display: none;
+
 }
 
 /* ----------------------varible para el precio---------------------- */
@@ -573,10 +571,6 @@ p{
     display: none;
 }
 
-/* responsive */
-/* @media screen and (max-width: 1050px){
-
-} */
 @media screen and (max-width: 600px){
     
 }

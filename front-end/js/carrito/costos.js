@@ -96,14 +96,4 @@ tipoRemito.addEventListener("change", actualizarTotal);
 tipoCopias.addEventListener("change", actualizarTotal);
 tipoEncuadernado.addEventListener("change", actualizarTotal);
 
-// Usamos AJAX para enviar esta variable a PHP
-$.ajax({
-    url: 'productos.php', // Archivo PHP que procesará la variable
-    type: 'POST',
-    data: { total: total },
-    success: function(response) {
-        console.log("Respuesta de PHP: " + response);
-    }
-});
 
-// carrito

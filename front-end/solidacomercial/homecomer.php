@@ -1,8 +1,6 @@
 <?php 
     session_start();
-    // $_SESSION['loggedin'] = true;
     include("../../back-end/conexion.php");
-    // include("../../back-end/log-in.php");
     $status = $_SESSION['status'] = 1;
     if(isset($_SESSION['email'])){
         $email = $_SESSION['email'];
@@ -15,7 +13,6 @@
     $resultplan = mysqli_query($conexion, $plan);
 
     if (mysqli_num_rows($resultado) > 0) {
-        // Si hay resultados, mostrarlos
         while($row = mysqli_fetch_assoc($resultado)) {
             $_SESSION['name'] = $row['name'];
             if (mysqli_num_rows($resultplan) > 0) {
@@ -146,10 +143,6 @@
                                         contactList.style.display = 'none';
                                         contactList.addEventListener("mouseout", () => {
                                             contactList.style.display = 'none';
-                                            // contactList.classList.toggle("disappear");
-                                            // setTimeout(() => {
-                                            //     contactList.classList.remove("disappear");
-                                            // },500)
                                         })
                                     });
                                 </script>
@@ -158,7 +151,6 @@
                                 <form name="closeform" style="height: fit-content;" action="../../back-end/log-out.php" method="post">
                                     
                                     <div style="display: none;">
-                                        <!-- <p id="ubicacion">home</p> -->
                                         <p id="pathclose" style="display: none;"></p>
                                         <script>
                                             const pathNameClose = window.location.pathname;
@@ -378,7 +370,6 @@
                             <p>Es fácil de transportar y montar, ofreciendo una presentación profesional y atractiva.</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                             </div>
                         </div>
                     </div>
@@ -395,7 +386,6 @@
                             <p>Son económicos, fáciles de distribuir y efectivos para alcanzar a una audiencia amplia en poco tiempo.</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                             </div>
                         </div>
                     </div>
@@ -412,7 +402,6 @@
                             <p>Identificaciones personalizadas con información y foto del usuario</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                             </div>
                         </div>
                     </div>
@@ -428,7 +417,6 @@
                             <p>ideal para publicidad en ventanas que permite la visibilidad desde un lado.</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                             </div>
                         </div>
                     </div>
@@ -444,7 +432,6 @@
                             <p>Tazas personalizadas con logos, imágenes o mensajes, perfectas para regalos corporativos y promoción de marcas.</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                             </div>
                         </div>
                     </div>
@@ -460,7 +447,6 @@
                             <p>Prendas de vestir personalizadas con serigrafía, bordado o impresión digital.</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                             </div>
                         </div>
                     </div>
@@ -476,7 +462,6 @@
                             <p>pequeñas tarjetas impresas con información de contacto, ideales para networking y encuentros profesionales.</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                             </div>
                         </div>
                     </div>
@@ -492,7 +477,6 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repudiandae?</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                             </div>
                         </div>
                     </div>
@@ -508,7 +492,6 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repudiandae?</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                             </div>
                         </div>
                     </div>
@@ -524,7 +507,6 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, repudiandae?</p>
                             <div>
                                 <button class="suggbuttom"><a href="" class="suggbletters bold">¡LO QUIERO!</a></button>
-                                <!-- <a href="" class="suggbuttom">¡LO QUIERO!</a>                     -->
                             </div>
                         </div>
                     </div>
@@ -676,36 +658,35 @@
 
                         ],
 
-                        //stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
-                        typeSpeed: 60, // Velocidad en mlisegundos para poner una letra,
-                        startDelay: 300, // Tiempo de retraso en iniciar la animacion. Aplica tambien cuando termina y vuelve a iniciar,
-                        backSpeed: 60, // Velocidad en milisegundos para borrrar una letra,
-                        smartBackspace: true, // Eliminar solamente las palabras que sean nuevas en una cadena de texto.
-                        shuffle: false, // Alterar el orden en el que escribe las palabras.
-                        backDelay: 1100, // Tiempo de espera despues de que termina de escribir una palabra.
-                        loop: true, // Repetir el array de strings
-                        loopCount: false, // Cantidad de veces a repetir el array.  false = infinite
-                        showCursor: true, // Mostrar cursor palpitanto
-                        cursorChar: '|', // Caracter para el cursor
-                        contentType: 'html', // 'html' o 'null' para texto sin formato
+                        typeSpeed: 60, 
+                        startDelay: 300, 
+                        backSpeed: 60,
+                        smartBackspace: true, 
+                        shuffle: false, 
+                        backDelay: 1100, 
+                        loop: true, 
+                        loopCount: false, 
+                        showCursor: true,
+                        cursorChar: '|', 
+                        contentType: 'html', 
                     });
                 </script>
             </div>
             <div id="vene2">
                 <div class="ven vEn">
-                    <div class="contadores" id="contador1" data-aos="fade-left" data-aos-duration="800" data-aos-delay="0">
+                    <div class="contadores-b" id="contador1" data-aos="fade-left" data-aos-duration="800" data-aos-delay="0">
                         <p class="bold">CREA</p>
                     </div>
-                    <div class="contadores" id="contador2" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+                    <div class="contadores-b" id="contador2" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
                         <p class="bold">INNOVA</p>
                     </div>
-                    <div class="contadores" id="contador3" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+                    <div class="contadores-b" id="contador3" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
                         <p class="bold">CRECE</p>
                     </div>
-                    <div class="contadores" id="contador4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+                    <div class="contadores-b" id="contador4" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
                         <p class="bold">SE CREATIVO</p>
                     </div>
-                    <div class="contadores" id="contador5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
+                    <div class="contadores-b" id="contador5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
                         <p class="bold">SE SÓLIDA</p>
                     </div>
                 </div>
@@ -786,71 +767,6 @@
         <div class="go-top-button">
             <div><img class="i" src="../img/instagram.png" alt=""></div>
         </div>
-        <!-- <div id="logoutbutton" class="go-top-button">
-            
-        </div> -->
-        <script>
-            console.log('esta es la consola');
-            const userBox = document.getElementById('user');
-            const userContent = document.getElementById('usercontent');
-            const logoutButton = document.getElementById('logoutbutton');
-            const login = document.getElementById('loginButton');
-
-            login.addEventListener("click", () => {
-                const cerrarAlerta = document.getElementById('cerrar-alert');
-                const caja = document.getElementById('containerAlert');
-                caja.style.display = 'none';
-                setTimeout(function() {
-                    caja.style.display = 'flex';
-                    setTimeout(function(){
-                        caja.style.opacity = '1';
-                    }, 100);
-                }, 100);
-                cerrarAlerta.addEventListener('click', () => {
-                    caja.style.opacity = '0';
-                    setTimeout(function() {
-                        caja.style.display = 'none';
-                    }, 500);
-                });
-            })
-            function checkStatus(){
-                console.log(status); 
-                const nameSesion = document.getElementById('nameSesion').textContent.trim();
-                if (nameSesion === "") {
-                    console.log('se inició sesión');
-                    userBox.style.display = 'block';
-                    userContent.style.display = 'block';
-                    logoutButton.style.display = 'none';
-                    window.onload = function() {
-                        const cerrarAlerta = document.getElementById('cerrar-alert');
-                        const caja = document.getElementById('containerAlert');
-                        caja.style.display = 'none';
-                        setTimeout(function() {
-                            caja.style.display = 'flex';
-                            setTimeout(function(){
-                                caja.style.opacity = '1';
-                            }, 2000);
-                        }, 2000);
-                        cerrarAlerta.addEventListener('click', () => {
-                            caja.style.opacity = '0';
-                            setTimeout(function() {
-                                caja.style.display = 'none';
-                            }, 500);
-                        });
-                    };
-                } else {
-                    const caja = document.getElementById('containerAlert');
-                    caja.style.display = 'none';
-                    // logoutButton.style.display = 'none';
-                    userContent.style.display = 'none';
-                    login.style.display = 'none';
-                    userBox.style.display = 'block';
-                }
-            }
-            checkStatus();
-            console.log(status);
-
-        </script>
     </div>
     <section class="footter">
         <div class="foot-interior">
@@ -905,7 +821,6 @@
                                 <img src="../img/iconos/wats.png" alt="" class="footer-iconos">
                             </div>
                             <div>
-                                <!--<a href=""><p>+57 324 569 36 94</p></a>-->
                                 <p>+57 324 569 36 94</p>
                             </div>
                         </div>
@@ -931,8 +846,6 @@
                         </div>
                         <div>
                             <a href="https://co.linkedin.com/company/s%C3%B3lida-sas" target="_blank"><p>Linkedin</p></a><br>
-                            <!--<a href="https://www.instagram.com/solida360_?igsh=MWFlZW9iaTJ0N3NuMQ%3D%3D"><p>Instagram</p></a>-->
-                            <!--<a href="https://www.tiktok.com/@solida.360?_t=8mP23a76KLV&_r=1"><p>Tik Tok</p></a>-->
                         </div>
                     </div>
                     <div class="fot-flex">
