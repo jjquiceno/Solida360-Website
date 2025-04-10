@@ -29,6 +29,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="description" content="Descubre los servicios de impresión personalizados de Solida 365: impresiones en múltiples formatos y materiales, desde documentos hasta camisas y pocillos. Calidad y variedad para tu negocio.">
+    <meta name="keywords" content="sólida 360, innova, innovación, diseño, impresión, social media, impresos, crea, creación, crece, creativo, creatividad, ">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Sólida 360">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="43200">
+    <meta property="og:title" content="Sólida 360 - Innovación en Marketing, Diseño y mucho mas">
+    <meta property="og:description" content="Impulsa tu marca con nosotros, juntos alcanzaremos nuevas alturas.">
+    <meta property="og:image" content="https://res.cloudinary.com/dowv6nrci/image/upload/v1718898456/solida360_fpzhkn.png">
+    <meta property="og:url" content="https://solidasas.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sólida 360 - Innovación en Marketing, Diseño y mucho mas">
+    <meta name="twitter:description" content="Impulsa tu marca con nosotros y alcancemos nuevas alturas.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dowv6nrci/image/upload/v1718898456/solida360_fpzhkn.png">
+    <title>Sólida Comercializadora</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/iconos/logo-solida.png">
@@ -37,7 +53,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../css/solidacomercial/hcomer.css">
     <link rel="stylesheet" href="../css/scroll.css">
-    <title>Sólida</title>
 </head>
 <body>
     <div id="containerAlert">
@@ -62,8 +77,10 @@
                             <span></span>
                         </div>
                         <div class="info-message" data-validate="el correo es requerido">
-                            <input class="caja_text" type="password" name="password" required>
+                            <input id="contra" class="caja_text" type="password" name="password" required>
                             <label class="label" for="password">CONTRASEÑA</label>
+                            <i id="eye" class="fa-solid fa-eye"></i>
+                            <i id="no-eye" class="fa-solid fa-eye-slash"></i>
                             <span></span>
                         </div>
                         <div style="display: none;">
@@ -690,6 +707,53 @@
                         <p class="bold">SE SÓLIDA</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="containerProducts">
+        <div>
+            <h2 class="tittles cajatittle"><span class="light">CONOCE </span>ALGUNOS DE NUESTROS PRODUCTOS</h2>    
+        </div>
+        <div class="separadorall"></div>
+        <div class="productsContainer">
+            <div class="product">
+                <div class="productInt" data-aos="fade-down" data-aos-duration="700" >
+                    <div class="imagesP">
+                        <img src="../img/pf-imp19.jpg" alt="" class="imagesIntP">
+                    </div>
+                    <div class="productTexts">
+                        <h3 class="tittles">Camisas</h3>
+                        <p class="text">Descripción del producto</p>
+                        <button class="botonPint regular">¡Lo quiero!</button>
+                    </div> 
+                </div>
+                <div class="shine" data-aos="fade-up" data-aos-duration="800"></div>
+            </div>
+            <div class="product">
+                <div class="productInt" data-aos="fade-down" data-aos-delay="100" data-aos-duration="700">
+                    <div class="imagesP">
+                        <img src="../img/imp7.png" alt="" class="imagesIntP">
+                    </div>
+                    <div class="productTexts">
+                        <h3 class="tittles">Tarjetas de Presentación</h3>
+                        <p class="text">Descripción del producto</p>
+                        <button class="botonPint regular">¡Lo quiero!</button>
+                    </div>
+                </div>
+                <div class="shine" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800"></div>
+            </div>
+            <div class="product">
+                <div class="productInt" data-aos="fade-down" data-aos-delay="200" data-aos-duration="700">
+                    <div class="imagesP">
+                        <img src="../img/imp5.png" alt="" class="imagesIntP">
+                    </div>
+                    <div class="productTexts">
+                        <h3 class="tittles">Mugs</h3>
+                        <p class="text">Descripción del producto</p>
+                        <button class="botonPint regular">¡Lo quiero!</button>
+                    </div>
+                </div> 
+                <div class="shine" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800"></div>
             </div>
         </div>
     </div>

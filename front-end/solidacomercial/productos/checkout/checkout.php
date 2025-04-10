@@ -231,8 +231,10 @@
                             <span></span>
                         </div>
                         <div class="info-message" data-validate="el correo es requerido">
-                            <input class="caja_text" type="password" name="password" required>
+                            <input id="contra" class="caja_text" type="password" name="password" required>
                             <label class="label" for="password">CONTRASEÑA</label>
+                            <i id="eye" class="fa-solid fa-eye"></i>
+                            <i id="no-eye" class="fa-solid fa-eye-slash"></i>
                             <span></span>
                         </div>
                         <div style="display: none;">
@@ -336,10 +338,10 @@
                                 <h2 id="cob" class="campos light-w" style="font-size: 1.2rem; cursor: pointer;">Ajustes de tu perfil</h2>
                             </div>
                             <div id="homeComer" class="campos">
-                                <h2 class="light-w" style="font-size: 1.2rem; cursor: pointer;">Volver al comercio</h2>
+                                <h2 id="vbackh" class="light-w" style="font-size: 1.2rem; cursor: pointer;">Volver al comercio</h2>
                             </div>
                             <div id="allProducts" class="campos">
-                                <h2 id="vbackh" class="light-w" style="font-size: 1.2rem; cursor: pointer;"><a id="enlaceP" href="../allproducts.php">Ver todos los productos</a></h2>
+                                <h2 class="light-w" style="font-size: 1.2rem; cursor: pointer;"><a id="enlaceP" href="../allproducts.php">Ver todos los productos</a></h2>
                                 <script>
                                     document.getElementById('vbackh').addEventListener("click", () => {
                                         window.location.href = '../../homecomer.php';

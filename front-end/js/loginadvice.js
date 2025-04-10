@@ -33,11 +33,12 @@ function pasVisible(){
     eye.addEventListener("click", () => {
         contra.type = 'text';
         eye.style.display = 'none';
-        noEye.style.display = 'block';
+        noEye.style.display = 'inline';
+        noEye.style.right = '4px';
     });
     noEye.addEventListener("click", () => {
         contra.type = 'password';
-        eye.style.display = 'block';
+        eye.style.display = 'inline';
         noEye.style.display = 'none';
     })
 }

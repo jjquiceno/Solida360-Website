@@ -95,8 +95,10 @@
                             <span></span>
                         </div>
                         <div class="info-message" data-validate="el correo es requerido">
-                            <input class="caja_text" type="password" name="password" required>
+                            <input id="contra" class="caja_text" type="password" name="password" required>
                             <label class="label" for="password">CONTRASEÑA</label>
+                            <i id="eye" class="fa-solid fa-eye"></i>
+                            <i id="no-eye" class="fa-solid fa-eye-slash"></i>
                             <span></span>
                         </div>
                         <div style="display: none;">

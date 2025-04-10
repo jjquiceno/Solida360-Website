@@ -86,6 +86,23 @@ p{
     letter-spacing: 2px;
     text-shadow: 3px 3px 10px black;
 }
+.cajatittle{
+    border: 1px solid var(--verde);
+    border-radius: 30px;
+    padding: 5px;
+    backdrop-filter: grayscale(250%);
+    margin: auto;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+.separadorall{
+    width: 70%;
+    height: 0;
+    margin: auto;
+    border: 1px solid var(--verde);
+    border-radius: 1px;
+    margin-bottom: 10px;
+}
 
 /* ----------------------------------------estilos de la barra de busqueda----------------------------------------- */
 #search-results{
@@ -560,6 +577,14 @@ p{
 }
 .form_f > .info-message > input{
     color: black;
+}
+#eye, 
+#no-eye{
+    opacity: .5;
+    position: absolute;
+    right: 5px;
+    transform: translate(5%, 60%);
+    cursor: pointer;
 }
 #no-eye{
     display: none;
